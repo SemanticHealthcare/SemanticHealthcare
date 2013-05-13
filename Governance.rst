@@ -21,46 +21,46 @@ licenses.
 Openness
 --------
 
-The community will embrace principles of full Openness. In particular, all
+The community will embrace principles of full Openness. All
 practices will be aligned with facilitating the flow of information across all
 members. No mechanisms will be adopted that could constrain the flow of
-information in any way.
+information.
 
 The practice of Open Development will be embraced. This means that source code
 and documents will be written on the open as they are being drafted, and that
 feedback, contributions, and participation from all will be welcomed during the
-drafting, development and subsequent maintenance of all materials.
+drafting, development and maintenance of all materials.
 
 Participation
 -------------
 
-The community will be an inclusive one, and will embrace participation by all.
-Not rules in the governance and subsequent policies will contain terms that
-exclude anyone from participation. Specific rules will be drafted, at the image
-of the Wikipedia, to address Trolling activities, in a manner conducive to
+The community will be inclusive, and will embrace participation by all.
+No rules in the governance and subsequent policies will contain terms that
+exclude anyone from participation. Specific rules will be drafted, using the 
+model of the Wikipedia, to address Trolling activities in a manner conducive to
 convert potential Trolls and vandals into contributors.
 
-The community will maintain a continuous effort for recruiting, welcoming and
-involving new members in the community. The goal will be to maximize the
-community size, in order to take advantage of the network effects and economies
-of scale that make possible to get the best benefits out of open source
+The community will maintain a continuous effort to recruit, welcome and
+involve new members in the community. The goal is to maximize the
+community size in order to take advantage of network effects and economies
+of scale that make possible the best benefits of open source
 practices and methodologies.
 
 Meritocratic Networked Organization
 -----------------------------------
 
-The community will adopt a non-hierarchical governance, modeled after
-Meritocratic network, where decisions will be made by those who are doing the
-work that is affected by those decisions. The decision making process will be
-kept as close as possible to the actual activities for which those decisions
+The community will adopt a non-hierarchical Meritocratic governance model. 
+Decisions about the directions of the commumity will be made by those who are doing the
+work and who are affected by those decisions. The decision making process will be
+kept as close as possible to the activities for which those decisions
 are relevant.
 
 Agility
 -------
 
-The community will embrace practices of Agile development. Using rapid
+The community will embrace practices of Agile development and will use rapid
 iterative cycles of light requirements gathering, design, prototyping,
-implementation and testing. Circling rapidly back to revising and adjusting
+implementation and testing followed by circling rapidly back to revising and adjusting
 requirements. This methodology is conducive to large scale participation, and
-prevents projects from drifting on divergent directions for too long.
+prevents projects from drifting in divergent directions for long periods of time.
 
