@@ -1,0 +1,94 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[DIV=calc, paper=a4, fontsize=12pt, twocolumn]{scrartcl}	 % A4 paper and 12pt font size
+
+\usepackage[english]{babel} % Engllish language /hyphenation
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage[svgnames]{xcolor} % Enabling colors by their 'svgnames'
+\usepackage{fix-cm}	 % Custom font sizes - used for the initial letter in the document
+
+\usepackage{sectsty} % Enables custom section titles
+\allsectionsfont{\usefont{OT1}{phv}{b}{n}} % Change the font of all section commands
+
+\usepackage{fancyhdr} % Needed to define custom headers/footers
+\pagestyle{fancy} % Enables the custom headers/footers
+\usepackage{lastpage} % Used to determine the number of pages in the document (for "Page X of Total")
+\usepackage{url} % Used to format urls correctly
+
+% Headers - all currently empty
+\lhead{}
+\chead{}
+\rhead{}
+
+% Footers
+\lfoot{}
+\cfoot{}
+\rfoot{\footnotesize Page \thepage\ of \pageref{LastPage}} % "Page 1 of 2"
+
+\renewcommand{\headrulewidth}{0.0pt} % No header rule
+\renewcommand{\footrulewidth}{0.4pt} % Thin footer rule
+
+\usepackage{lettrine} % Package to accentuate the first letter of the text
+\newcommand{\initial}[1]{ % Defines the command and style for the first letter
+\lettrine[lines=3,lhang=0.3,nindent=0em,slope=-0.5em]{
+\color{DarkBlue}
+{\textbf{#1}}}{}}
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\usepackage{titling} % Allows custom title configuration
+
+\newcommand{\HorRule}{\color{DarkGoldenrod} \rule{\linewidth}{1pt}} % Defines the gold horizontal rule around the title
+
+\pretitle{\vspace{-20pt} \begin{flushleft} \HorRule \fontsize{40}{40} \usefont{OT1}{phv}{b}{n} \color{DarkRed} \selectfont} % Horizontal rule before the title
+
+\title{Semantic Healthcare} % Your article title
+
+\posttitle{\par\end{flushleft}\vskip 0.5em} % Whitespace under the title
+
+\preauthor{\begin{flushleft}\large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{DarkRed}} % Author font configuration
+
+\newcommand{\org}{\footnotesize \usefont{OT1}{phv}{m}{sl} \color{Black}}
+
+\DeclareRobustCommand{\authoring}{
+\begin{tabular}{cc}
+  Sankhesh Jhaveri & Catherine Dumas \\
+  \org Kitware,Inc. & \org SUNY Albany
+\end{tabular}}
+
+\author{\authoring} % Your name
+
+\postauthor{\footnotesize \usefont{OT1}{phv}{m}{sl} \color{Black} % Configuration for the institution name
+ % Your institution
+
+\par\end{flushleft}\HorRule} % Horizontal rule after the title
+
+\date{} % Add a date here if you would like one to appear underneath the title block
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{fancy} % Enabling the custom headers/footers for the first page
+
+%----------------------------------------------------------------------------------------
+
+\cite{bouamrane_overview_2012}
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\bibliographystyle{abbrv}
+\bibliography{SemanticHealthcare}{}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
