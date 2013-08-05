@@ -30,6 +30,16 @@
 \renewcommand{\headrulewidth}{0.0pt} % No header rule
 \renewcommand{\footrulewidth}{0.4pt} % Thin footer rule
 
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true, %set true if you want colored links
+	linktoc=all, %set to all if you want both sections and subsections linked
+	linkcolor=blue, %choose some color if you want links to stand out
+	citecolor=Maroon, 
+	}
+	
+\addto{\captionsenglish}{\renewcommand*\contentsname{Table of Contents}}
+
 \usepackage{lettrine} % Package to accentuate the first letter of the text
 \newcommand{\initial}[1]{ % Defines the command and style for the first letter
 \lettrine[lines=3,lhang=0.3,nindent=0em,slope=-0.5em]{
@@ -74,9 +84,19 @@
 
 \begin{document}
 
+\thispagestyle{fancy} % Enabling the custom headers/footers for the first page
+
 \maketitle
 
-\thispagestyle{fancy} % Enabling the custom headers/footers for the first page
+\begin{minipage}[t]{\textwidth}
+\center{\bfseries\contentsname}
+\begin{center}
+\makeatletter
+\@starttoc{toc}
+\makeatother
+\end{center}
+\end{minipage}
+
 
 %----------------------------------------------------------------------------------------
 \cite{bouamrane_overview_2012}
