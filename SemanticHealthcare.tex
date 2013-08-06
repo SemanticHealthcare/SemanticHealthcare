@@ -1,7 +1,7 @@
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
-\documentclass[DIV=calc, paper=a4, fontsize=12pt, twocolumn]{scrartcl}	 % A4 paper and 12pt font size
+\documentclass[DIV=calc, paper=a4, fontsize=12pt, onecolumn]{scrartcl}	 % A4 paper and 12pt font size
 
 \usepackage[english]{babel} % Engllish language /hyphenation
 \usepackage[protrusion=true,expansion=true]{microtype} % Better typography
@@ -42,9 +42,9 @@
 
 \usepackage{lettrine} % Package to accentuate the first letter of the text
 \newcommand{\initial}[1]{ % Defines the command and style for the first letter
-\lettrine[lines=3,lhang=0.3,nindent=0em,slope=-0.5em]{
+\lettrine[lines=3,lhang=0.3,nindent=0em,slope=0em]{
 \color{DarkBlue}
-{\textbf{#1}}}{}}
+{\textbf{\textit{#1}}}}{}}
 
 
 %----------------------------------------------------------------------------------------
@@ -55,7 +55,7 @@
 
 \newcommand{\HorRule}{\color{DarkGoldenrod} \rule{\linewidth}{1pt}} % Defines the gold horizontal rule around the title
 
-\pretitle{\vspace{-20pt} \begin{flushleft} \HorRule \fontsize{40}{40} \usefont{OT1}{phv}{b}{n} \color{DarkRed} \selectfont} % Horizontal rule before the title
+\pretitle{ \vspace{-150pt}\begin{flushleft} \HorRule \fontsize{40}{40} \usefont{OT1}{phv}{b}{n} \color{DarkRed} \selectfont} % Horizontal rule before the title
 
 \title{Semantic Healthcare} % Your article title
 
@@ -80,11 +80,12 @@
 
 \date{} % Add a date here if you would like one to appear underneath the title block
 
+\setcounter{secnumdepth}{0} % All sections start from depth 1
+
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\thispagestyle{fancy} % Enabling the custom headers/footers for the first page
 
 \maketitle
 
@@ -97,9 +98,21 @@
 \end{center}
 \end{minipage}
 
-
+\thispagestyle{fancy} % Enabling the custom headers/footers for the first page
 %----------------------------------------------------------------------------------------
-\cite{bouamrane_overview_2012}
+\section[Systematized Nomenclature in Medicine - Clinical Terms ( SNOMED CT )]{SNOMED CT}
+
+\initial{S}\textit{ystematized Nomenclature in Medicine - Clinical Terms ( SNOMED CT )} is a comprehensive, multilingual clinical terminology that provides clinical content and expressivity for clinical documentation and reporting. It can be used to code, retrieve and analyze clinical data. In a nutshell, SNOMED CT consists of concepts arranged in a hierarchy, connected by relationships. The International Health Terminology Standards Development Organization (IHTSDO) owns and administers the rights to SNOMED CT.\\
+
+There are three basic components of SNOMED CT:
+\begin{itemize}
+	\item{Concepts}
+	\item{Descriptions}
+	\item{Relationships}
+\end{itemize}
+
+\textbf{Concepts} are clinical ideas, ranging from abscess to zygote, identified by a unique numeric identifier (\textit{ConceptId}) that never changes and represented by a unique human readable \textit{Fully Specified Name (FSN)}\cite{snomed_-_user_guide_snomed_2011,snomed_implementation_guide_snomed_2011}.
+
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST

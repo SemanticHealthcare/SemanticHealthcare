@@ -1,18 +1,45 @@
 
-@inproceedings{lopes_semantic_2011,
+@inproceedings{rao_software_2012,
 	address = {New York, {NY}, {USA}},
-	series = {{MIXHS} '11},
-	title = {A semantic web application framework for health systems interoperability},
-	isbn = {978-1-4503-0954-7},
-	url = {http://doi.acm.org/10.1145/2064747.2064768},
-	doi = {10.1145/2064747.2064768},
-	booktitle = {Proceedings of the first international workshop on Managing interoperability and complexity in health systems},
+	series = {{IHI} '12},
+	title = {A software tool for large-scale sharing and querying of clinical documents modeled using {HL7} version 3 standard},
+	isbn = {978-1-4503-0781-9},
+	url = {http://doi.acm.org/10.1145/2110363.2110417},
+	doi = {10.1145/2110363.2110417},
+	abstract = {We present a novel software tool called {CDN} (Collaborative Data Network) for large-scale sharing and querying of clinical documents modeled using {HL7} v3 standard (e.g., Clinical Document Architecture ({CDA)}, Continuity of Care Document ({CCD)).} Similar to the {caBIG} initiative, {CDN} aims to foster innovations in cancer treatment and diagnosis through large-scale, sharing of clinical data. We focus on cancer because it is the second leading cause of deaths in the {US.} {CDN} is based on the synergistic combination of peer-to-peer technology and the extensible markup language {XML} and {XQuery.} Using {CDN}, a user can pose both structured queries and keyword queries on the {HL7} v3 documents hosted by data providers. {CDN} is unique in its design - it supports location oblivious queries in a large-scale, network wherein a user does not explicitly provide the location of the data for a query. A location service in {CDN} discovers data of interest in the network at query time. {CDN} uses standard cryptographic techniques to provide security to data providers and protect the privacy of patients. Using {CDN}, a user can pose clinical queries pertaining to cancer containing aggregations and joins across data hosted by multiple data providers. {CDN} is implemented with open-source software for web application development and {XML} query processing. We report the evaluation of {CDN} in a distributed environment ({LAN)} using a real dataset of discharge summaries available from the i2b2 project.},
+	urldate = {2013-08-06},
+	booktitle = {Proceedings of the 2nd {ACM} {SIGHIT} International Health Informatics Symposium},
 	publisher = {{ACM}},
-	author = {Lopes, Pedro and Oliveira, José Luís},
-	year = {2011},
-	keywords = {bioinformatics, healthcare interoperability, semantic exploration, semantic integration, semantic web},
-	pages = {87–90},
-	file = {-A semantic web application framework for health systems interoperability-.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\4FFK8KRP\-A semantic web application framework for health systems interoperability-.pdf:application/pdf}
+	author = {Rao, Praveen R. and Komara Swami, Tivakar and Rao, Deepthi S. and Barnes, Michael J. and Thorve, Swati G. and Natoo, Prasad},
+	year = {2012},
+	keywords = {hl7 v3, large-scale, peer-to-peer, xquery processing},
+	pages = {473–482},
+	file = {ACM Full Text PDF:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\QUNKRWQU\Rao et al. - 2012 - A software tool for large-scale sharing and queryi.pdf:application/pdf}
+},
+
+@inproceedings{khan_achieving_2012,
+	address = {New York, {NY}, {USA}},
+	series = {{ICUIMC} '12},
+	title = {Achieving interoperability among healthcare standards: building semantic mappings at models level},
+	isbn = {978-1-4503-1172-4},
+	shorttitle = {Achieving interoperability among healthcare standards},
+	url = {http://doi.acm.org/10.1145/2184751.2184868},
+	doi = {10.1145/2184751.2184868},
+	abstract = {Resolving heterogeneities between data and processes paves the way for interoperability between different heterogeneous systems. Healthcare standards provide the base for interoperability between different Electronic Health Record ({EHR)} system. The problems related to data interoperability arise when two {EHR} system's are complaint to heterogeneous healthcare standards and want to communicate with each other. To achieve semantic data interoperability, there is need to resolve data level heterogeneity. In this paper, we propose system that enable high level of accuracy of mapping between heterogeneous healthcare standards model. The broader goal of data interoperability is achieved when these heterogeneities are resolved through ontology matching and generation of accurate mapping file, that helps in clinical message conversion from one standard to another. To justify claim we investigate {HL7} and {openEHR} standards ontological mappings. We will discuss transformation of {HL7} and {openEHR} models at high level and instance transformation at the realization level. The proposed approach provides accurate mappings that enables timely health information sharing among different healthcare systems to provide better healthcare to patients.},
+	urldate = {2013-08-06},
+	booktitle = {Proceedings of the 6th International Conference on Ubiquitous Information Management and Communication},
+	publisher = {{ACM}},
+	author = {Khan, Wajahat Ali and Khattak, Asad Masood and Lee, Sungyoung and Hussain, Maqbool and Amin, Bilal and Latif, Khalid},
+	year = {2012},
+	keywords = {healthcare standard, {HL7}, ontology mapping, {openEHR}, Semantic interoperability},
+	pages = {101:1–101:9}
+},
+
+@book{sheth_active_????,
+	title = {Active Semantic Electronic Medical Record},
+	abstract = {Abstract. The healthcare industry is rapidly advancing towards the widespread use of electronic medical records systems to manage the increasingly large amount of patient data and reduce medical errors. In addition to patient data there is a large amount of data describing procedures, treatments, diagnoses, drugs, insurance plans, coverage, formularies and the relationships between these data sets. While practices have benefited from the use of {EMRs}, infusing these essential programs with rich domain knowledge and rules can greatly enhance their performance and ability to support clinical decisions. Active Semantic Electronic Medical Record ({ASEMR)} application discussed here uses Semantic Web technologies to reduce medical errors, improve physician efficiency with accurate completion of patient charts, improve patient safety and satisfaction in medical practice, and improve billing due to more accurate coding. This results in practice efficiency and growth by enabling physicians to see more patients with improved care. {ASEMR} has been deployed and in daily use for managing all patient records at the Athens Heart Center since December 2005. This showcases an application of Semantic Web in health care, especially small clinics.},
+	author = {Sheth, A. and Agrawal, S. and Lathem, J. and Oldham, N. and Wingate, H. and Yadav, P. and Gallagher, K.},
+	file = {Citeseer - Full Text PDF:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\8HBCACTM\Sheth et al. - Active Semantic Electronic Medical Record.pdf:application/pdf;Citeseer - Snapshot:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\887QRPZB\summary.html:text/html}
 },
 
 @inproceedings{bouamrane_overview_2012,
@@ -28,7 +55,7 @@
 	year = {2012},
 	keywords = {ehealth, electronic health systems, health care information management, health information quality assessment},
 	pages = {37–46},
-	file = {An overview of electronic health information management systems quality assessment.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\F2ZDNR2P\An overview of electronic health information management systems quality assessment.pdf:application/pdf}
+	file = {An overview of electronic health information management systems quality assessment.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\JWCE4NUN\An overview of electronic health information management systems quality assessment.pdf:application/pdf}
 },
 
 @inproceedings{pathak_applying_2012,
@@ -44,7 +71,82 @@
 	year = {2012},
 	keywords = {electronic health record (ehr), linked data, semantic web, translational research},
 	pages = {455–464},
-	file = {Applying linked data principles to represent patient's electronic health records at Mayo clinic.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\NMPCV4MS\Applying linked data principles to represent patient's electronic health records at Mayo clinic.pdf:application/pdf}
+	file = {Applying linked data principles to represent patient's electronic health records at Mayo clinic.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\FAHI8BTG\Applying linked data principles to represent patient's electronic health records at Mayo clinic.pdf:application/pdf}
+},
+
+@article{sari_archetype_2012,
+	title = {Archetype sub-ontology: Improving constraint-based clinical knowledge model in electronic health records},
+	volume = {26},
+	issn = {0950-7051},
+	shorttitle = {Archetype sub-ontology},
+	url = {http://www.sciencedirect.com/science/article/pii/S0950705111001444},
+	doi = {10.1016/j.knosys.2011.07.004},
+	abstract = {The global effort in the standardization of electronic health records has driven the need for a model to allow medical practitioners to interact with the newly standardized medical information system by focusing on the actual medical concepts/processes rather than the underlying data representations. An archetype has been introduced as a model that represents functional health concepts or processes such as admission record, which enables capturing all information relevant to the processes transparently to the users. However, it is necessary to ensure that the archetypes capture accurately all information relevant to the archetype concepts. Therefore, a semantic backbone is required for each of the archetype.
+
+In this paper, we propose the development of an archetype sub-ontology for each archetype to represent the semantic content of the corresponding archetype. The sub-ontology is semi-automatically extracted from a standard health ontology, in this case {SNOMED} {CT.} Two steps performed to build an archetype sub-ontology are the annotation process and the extraction process, in which some rules have to be applied to maintain the validity of sub-ontology. The approach is evaluated by utilizing the archetype sub-ontologies produced in the development of a new archetype to ensure that only relevant archetypes can be linked to the archetype being developed, so that the only relevant data are captured using the particular archetype. It is shown that the method produces better results than the current approach in which an archetype sub-ontology is not used. We conclude that the archetype sub-ontology can represent well the semantic content of archetype.},
+	urldate = {2013-08-06},
+	journal = {Knowledge-Based Systems},
+	author = {Sari, Anny Kartika and Rahayu, Wenny and Bhatt, Mehul},
+	month = feb,
+	year = {2012},
+	keywords = {Archetype, Electronic health record, Medical information systems, Semantic relevance, Sub-ontology derivation},
+	pages = {75--85},
+	file = {ScienceDirect Full Text PDF:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\W69R8ZU2\Sari et al. - 2012 - Archetype sub-ontology Improving constraint-based.pdf:application/pdf;ScienceDirect Snapshot:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\6PBNSWHM\S0950705111001444.html:text/html}
+},
+
+@article{lin_auditing_2012,
+	title = {Auditing consistency and usefulness of {LOINC} use among three large institutions – Using version spaces for grouping {LOINC} codes},
+	volume = {45},
+	issn = {1532-0464},
+	shorttitle = {Translating Standards into Practice: Experiences and Lessons Learned in Biomedicine and Health Care},
+	url = {http://www.sciencedirect.com/science/article/pii/S1532046412000093},
+	doi = {10.1016/j.jbi.2012.01.008},
+	abstract = {Objectives
+We wanted to develop a method for evaluating the consistency and usefulness of {LOINC} code use across different institutions, and to evaluate the degree of interoperability that can be attained when using {LOINC} codes for laboratory data exchange. Our specific goals were to: (1) Determine if any contradictory knowledge exists in {LOINC.} (2) Determine how many {LOINC} codes were used in a truly interoperable fashion between systems. (3) Provide suggestions for improving the semantic interoperability of {LOINC.} Methods
+We collected Extensional Definitions ({EDs)} of {LOINC} usage from three institutions. The version space approach was used to divide {LOINC} codes into small sets, which made auditing of {LOINC} use across the institutions feasible. We then compared pairings of {LOINC} codes from the three institutions for consistency and usefulness. Results
+The number of {LOINC} codes evaluated were 1917, 1267 and 1693 as obtained from {ARUP}, Intermountain and Regenstrief respectively. There were 2022, 2030, and 2301 version spaces among {ARUP} and Intermountain, Intermountain and Regenstrief and {ARUP} and Regenstrief respectively. Using the {EDs} as the gold standard, there were 104, 109 and 112 pairs containing contradictory knowledge and there were 1165, 765 and 1121 semantically interoperable pairs. The interoperable pairs were classified into three levels: (1) Level I – No loss of meaning, complete information was exchanged by identical codes. (2) Level {II} – No loss of meaning, but processing of data was needed to make the data completely comparable. (3) Level {III} – Some loss of meaning. For example, tests with a specific ‘method’ could be rolled-up with tests that were ‘methodless’. Conclusions
+There are variations in the way {LOINC} is used for data exchange that result in some data not being truly interoperable across different enterprises. To improve its semantic interoperability, we need to detect and correct any contradictory knowledge within {LOINC} and add computable relationships that can be used for making reliable inferences about the data. The {LOINC} committee should also provide detailed guidance on best practices for mapping from local codes to {LOINC} codes and for using {LOINC} codes in data exchange.},
+	number = {4},
+	urldate = {2013-08-06},
+	journal = {Journal of Biomedical Informatics},
+	author = {Lin, {M.C.} and Vreeman, {D.J.} and {McDonald}, Clement J. and Huff, {S.M.}},
+	month = aug,
+	year = {2012},
+	keywords = {Clinical laboratory information systems, Consistency, Controlled vocabulary, Data exchange standards, Evaluation research, {LOINC}, {LOINC} usage, Semantic interoperability, Usefulness},
+	pages = {658--666},
+	file = {ScienceDirect Snapshot:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\WVUF2SB5\S1532046412000093.html:text/html}
+},
+
+@misc{michel_dumontier_bio2rdf_2009,
+	type = {Education},
+	title = {{Bio2RDF} : A biological knowledge base for the Semantic Web},
+	copyright = {© All Rights Reserved},
+	shorttitle = {{Bio2RDF}},
+	url = {http://www.slideshare.net/micheldumontier/bio2rdf-a-biological-knowledge-base-for-the-semantic-web-1603939},
+	abstract = {A presentation given at the University of Toronto on June 18, 2009 describing the current state of {Bio2RDF} with respect to biological knowledge representation on the semantic web as linked data with services to describe and answer questions.},
+	urldate = {2013-07-30},
+	author = {Michel Dumontier},
+	month = jun,
+	year = {2009}
+},
+
+@article{belleau_bio2rdf:_2008,
+	title = {{Bio2RDF:} Towards a mashup to build bioinformatics knowledge systems},
+	volume = {41},
+	issn = {1532-0464},
+	shorttitle = {Semantic Mashup of Biomedical Data},
+	url = {http://www.sciencedirect.com/science/article/pii/S1532046408000415},
+	doi = {10.1016/j.jbi.2008.03.004},
+	abstract = {Presently, there are numerous bioinformatics databases available on different websites. Although {RDF} was proposed as a standard format for the web, these databases are still available in various formats. With the increasing popularity of the semantic web technologies and the ever growing number of databases in bioinformatics, there is a pressing need to develop mashup systems to help the process of bioinformatics knowledge integration. {Bio2RDF} is such a system, built from rdfizer programs written in {JSP}, the Sesame open source triplestore technology and an {OWL} ontology. With {Bio2RDF}, documents from public bioinformatics databases such as Kegg, {PDB}, {MGI}, {HGNC} and several of {NCBI’s} databases can now be made available in {RDF} format through a unique {URL} in the form of http://bio2rdf.org/namespace:id. The {Bio2RDF} project has successfully applied the semantic web technology to publicly available databases by creating a knowledge space of {RDF} documents linked together with normalized {URIs} and sharing a common ontology. {Bio2RDF} is based on a three-step approach to build mashups of bioinformatics data. The present article details this new approach and illustrates the building of a mashup used to explore the implication of four transcription factor genes in Parkinson’s disease. The {Bio2RDF} repository can be queried at http://bio2rdf.org.},
+	number = {5},
+	urldate = {2013-07-30},
+	journal = {Journal of Biomedical Informatics},
+	author = {Belleau, François and Nolin, Marc-Alexandre and Tourigny, Nicole and Rigault, Philippe and Morissette, Jean},
+	month = oct,
+	year = {2008},
+	keywords = {Bioinformatics database, Knowledge integration, Mashup, Ontology, Semantic web},
+	pages = {706--716},
+	file = {ScienceDirect Full Text PDF:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\R4MVBFK5\Belleau et al. - 2008 - Bio2RDF Towards a mashup to build bioinformatics .pdf:application/pdf;ScienceDirect Snapshot:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\G452NQP3\S1532046408000415.html:text/html}
 },
 
 @inproceedings{he_clinical_2012,
@@ -60,7 +162,41 @@
 	year = {2012},
 	keywords = {clinical use, snomed ct, synonyms, terminology},
 	pages = {1–6},
-	file = {Clinical clarity versus terminological order- the readiness of SNOMED CT concept descriptors for primary care.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\TFM8H2RB\Clinical clarity versus terminological order- the readiness of SNOMED CT concept descriptors for primary care.pdf:application/pdf}
+	file = {Clinical clarity versus terminological order- the readiness of SNOMED CT concept descriptors for primary care.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\BFNAG4CA\Clinical clarity versus terminological order- the readiness of SNOMED CT concept descriptors for primary care.pdf:application/pdf}
+},
+
+@inproceedings{ansell_customisable_2010,
+	address = {Darlinghurst, Australia, Australia},
+	series = {{HIKM} '10},
+	title = {Customisable query resolution in biology and medicine},
+	isbn = {978-1-920682-89-7},
+	url = {http://dl.acm.org/citation.cfm?id=1862303.1862315},
+	abstract = {Scientists and healthcare workers regularly use data from a number of sources as part of their research and professional work. The current mechanisms for providing combined access to multiple datasources are either closed or not easily extensible, with some requiring users to locally load and query each data-source independently. In this work we introduce a new model for transparent querying across multiple datasources which relies on the single unifying format of {RDF} to merge information before returning it to users. The use of normalised, resolvable {URI's}, combined with the {SPARQL} {RDF} query language, enables common queries to be executed across multiple public and private datasources, including those not initially designed or represented using {RDF.} In order to accommodate a range of users, the implemented system has been set up to enable customisation of queries and datasources based on {RDF} formatted configuration files. This breadth of data and configurability allows scientists and healthcare workers to more efficiently find and communicate semantic references, supporting research, professional practice and dissemination of knowledge across communities and disciplines.},
+	urldate = {2013-08-06},
+	booktitle = {Proceedings of the Fourth Australasian Workshop on Health Informatics and Knowledge Management - Volume 108},
+	publisher = {Australian Computer Society, Inc.},
+	author = {Ansell, Peter and Hogan, James and Roe, Paul},
+	year = {2010},
+	pages = {69–76}
+},
+
+@article{vreeman_enabling_2012,
+	title = {Enabling international adoption of {LOINC} through translation},
+	volume = {45},
+	issn = {1532-0464},
+	shorttitle = {Translating Standards into Practice: Experiences and Lessons Learned in Biomedicine and Health Care},
+	url = {http://www.sciencedirect.com/science/article/pii/S1532046412000068},
+	doi = {10.1016/j.jbi.2012.01.005},
+	abstract = {Interoperable health information exchange depends on adoption of terminology standards, but international use of such standards can be challenging because of language differences between local concept names and the standard terminology. To address this important barrier, we describe the evolution of an efficient process for constructing translations of {LOINC} terms names, the foreign language functions in {RELMA}, and the current state of translations in {LOINC.} We also present the development of the Italian translation to illustrate how translation is enabling adoption in international contexts. We built a tool that finds the unique list of {LOINC} Parts that make up a given set of {LOINC} terms. This list enables translation of smaller pieces like the core component “hepatitis c virus” separately from all the suffixes that could appear with it, such {“Ab.IgG”}, {“DNA”}, and {“RNA”.} We built another tool that generates a translation of a full {LOINC} name from all of these atomic pieces. As of version 2.36 (June 2011), {LOINC} terms have been translated into nine languages from 15 linguistic variants other than its native English. The five largest linguistic variants have all used the Part-based translation mechanism. However, even with efficient tools and processes, translation of standard terminology is a complex undertaking. Two of the prominent linguistic challenges that translators have faced include: the approach to handling acronyms and abbreviations, and the differences in linguistic syntax (e.g. word order) between languages. {LOINC’s} open and customizable approach has enabled many different groups to create translations that met their needs and matched their resources. Distributing the standard and its many language translations at no cost worldwide accelerates {LOINC} adoption globally, and is an important enabler of interoperable health information exchange.},
+	number = {4},
+	urldate = {2013-08-06},
+	journal = {Journal of Biomedical Informatics},
+	author = {Vreeman, Daniel J. and Chiaravalloti, Maria Teresa and Hook, John and {McDonald}, Clement J.},
+	month = aug,
+	year = {2012},
+	keywords = {Clinical laboratory information systems/standards, Computerized/standards, {LOINC}, Medical records systems, Multilingualism, Translating, Vocabulary, Controlled},
+	pages = {667--673},
+	file = {ScienceDirect Snapshot:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\S42X562S\S1532046412000068.html:text/html}
 },
 
 @inproceedings{khare_exploiting_2012,
@@ -76,7 +212,115 @@
 	year = {2012},
 	keywords = {forms, mapping, semantics, snomed ct, structure, terms},
 	pages = {285–294},
-	file = {Exploiting semantic structure for mapping user-specified form terms to SNOMED CT concepts.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\ZAH8WTVX\Exploiting semantic structure for mapping user-specified form terms to SNOMED CT concepts.pdf:application/pdf}
+	file = {Exploiting semantic structure for mapping user-specified form terms to SNOMED CT concepts.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\EJ9DR28C\Exploiting semantic structure for mapping user-specified form terms to SNOMED CT concepts.pdf:application/pdf}
+},
+
+@article{_fmql_????,
+	title = {{FMQL}}
+},
+
+@article{wang_implementing_2004,
+	title = {Implementing Patient Access to Electronic Health Records Under {HIPAA:} Lessons Learned},
+	volume = {1},
+	issn = {1559-4122},
+	shorttitle = {Implementing Patient Access to Electronic Health Records Under {HIPAA}},
+	url = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2047325/},
+	abstract = {In 2001, the Institute of Medicine ({IOM)} and the Health Insurance Portability and Accountability Act ({HIPAA)} emphasized the need for patients to have greater control over their health information. We describe a Boston healthcare system's approach to providing patients access to their electronic health records ({EHRs)} via Patient Gateway, a secure, Web-based portal., Implemented in 19 clinic sites to date, Patient Gateway allows patients to access information from their medical charts via the Internet in a secure manner., Since 2002, over 19,000 patients have enrolled in Patient Gateway, more than 125,000 patients have logged into the system, and over 37,000 messages have been sent by patients to their practices. There have been no major security concerns., By providing access to {EHR} data, secure systems like Patient Gateway allow patients a greater role in their healthcare process, as envisioned by the {IOM} and {HIPAA.}},
+	urldate = {2013-08-01},
+	journal = {Perspectives in Health Information Management / {AHIMA}, American Health Information Management Association},
+	author = {Wang, Tiffany and Pizziferri, Lisa and Volk, Lynn A and Mikels, Debra A and Grant, Karen G and Wald, Jonathan S and Bates, David W},
+	month = dec,
+	year = {2004},
+	note = {{PMID:} 18066391
+{PMCID:} {PMC2047325}},
+	file = {PubMed Central Full Text PDF:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\6QZFKSN4\Wang et al. - 2004 - Implementing Patient Access to Electronic Health R.pdf:application/pdf}
+},
+
+@article{disantostefano_international_2009,
+	title = {International Classification of Diseases 10th Revision ({ICD-10)}},
+	volume = {5},
+	issn = {1555-4155},
+	url = {http://www.sciencedirect.com/science/article/pii/S1555415508005230},
+	doi = {10.1016/j.nurpra.2008.09.020},
+	abstract = {The Department of Health and Human Services ({HHS)} released a proposed regulation that would replace the {ICD-9-CM} code sets currently used to report health care diagnoses and procedures with a new, expanded {ICD-10} coding system.},
+	number = {1},
+	urldate = {2013-08-06},
+	journal = {The Journal for Nurse Practitioners},
+	author = {{DiSantostefano}, Jan},
+	month = jan,
+	year = {2009},
+	pages = {56--57},
+	file = {ScienceDirect Snapshot:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\MIZQHH95\S1555415508005230.html:text/html}
+},
+
+@article{dolin_kaiser_2004,
+	title = {Kaiser Permanente's Convergent Medical Terminology},
+	volume = {107},
+	issn = {0926-9630},
+	abstract = {This paper describes Kaiser Permanente's ({KP)} enterprise-wide medical terminology solution, referred to as our Convergent Medical Terminology ({CMT).} Initially developed to serve the needs of a regional electronic health record, {CMT} has evolved into a core {KP} asset, serving as the common terminology across all applications. {CMT} serves as the definitive source of concept definitions for the organization, provides a consistent structure and access method to all codes used by the organization, and is {KP's} language of interoperability, with cross-mappings to regional ancillary systems and administrative billing codes. The core of {CMT} is comprised of {SNOMED} {CT}, laboratory {LOINC}, and First {DataBank} drug terminology. These are integrated into a single poly-hierarchically structured knowledge base. Cross map sets provide bi-directional translations between {CMT} and ancillary applications and administrative billing codes. Context sets provide subsets of {CMT} for use in specific contexts. Our experience with {CMT} has lead us to conclude that a successful terminology solution requires that: (1) usability considerations are an organizational priority; (2) "interface" terminology is differentiated from "reference" terminology; (3) it be easy for clinicians to find the concepts they need; (4) the immediate value of coded data be apparent to clinician user; (5) there be a well defined approach to terminology extensions. Over the past several years, there has been substantial progress made in the domain coverage and standardization of medical terminology. {KP} has learned to exploit that terminology in ways that are clinician-acceptable and that provide powerful options for data analysis and reporting.},
+	language = {eng},
+	number = {Pt 1},
+	journal = {Studies in health technology and informatics},
+	author = {Dolin, Robert H and Mattison, John E and Cohn, Simon and Campbell, Keith E and Wiesenthal, Andrew M and Hochhalter, Brad and {LaBerge}, Diane and Barsoum, Rita and Shalaby, James and Abilla, Alan and Clements, Robert J and Correia, Carol M and Esteva, Diane and Fedack, John M and Goldberg, Bruce J and Gopalarao, Sridhar and Hafeza, Eza and Hendler, Peter and Hernandez, Enrique and Kamangar, Ron and Kahn, Rafique A and Kurtovich, Georgina and Lazzareschi, Gerry and Lee, Moon H and Lee, Tracy and Levy, David and Lukoff, Jonathan Y and Lundberg, Cyndie and Madden, Michael P and Ngo, Trongtu L and Nguyen, Ben T and Patel, Nikhilkumar P and Resneck, Jim and Ross, David E and Schwarz, Kathleen M and Selhorst, Charles C and Snyder, Aaron and Umarji, Mohamed I and Vilner, Max and Zer-Chen, Roy and Zingo, Chris},
+	year = {2004},
+	note = {{PMID:} 15360832},
+	keywords = {Health Maintenance Organizations, Logical Observation Identifiers Names and Codes, Systematized Nomenclature of Medicine, Terminology as Topic, United States, Vocabulary, Controlled},
+	pages = {346--350}
+},
+
+@inproceedings{jarrar_mashql:_2008,
+	address = {New York, {NY}, {USA}},
+	series = {{ONISW} '08},
+	title = {{MashQL:} a query-by-diagram topping {SPARQL}},
+	isbn = {978-1-60558-255-9},
+	shorttitle = {{MashQL}},
+	url = {http://doi.acm.org/10.1145/1458484.1458499},
+	doi = {10.1145/1458484.1458499},
+	abstract = {This article is motivated by the importance of building web data mashups. Building on the remarkable success of Web 2.0 mashups, and specially Yahoo Pipes, we generalize the idea of mashups and regard the Internet as a database. Each internet data source is seen as a table, and a mashup is seen as a query on these tables. We assume that web data sources are represented in {RDF}, and {SPARQL} is the query language. We propose a query-by-diagram language called {MashQL.} The goal is to allow people to build data mashups diagrammatically. In the background, {MashQL} queries are translated into and executed as {SPARQL} queries. The novelty of {MashQL} is that it allows querying a data source without any prior understanding of the schema or the structure of this source. Users also do not need any knowledge about {RDF/SPARQL} to get started.},
+	urldate = {2013-08-06},
+	booktitle = {Proceedings of the 2nd international workshop on Ontologies and information systems for the semantic web},
+	publisher = {{ACM}},
+	author = {Jarrar, Mustafa and Dikaiakos, Marios D.},
+	year = {2008},
+	keywords = {data web, linked data, mashups, query pipelines, query-by-diagram, {RDF}, Semantic web, {SPARQL}, Web 2.0, Web 3.0},
+	pages = {89–96}
+},
+
+@article{ansell_model_2011,
+	title = {Model and prototype for querying multiple linked scientific datasets},
+	volume = {27},
+	issn = {0167-{739X}},
+	url = {http://www.sciencedirect.com/science/article/pii/S0167739X10001706},
+	doi = {10.1016/j.future.2010.08.016},
+	abstract = {Scientists need to transfer semantically similar queries across multiple heterogeneous linked datasets. These queries may require data from different locations and the results are not simple to combine due to differences between datasets. A query model was developed to make it simple to distribute queries across different datasets using {RDF} as the result format. The query model, based on the concept of publicly recognised namespaces for parts of each scientific dataset, was implemented with a configuration that includes a large number of current biological and chemical datasets. The configuration is flexible, providing the ability to transparently use both private and public datasets in any query. A prototype implementation of the model was used to resolve queries for the {Bio2RDF} website, including both {Bio2RDF} datasets and other datasets that do not follow the {Bio2RDF} {URI} conventions.},
+	number = {3},
+	urldate = {2013-08-05},
+	journal = {Future Generation Computer Systems},
+	author = {Ansell, Peter},
+	month = mar,
+	year = {2011},
+	keywords = {Biology and genetics, Data models, Distributed databases (H.2.4), Distributed systems (H.3.4), Medical information systems, Query formulation},
+	pages = {329--333},
+	file = {ScienceDirect Snapshot:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\9HESKBWE\S0167739X10001706.html:text/html}
+},
+
+@article{archer_personal_2011,
+	title = {Personal health records: a scoping review},
+	volume = {18},
+	issn = {1067-5027},
+	shorttitle = {Personal health records},
+	url = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3128401/},
+	doi = {10.1136/amiajnl-2011-000105},
+	abstract = {Electronic personal health record systems ({PHRs)} support patient centered healthcare by making medical records and other relevant information accessible to patients, thus assisting patients in health self-management. We reviewed the literature on {PHRs} including design, functionality, implementation, applications, outcomes, and benefits. We found that, because primary care physicians play a key role in patient health, {PHRs} are likely to be linked to physician electronic medical record systems, so {PHR} adoption is dependent on growth in electronic medical record adoption. Many {PHR} systems are physician-oriented, and do not include patient-oriented functionalities. These must be provided to support self-management and disease prevention if improvements in health outcomes are to be expected. Differences in patient motivation to use {PHRs} exist, but an overall low adoption rate is to be expected, except for the disabled, chronically ill, or caregivers for the elderly. Finally, trials of {PHR} effectiveness and sustainability for patient self-management are needed.},
+	number = {4},
+	urldate = {2013-08-01},
+	journal = {Journal of the American Medical Informatics Association : {JAMIA}},
+	author = {Archer, N and Fevrier-Thomas, U and Lokker, C and {McKibbon}, K A and Straus, S E},
+	year = {2011},
+	note = {{PMID:} 21672914
+{PMCID:} {PMC3128401}},
+	pages = {515--522},
+	file = {PubMed Central Full Text PDF:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\3D42DINW\Archer et al. - 2011 - Personal health records a scoping review.pdf:application/pdf}
 },
 
 @inproceedings{rector_quality_2011,
@@ -91,8 +335,7 @@
 	author = {Rector, Alan and Iannone, Luigi and Stevens, Robert},
 	year = {2011},
 	keywords = {description logics, modularization, ontologies, {OWL}, quality assurance},
-	pages = {57–64},
-	file = {Quality assurance of the content of a large DL-based terminology using mixed lexical and semantic criteria.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\CGN239ZU\Quality assurance of the content of a large DL-based terminology using mixed lexical and semantic criteria.pdf:application/pdf}
+	pages = {57–64}
 },
 
 @inproceedings{sahoo_role_2012,
@@ -108,7 +351,7 @@
 	year = {2012},
 	keywords = {biomedical ontologies, data integration, health informatics, querying, semantic provenance, semantic web},
 	pages = {881–882},
-	file = {Role of semantic web in health informatics.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\55WH78F3\Role of semantic web in health informatics.pdf:application/pdf}
+	file = {Role of semantic web in health informatics.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\E9WSCABK\Role of semantic web in health informatics.pdf:application/pdf}
 },
 
 @article{sachdeva_semantic_2012,
@@ -124,7 +367,7 @@
 	year = {2012},
 	keywords = {archetype-based {EHR}, data quality in healthcare, electronic health records, {openEHR}, quality-based {EHR}, semantic interoperability, standardization in {EHR}},
 	pages = {1:1–1:37},
-	file = {Semantic interoperability in standardized electronic health record databases.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\5MSSRTF5\Semantic interoperability in standardized electronic health record databases.pdf:application/pdf}
+	file = {Semantic interoperability in standardized electronic health record databases.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\EU6NRXWX\Semantic interoperability in standardized electronic health record databases.pdf:application/pdf}
 },
 
 @inproceedings{taweel_service_2011,
@@ -140,7 +383,90 @@
 	year = {2011},
 	keywords = {data integration, ehealth, interoperability, ontology, semantic web services},
 	pages = {11–17},
-	file = {Service and model-driven dynamic integration of health data.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\AN733VBK\Service and model-driven dynamic integration of health data.pdf:application/pdf}
+	file = {Service and model-driven dynamic integration of health data.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\2WBGD8HT\Service and model-driven dynamic integration of health data.pdf:application/pdf}
+},
+
+@misc{snomed_implementation_guide_snomed_2011,
+	title = {{SNOMED} {CT} Technical Implementation Guide},
+	url = {http://www.ihtsdo.org/fileadmin/user_upload/doc/en_us/toc_tree.html?m=tig},
+	urldate = {2013-08-05},
+	author = {{SNOMED} Implementation Guide, International Health Terminology Standards Development Organization},
+	year = {2011},
+	file = {Snapshot:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\UCQ8KB73\toc_tree.html:text/html;SNOMED_CT_TechnicalImplementationGuide_Current-en-US_INT_20130731.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\UIKWKSR3\SNOMED_CT_TechnicalImplementationGuide_Current-en-US_INT_20130731.pdf:application/pdf}
+},
+
+@techreport{snomed_-_user_guide_snomed_2011,
+	title = {{SNOMED} {CT} User Guide},
+	url = {http://www.ihtsdo.org/fileadmin/user_upload/doc/en_us/toc_tree.html?m=ug},
+	urldate = {2013-08-05},
+	author = {{SNOMED} - User Guide, International Health Terminology Standards Development Organization},
+	year = {2011},
+	file = {Snapshot:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\CX4B6XJ9\toc_tree.html:text/html;SNOMED_CT_UserGuide_Current-en-US_INT_20110731.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\PSBG67HM\SNOMED_CT_UserGuide_Current-en-US_INT_20110731.pdf:application/pdf}
+},
+
+@article{spackman_snomed_1997,
+	title = {{SNOMED} {RT:} a reference terminology for health care.},
+	issn = {1091-8280},
+	shorttitle = {{SNOMED} {RT}},
+	url = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2233423/},
+	abstract = {We describe the framework for {SNOMED} {RT} (Reference Terminology), designed to complement the broad coverage of medical concepts in {SNOMED} with a set of enhanced features that significantly increases its value as a reference terminology for representing clinical data. We describe what is meant by a reference terminology, and differentiate {SNOMED} {RT} from specialized terminologies that enable user interfaces, electronic messaging, or natural language processing, as well as from other specialized reference terminologies whose primary purpose is for representing data that is not primarily clinical in nature. We then describe how {SNOMED} {RT} represents multiple hierarchies and incorporates description logic. We believe that such a comprehensive set of concepts at multiple levels of granularity, with multiple logic-based subsumption hierarchies can meet the requirements of a reference terminology for health care.},
+	urldate = {2013-08-05},
+	journal = {Proceedings of the {AMIA} Annual Fall Symposium},
+	author = {Spackman, K. A. and Campbell, K. E. and {CA?tA(C)}, R. A.},
+	year = {1997},
+	note = {{PMID:} 9357704
+{PMCID:} {PMC2233423}},
+	pages = {640--644},
+	file = {PubMed Central Full Text PDF:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\8USCXKGG\Spackman et al. - 1997 - SNOMED RT a reference terminology for health care.pdf:application/pdf}
+},
+
+@article{van_drimmelen-krabbe_application_1998,
+	title = {The application of the International Statistical Classification of Diseases to neurology: {ICD-10} {NA}},
+	volume = {161},
+	issn = {0022-{510X}},
+	shorttitle = {The application of the International Statistical Classification of Diseases to neurology},
+	url = {http://www.sciencedirect.com/science/article/pii/S0022510X98002172},
+	doi = {10.1016/S0022-510X(98)00217-2},
+	abstract = {Rapid advances in the clinical neurosciences in the last decade have led to considerable amplification of our ability to classify neurological diseases. For these classifications to be widely used, they must be compatible with the {`International} Statistical Classification of Diseases and related health problems' ({ICD)} of the World Health Organization ({WHO)}, which system is used throughout the world for classification of diseases and reasons of death. The {`Ninth'} revision of the {ICD} ({ICD-9)}, published in 1976, is currently in use in a number of Member States of the World Health Organization, including the United States. However, it is expected that by the end of this decade virtually all Member States will have introduced the 10th Revision of the {ICD} ({ICD-10)}, published in 1992. An {`Application} of {ICD-10} to neurology' ({ICD-10} {NA)} has been developed, with a specific coding system for virtually every neurological disease currently recognized. This article describes the structure and background of this work, that is offered as a definitive international classification of neurological disease to be used by clinical and research organizations, governmental and nongovernmental bodies, and for epidemiological and research purposes. It is concordant with the new and proposed classifications of subspecialty neurological organizations.},
+	number = {1},
+	urldate = {2013-08-06},
+	journal = {Journal of the Neurological Sciences},
+	author = {van Drimmelen-Krabbe, {J.J.} and Bradley, {W.G.} and Orgogozo, {J.M.} and Sartorius, N.},
+	month = nov,
+	year = {1998},
+	keywords = {Application to neurology, {ICD-10} Neurological application, International classification of diseases, Neurological application of {ICD-10}},
+	pages = {2--9},
+	file = {ScienceDirect Full Text PDF:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\EQ8AUDC3\van Drimmelen-Krabbe et al. - 1998 - The application of the International Statistical C.pdf:application/pdf;ScienceDirect Snapshot:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\3ETB2FQ8\S0022510X98002172.html:text/html}
+},
+
+@article{eysenbach_semantic_2003,
+	title = {The Semantic Web and healthcare consumers: a new challenge and opportunity on the horizon?},
+	volume = {5},
+	shorttitle = {The Semantic Web and healthcare consumers},
+	url = {http://inderscience.metapress.com/index/B8BNB7RHRLMG1CTU.pdf},
+	number = {3},
+	urldate = {2013-08-05},
+	journal = {International journal of healthcare technology and management},
+	author = {Eysenbach, Gunther},
+	year = {2003},
+	pages = {194–212},
+	file = {download.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\UZFD9WQC\download.pdf:application/pdf}
+},
+
+@article{lindberg_unified_1993,
+	title = {The Unified Medical Language System},
+	volume = {32},
+	issn = {0026-1270},
+	abstract = {In 1986, the National Library of Medicine began a long-term research and development project to build the Unified Medical Language System ({UMLS).} The purpose of the {UMLS} is to improve the ability of computer programs to "understand" the biomedical meaning in user inquiries and to use this understanding to retrieve and integrate relevant machine-readable information for users. Underlying the {UMLS} effort is the assumption that timely access to accurate and up-to-date information will improve decision making and ultimately the quality of patient care and research. The development of the {UMLS} is a distributed national experiment with a strong element of international collaboration. The general strategy is to develop {UMLS} components through a series of successive approximations of the capabilities ultimately desired. Three experimental Knowledge Sources, the Metathesaurus, the Semantic Network, and the Information Sources Map have been developed and are distributed annually to interested researchers, many of whom have tested and evaluated them in a range of applications. The {UMLS} project and current developments in high-speed, high-capacity international networks are converging in ways that have great potential for enhancing access to biomedical information.},
+	language = {eng},
+	number = {4},
+	journal = {Methods of information in medicine},
+	author = {Lindberg, D A and Humphreys, B L and {McCray}, A T},
+	month = aug,
+	year = {1993},
+	note = {{PMID:} 8412823},
+	keywords = {Information Storage and Retrieval, {MEDLINE}, National Library of Medicine ({U.S.)}, Unified Medical Language System, United States},
+	pages = {281--291}
 },
 
 @inproceedings{tao_toward_2011,
@@ -156,7 +482,25 @@
 	year = {2011},
 	keywords = {electronic health records, ontologies, semantic web},
 	pages = {75–78},
-	file = {Toward Semantic Web based Knowledge Representation.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\J9TSHUH2\Toward Semantic Web based Knowledge Representation.pdf:application/pdf}
+	file = {Toward Semantic Web based Knowledge Representation.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\ZH4FTPXZ\Toward Semantic Web based Knowledge Representation.pdf:application/pdf}
+},
+
+@inproceedings{ryan_towards_2006,
+	address = {Darlinghurst, Australia, Australia},
+	series = {{AOW} '06},
+	title = {Towards semantic interoperability in healthcare: ontology mapping from {SNOMED-CT} to {HL7} version 3},
+	isbn = {1-920-68253-8},
+	shorttitle = {Towards semantic interoperability in healthcare},
+	url = {http://dl.acm.org/citation.cfm?id=1273659.1273668},
+	abstract = {One of the most successful Healthcare Information Models is version 2 of the Health Level 7 ({HL7)} standard. However, this standard has various problems, mainly its lack of semantic interoperability. This shortfall was addressed in {HL7} Version 3, a newer standard which has been designed to solve this problem. Total semantic interoperability cannot be achieved without defined terminology, and to this end the use of the Systemised Nomenclature of Medicine - Clinical Terms ({SNOMED-CT)} is proposed. The difficulty arrives when deciding how to integrate the information model and the terminology. The line between where one ends and the other begins is often indistinct. This paper describes a proposal for normalising the two using ontology mapping and basing {HL7} message models on {SNOMED-CT} concepts and their relationships, in an effort to further total semantic interoperability and seamless communication between healthcare entities.},
+	urldate = {2013-08-05},
+	booktitle = {Proceedings of the second Australasian workshop on Advances in ontologies - Volume 72},
+	publisher = {Australian Computer Society, Inc.},
+	author = {Ryan, Amanda},
+	year = {2006},
+	keywords = {Health Informatics, {HL7}, interoperability, ontology mapping, {SNOMED-CT}},
+	pages = {69–74},
+	file = {Towards Semantic Interoperability in Healthcare.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\PSSP7UUS\Towards Semantic Interoperability in Healthcare.pdf:application/pdf}
 },
 
 @inproceedings{van_den_braak_trusted_2012,
@@ -172,7 +516,62 @@
 	year = {2012},
 	keywords = {data integration, data sharing, public sector, trusted third parties},
 	pages = {135–144},
-	file = {Trusted third parties for secure and privacy-preserving data integration and sharing in the public sector.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\UJ3XZHQ2\Trusted third parties for secure and privacy-preserving data integration and sharing in the public sector.pdf:application/pdf}
+	file = {Trusted third parties for secure and privacy-preserving data integration and sharing in the public sector.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\GAWIWSM6\Trusted third parties for secure and privacy-preserving data integration and sharing in the public sector.pdf:application/pdf}
+},
+
+@article{kroth_using_2012,
+	title = {Using {LOINC} to link 10 terminology standards to one unified standard in a specialized domain},
+	volume = {45},
+	issn = {1532-0464},
+	shorttitle = {Translating Standards into Practice: Experiences and Lessons Learned in Biomedicine and Health Care},
+	url = {http://www.sciencedirect.com/science/article/pii/S1532046411001699},
+	doi = {10.1016/j.jbi.2011.10.003},
+	abstract = {Despite the existence of multiple standards for the coding of biomedical data and the known benefits of doing so, there remain a myriad of biomedical information domain spaces that are essentially un-coded and unstandardized. Perhaps a worse situation is when the same or similar information in a given domain is coded to a variety of different standards. Such is the case with cephalometrics – standardized measurements of angles and distances between specified landmarks on X-ray film used for orthodontic treatment planning and a variety of research applications. We describe how we unified the existing cephalometric definitions from 10 existing cephalometric standards to one unifying terminology set using an existing standard ({LOINC).} Using our example of an open and web-based orthodontic case file system, we describe how this work benefited our project and discuss how adopting or expanding established standards can benefit other similar projects in specialized domains.},
+	number = {4},
+	urldate = {2013-08-06},
+	journal = {Journal of Biomedical Informatics},
+	author = {Kroth, Philip J. and Daneshvari, Shamsi and Harris, Edward F. and Vreeman, Daniel J. and Edgar, Heather {J.H.}},
+	month = aug,
+	year = {2012},
+	keywords = {Cephalometry, Information Storage and Retrieval, Logical Observation Identifiers Names and Codes, Systems integration, Terminology as Topic},
+	pages = {674--682},
+	file = {ScienceDirect Snapshot:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\4X9IX2FQ\S1532046411001699.html:text/html}
+},
+
+@inproceedings{jiang_using_2012,
+	address = {New York, {NY}, {USA}},
+	series = {{SWAT4LS} '11},
+	title = {Using semantic web technology to support {ICD-11} textual definitions authoring},
+	isbn = {978-1-4503-1076-5},
+	url = {http://doi.acm.org/10.1145/2166896.2166910},
+	doi = {10.1145/2166896.2166910},
+	abstract = {The beta phase of the 11th revision of International Classification of Diseases ({ICD-11)} intends to accept public input through a distributed model of crowdsourcing. One of the core use cases is to create textual definitions for the {ICD} categories. The objective of the present study is to design, develop and evaluate approaches to support {ICD-11} textual definitions authoring using Semantic Web technology. We investigated a number of heterogeneous resources related to the definitions of diseases, including the linked open data ({LOD)} from {DBpedia}, the textual definitions from the {UMLS} and the formal definitions of {SNOMED} {CT.} We integrated them in a Semantic Web framework (i.e. linked data in a {RDF} triple store), which is being proposed as a backend in a prototype platform for collaborative authoring of {ICD-11} beta. We performed a preliminary evaluation on the usefulness of our approaches and discussed the potential challenges from both technical and clinical perspectives.},
+	urldate = {2013-08-06},
+	booktitle = {Proceedings of the 4th International Workshop on Semantic Web Applications and Tools for the Life Sciences},
+	publisher = {{ACM}},
+	author = {Jiang, Guoqian and Solbrig, Harold R. and Chute, Christopher G.},
+	year = {2012},
+	keywords = {{DBpedia}, {ICD-11}, {RDF}, semantic web technology, {SNOMED} {CT}, {SPARQL}},
+	pages = {38–44}
+},
+
+@incollection{benson_using_2010,
+	series = {Health Informatics},
+	title = {Using {SNOMED} and {HL7} Together},
+	copyright = {©2010 Springer-Verlag London},
+	isbn = {978-1-84882-802-5, 978-1-84882-803-2},
+	url = {http://link.springer.com/chapter/10.1007/978-1-84882-803-2_13},
+	abstract = {One of the lessons of the past few years is that we cannot separate the issues of information structure from those of terminology. The idea that syntax and semantics are independent has been shown to be an oversimplification. We cannot slot any terminology into any data structure and expect it to work. Perhaps, it is surprising that for so many years, so many people thought that we could. After all, in every spoken language, such as English, the grammar (syntax) and words (terminology) have evolved together. For reasons, which seemed good at the time, the standards development organization responsible for healthcare terminologies (such as {SNOMED} {CT)}, message syntaxes (such as the {HL7} V2 and V3) and information models, developed independently and in parallel. The main justification was the perceived need to interoperate with a wide range of legacy schemes and to meet the needs of different national requirements and languages. {SNOMED} {CT} was designed to be syntax-neutral, so it could work with any syntax. Reference models such as the {HL7} {RIM} and {EN} 13606 set out to be terminology-neutral.},
+	language = {en},
+	urldate = {2013-08-05},
+	booktitle = {Principles of Health Interoperability {HL7} and {SNOMED}},
+	publisher = {Springer London},
+	author = {Benson, Tim},
+	month = jan,
+	year = {2010},
+	keywords = {Health Informatics, {Medicine/Public} Health, general, Public {Health/Gesundheitswesen}},
+	pages = {217--225},
+	file = {Snapshot:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\M4B49QA2\10.html:text/html}
 },
 
 @inproceedings{wei_using_2012,
@@ -188,5 +587,5 @@
 	year = {2012},
 	keywords = {concept, concept grouping, quality assurance, semantic type, semantic type assignment, snomed, terminology, umls},
 	pages = {825–830},
-	file = {Using SNOMED semantic concept groupings to enhance semantic-type assignment consistency in the UMLS.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\VHBSG9GE\Using SNOMED semantic concept groupings to enhance semantic-type assignment consistency in the UMLS.pdf:application/pdf}
+	file = {Using SNOMED semantic concept groupings to enhance semantic-type assignment consistency in the UMLS.pdf:C:\Users\sankhesh.jhaveri\AppData\Roaming\Zotero\Zotero\Profiles\y3oum7uw.default\zotero\storage\RVP4WD3M\Using SNOMED semantic concept groupings to enhance semantic-type assignment consistency in the UMLS.pdf:application/pdf}
 }
