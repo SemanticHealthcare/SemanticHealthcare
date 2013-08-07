@@ -8,6 +8,7 @@
 \usepackage{booktabs} % Horizontal rules in tables
 \usepackage[svgnames]{xcolor} % Enabling colors by their 'svgnames'
 \usepackage{fix-cm}	 % Custom font sizes - used for the initial letter in the document
+\usepackage{graphicx} % Inserting figures and images
 
 \usepackage{sectsty} % Enables custom section titles
 \allsectionsfont{\usefont{OT1}{phv}{b}{n}} % Change the font of all section commands
@@ -86,51 +87,116 @@
 
 \begin{document}
 
+  \maketitle
 
-\maketitle
+  \begin{minipage}[t]{\textwidth}
+    \center{\usefont{OT1}{phv}{b}{n}\contentsname}
+    \begin{flushleft}
+      \makeatletter
+      \@starttoc{toc}
+      \makeatother
+    \end{flushleft}
+  \end{minipage}
 
-\begin{minipage}[t]{\textwidth}
-\center{\bfseries\contentsname}
-\begin{center}
-\makeatletter
-\@starttoc{toc}
-\makeatother
-\end{center}
-\end{minipage}
+  \thispagestyle{fancy} % Enabling the custom headers/footers for the first page
+  %----------------------------------------------------------------------------------------
+  \section[Systematized Nomenclature in Medicine Clinical Terms ( SNOMED CT )]{SNOMED CT}
 
-\thispagestyle{fancy} % Enabling the custom headers/footers for the first page
-%----------------------------------------------------------------------------------------
-\section[Systematized Nomenclature in Medicine - Clinical Terms ( SNOMED CT )]{SNOMED CT}
-\section[Systematized Nomenclature in Medicine - Reference Terminology ( SNOMED  RT )]{SNOMED RT}
-\section[Healthcare Data Dictionary ( HDD )]{HDD}
-\section[Convergent Medical Terminology ( CMT )]{CMT}
-\section[International Classification of Diseases ( ICD )]{ICD}
-\section[Logical Observation Identifier Names and Codes terminology ( LOINC )]{LOINC}
-\section[Bio2RDF]{BIo2RDF}
-\section[Fast Health Interoperable Resources (HL7/FHIR)]{HL7/FHIR}
-\section[Nationwide Health Information Network ( NwHIN )]{NwHIN}
-\section[Resource Description Framework (RDF)]{RDF}
-\section[SPARQL Protocol and RDF Query Language (SPARQL)]{SPARQL}
-\section[FileMan Query Language ( FMQL )]{FMQL}
+  \initial{S}\textit{ystematized Nomenclature in Medicine - Clinical Terms ( SNOMED CT )}\
+   is a comprehensive, multilingual clinical terminology that provides clinical content and\
+   expressivity for clinical documentation and reporting. It can be used to code, retrieve\
+   and analyze clinical data. SNOMED CT is a used widely to achieve semantic uniformity\
+   and consistency of health terms as well as to achieve interoperability between HL7\
+   (Health Level 7) based health frameworks and other healthcare entities\
+   \cite{ryan_towards_2006,arguello_executing_2009,khan_achieving_2012}.\
+   In a nutshell, SNOMED CT consists of concepts arranged in a hierarchy, connected\
+   by relationships. The International Health Terminology Standards Development Organization\
+   (IHTSDO) owns and administers the rights to SNOMED CT.\\
 
-\initial{S}\textit{ystematized Nomenclature in Medicine - Clinical Terms ( SNOMED CT )} is a comprehensive, multilingual clinical terminology that provides clinical content and expressivity for clinical documentation and reporting. It can be used to code, retrieve and analyze clinical data. In a nutshell, SNOMED CT consists of concepts arranged in a hierarchy, connected by relationships. The International Health Terminology Standards Development Organization (IHTSDO) owns and administers the rights to SNOMED CT.\\
+  According to \cite{snomed_-_user_guide_snomed_2011}, there are three basic\
+  components of SNOMED CT:
+  \begin{itemize}
+    \itemsep0em
+	  \item{Concepts}
+	  \item{Descriptions}
+	  \item{Relationships}
+  \end{itemize}
 
-There are three basic components of SNOMED CT:
-\begin{itemize}
-	\item{Concepts}
-	\item{Descriptions}
-	\item{Relationships}
-\end{itemize}
+\subsection{Concepts}
+  Concepts are clinical ideas, ranging from \emph{abscess} to \emph{zygote},\
+  identified by a unique numeric identifier (\textit{ConceptId}) that never changes\
+  and represented by a unique human readable \textit{Fully Specified Name (FSN)}.\
+  The concepts are formally defined in terms of their Relationships with other concepts.\
+  These logical definitions give explicit meaning which a computer can process and query\
+  on. Every concept also has a set of terms that name the concept in a human-readable\
+  way. There are well over 300,000 active concepts in the terminology with differing levels\
+  of granularity linked to one another by \textbar ~is a \textbar ~relationships as depicted\
+  in Figure \ref{fig:snomedct_concepts_granularity}. 
+    \begin{figure}[h!]
+    \centering
+    \includegraphics[scale=1]{granularity.png}
+    \caption{Multiple levels of granularity}\cite[Fig.~1]{snomed_-_user_guide_snomed_2011}
+    \label{fig:snomedct_concepts_granularity}
+  \end{figure}
 
-\textbf{Concepts} are clinical ideas, ranging from abscess to zygote, identified by a unique numeric identifier (\textit{ConceptId}) that never changes and represented by a unique human readable \textit{Fully Specified Name (FSN)}\cite{snomed_-_user_guide_snomed_2011,snomed_implementation_guide_snomed_2011}.
+  \noindent Concept identifiers in SNOMED CT are meaningless to avoid changes to\
+  reflect revised understanding of the nature of a disorder. Meaningless identifiers\
+  also enable multiple aspects of meaning to be represented in the same way.\\
+  
+\subsection{Descriptions}
+  Concept Descriptions are the terms or names assigned to a SNOMED CT concept.\
+  A unique DescriptionId  identifies a Description. Multiple Descriptions might be\
+  associated with a concept identified by a ConceptId. There are nearly a million\
+  English Descriptions in the International Release of SNOMED CT. Each translation\ 
+  of SNOMED CT includes an additional set of descriptions, which link terms in another\
+  language to the same SNOMED CT concepts.
+  
+ \noindent\textbf{\emph{Example:}}
+Some of the Descriptions associated with \emph{ConceptId} 22298006:
+  \begin{itemize}
+    \itemsep0em
+    \item{Fully Specified Name: | Myocardial infarction (disorder) | \emph{DescriptionId}\
+    751689013}
+    \item{Preferred term: Myocardial infarction \emph{DescriptionId} 37436014}
+    \item{Synonym: Cardiac infarction \emph{DescriptionId} 37442013}
+    \item{Synonym: Heart attack \emph{DescriptionId} 37443015}
+    \item{Synonym: Infarction of heart \emph{DescriptionId} 37441018}
+  \end{itemize}
+  Each of the above Descriptions has a unique \emph{DescriptionId}, and all of these\
+  Descriptions are associated with a single Concept (and the single \emph{ConceptId} 22298006).\\
 
+\subsection{Relationships}
+  SNOMED CT Relationships link each concept to other concepts that have a related\
+  meaning. These relationships provide formal definitions and other characteristics of\
+  the concept. One type of link is the \textbar ~is a \textbar ~relationship which\
+  relates a concept to the its more general concepts. For example, the concept\
+  ``viral pneumonia'' has an \textbar ~is a \textbar ~relationship to the more\
+  general concept ``pneumonia''. These \textbar ~is a \textbar ~relationships\
+  define the hierarchy of SNOMED CT concepts. Other types of relationships\
+  represent other aspects of the definition of a concept. For example, the concept\
+  ``bacterial pneumonia'' has a \textbar ~causative agent \textbar ~relationship to\
+  the concept ``bacteria'' and a \textbar ~finding site \textbar ~relationship to the\
+  concept ``lung structure''. There are well over a million relationships in SNOMED CT.
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{defining_relationship_example1.png}
+    \caption{Illustration of Defining Relationships}\cite[Fig.~7]{snomed_-_user_guide_snomed_2011}
+    \label{fig:snomedct_relationships}
+  \end{figure}
 
-%----------------------------------------------------------------------------------------
-%	REFERENCE LIST
-%----------------------------------------------------------------------------------------
+\subsection{Implementation}
+  SNOMED CT is distributed as a set of tab-delimited text files that can be\
+  imported into a relational database. The three tables - the Concepts table,\
+  the Descriptions table and the Relationships table are commonly referred to\
+  as \emph{Core Components}~\cite{snomed_implementation_guide_snomed_2011}.\
+  Supplementary tables called \emph{Reference Sets} specify the common extensible\
+  pattern that is used to add additional information related to the core components.
+   %----------------------------------------------------------------------------------------
+  %	REFERENCE LIST
+  %----------------------------------------------------------------------------------------
 
-\bibliographystyle{apalike}
-\bibliography{SemanticHealthcare}{}
+  \bibliographystyle{apalike}
+  \bibliography{SemanticHealthcare}{}
 
 %----------------------------------------------------------------------------------------
 
