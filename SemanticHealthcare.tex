@@ -10,8 +10,8 @@
 \usepackage{fix-cm}	 % Custom font sizes - used for the initial letter in the document
 \usepackage{graphicx} % Inserting figures and images
 
-\usepackage{sectsty} % Enables custom section titles
-\allsectionsfont{\usefont{OT1}{phv}{b}{n}} % Change the font of all section commands
+%\usepackage{sectsty} % Enables custom section titles
+%\allsectionsfont{\usefont{OT1}{phv}{b}{n}} % Change the font of all section commands
 
 \usepackage{fancyhdr} % Needed to define custom headers/footers
 \pagestyle{fancy} % Enables the custom headers/footers
@@ -81,7 +81,7 @@
 
 \date{} % Add a date here if you would like one to appear underneath the title block
 
-\setcounter{secnumdepth}{0} % All sections start from depth 1
+%\setcounter{secnumdepth}{0} % All sections start from depth 0
 
 %----------------------------------------------------------------------------------------
 
@@ -99,13 +99,47 @@
   \end{minipage}
 
   \thispagestyle{fancy} % Enabling the custom headers/footers for the first page
-  %----------------------------------------------------------------------------------------
-  \section[Systematized Nomenclature in Medicine Clinical Terms ( SNOMED CT )]{SNOMED CT}
 
-  \initial{S}\textit{ystematized Nomenclature in Medicine - Clinical Terms ( SNOMED CT )}\
+%----------------------------------------------------------------------------------------
+%	SNOMED RT
+%----------------------------------------------------------------------------------------
+   \section[Systematized Nomenclature in Medicine  Reference Terminology (SNOMED RT\textsuperscript{\textregistered})]
+   {SNOMED RT\textsuperscript{\textregistered}}
+   \label{sec:snomedrt}
+   
+   \initial{S}\textit{ystematized Nomenclature in Medicine Reference Terminology\\ (SNOMED RT)}\
+   represents the initial step towards unifying various clinical terms in healthcare. SNOMED RT was\
+   designed to complement the broad coverage of medical concepts in SNOMED with a set of\
+   enhanced features that significantly increased its value as a reference terminology for\
+   representing clinical data~\cite{spackman_snomed_1997}. SNOMED RT was developed by\
+   the College of American Pathologists (CAP).\\
+   
+  \noindent SNOMED RT is a concept-based terminology. A \emph{concept} is a unit\
+  of thought that refers to a unique, clearly defined entity. An example is ``Fundus of stomach''.\
+  A \emph{term} is a particular lexical string or expression that represents a concept.\
+  Terms are used in clinical information systems or other healthcare applications.\
+  In SNOMED RT, we use \emph{description} to refer to terms that are linked\
+  to concepts in core tables. This imparts a specific, nonambiguous meaning to each\
+  term. A single concept may have one or more associated descriptions. One description\
+  in each concept is designated the \emph{preferred name}, and the others are called\
+  \emph{synonyms}.
+
+
+%----------------------------------------------------------------------------------------
+%	SNOMED CT
+%----------------------------------------------------------------------------------------
+
+  \section[Systematized Nomenclature in Medicine Clinical Terms\\ (SNOMED CT\textsuperscript{\textregistered})]
+  {SNOMED CT\textsuperscript{\textregistered}}
+  \label{sec:snomedct}
+
+  \initial{S}\textit{ystematized Nomenclature in Medicine Clinical Terms (SNOMED CT)}\
    is a comprehensive, multilingual clinical terminology that provides clinical content and\
    expressivity for clinical documentation and reporting. It can be used to code, retrieve\
    and analyze clinical data.\
+   SNOMED CT was formed by the merger, expansion and restructuring of SNOMED RT\
+   (described in section~\ref{sec:snomedrt}) and the United Kingdom National Health Service (NHS)\
+   Clinical Terms (also known as the Read Codes).\
    In a nutshell, SNOMED CT consists of concepts arranged in a hierarchy, connected\
    by relationships. The International Health Terminology Standards Development Organization\
    (IHTSDO) owns and administers the rights to SNOMED CT.\\
@@ -119,7 +153,7 @@
 	  \item{Relationships}
   \end{itemize}
 
-\subsection{Concepts}
+  \subsection{Concepts}
   Concepts are clinical ideas, ranging from \emph{abscess} to \emph{zygote},\
   identified by a unique numeric identifier (\textit{ConceptId}) that never changes\
   and represented by a unique human readable \textit{Fully Specified Name (FSN)}.\
@@ -129,10 +163,10 @@
   way. There are well over 300,000 active concepts in the terminology with differing levels\
   of granularity linked to one another by \textbar ~is a \textbar ~relationships as depicted\
   in Figure \ref{fig:snomedct_concepts_granularity}. 
-    \begin{figure}[h!]
+    \begin{figure}[!ht]
     \centering
     \includegraphics[scale=1]{granularity.png}
-    \caption{Multiple levels of granularity}\cite[Fig.~1]{snomed_-_user_guide_snomed_2011}
+    \caption{SNOMED CT - Multiple levels of granularity}\cite[Fig.~1]{snomed_-_user_guide_snomed_2011}
     \label{fig:snomedct_concepts_granularity}
   \end{figure}
 
@@ -140,7 +174,7 @@
   reflect revised understanding of the nature of a disorder. Meaningless identifiers\
   also enable multiple aspects of meaning to be represented in the same way.\\
   
-\subsection{Descriptions}
+  \subsection{Descriptions}
   Concept Descriptions are the terms or names assigned to a SNOMED CT concept.\
   A unique DescriptionId  identifies a Description. Multiple Descriptions might be\
   associated with a concept identified by a ConceptId. There are nearly a million\
@@ -148,8 +182,8 @@
   of SNOMED CT includes an additional set of descriptions, which link terms in another\
   language to the same SNOMED CT concepts.
   
- \noindent\textbf{\emph{Example:}}
-Some of the Descriptions associated with \emph{ConceptId} 22298006:
+  \noindent\textbf{\emph{Example:}}
+  Some of the Descriptions associated with \emph{ConceptId} 22298006:
   \begin{itemize}
     \itemsep0em
     \item{Fully Specified Name: | Myocardial infarction (disorder) | \emph{DescriptionId}\
@@ -162,7 +196,7 @@ Some of the Descriptions associated with \emph{ConceptId} 22298006:
   Each of the above Descriptions has a unique \emph{DescriptionId}, and all of these\
   Descriptions are associated with a single Concept (and the single \emph{ConceptId} 22298006).\\
 
-\subsection{Relationships}
+  \subsection{Relationships}
   SNOMED CT Relationships link each concept to other concepts that have a related\
   meaning. These relationships provide formal definitions and other characteristics of\
   the concept. One type of link is the \textbar ~is a \textbar ~relationship which\
@@ -174,10 +208,10 @@ Some of the Descriptions associated with \emph{ConceptId} 22298006:
   ``bacterial pneumonia'' has a \textbar ~causative agent \textbar ~relationship to\
   the concept ``bacteria'' and a \textbar ~finding site \textbar ~relationship to the\
   concept ``lung structure''. There are well over a million relationships in SNOMED CT.
-  \begin{figure}[h!]
+  \begin{figure}[!ht]
     \centering
     \includegraphics[scale=0.5]{defining_relationship_example1.png}
-    \caption{Illustration of Defining Relationships}\cite[Fig.~7]{snomed_-_user_guide_snomed_2011}
+    \caption{SNOMED CT - Illustration of Defining Relationships}\cite[Fig.~7]{snomed_-_user_guide_snomed_2011}
     \label{fig:snomedct_relationships}
   \end{figure}
 
@@ -190,19 +224,23 @@ Some of the Descriptions associated with \emph{ConceptId} 22298006:
   pattern that is used to add additional information related to the core components.
 
   \subsection{Summary}
-   SNOMED CT is a used widely to achieve semantic uniformity\
-   and consistency of health terms as well as to achieve interoperability between HL7\
-   (Health Level 7) based health frameworks and other healthcare entities as shown\
-   by the works in \cite{ryan_towards_2006,arguello_executing_2009,khan_achieving_2012}.\
-   Not only does it provide unique semantic identifiers to clinical concepts, SNOMED CT\
-   also describes and links different concepts in an ontogolical fashion.\
-   While SNOMED CT has emerged internationally as a leading terminology, the work of\
-   \cite{he_clinical_2012, khare_exploiting_2012} delineates that the existing SNOMED CT\
-   lexicon suffers from a surprisingly huge paucity of synonyms.\
-   Efforts are underway to reduce SNOMED CT's structural complexity\
-   and provide a metathesaurus of clinical concepts with mappings to different terminologies,\
-   thereby improving semantic integrity in practical healthcare scenarios.\
-   \cite{lindberg_unified_1993,wei_using_2012}
+  SNOMED CT is a used widely to achieve semantic uniformity\
+  and consistency of health terms as well as to achieve interoperability between HL7\
+  (Health Level 7) based health frameworks and other healthcare entities as shown\
+  by the works in \cite{ryan_towards_2006,arguello_executing_2009,khan_achieving_2012}.\
+  Not only does it provide unique semantic identifiers to clinical concepts, SNOMED CT\
+  also describes and links different concepts in an ontogolical fashion.\
+  While SNOMED CT has emerged internationally as a leading terminology, the work of\
+  \cite{he_clinical_2012, khare_exploiting_2012} delineates that the existing SNOMED CT\
+  lexicon suffers from a surprisingly huge paucity of synonyms.\
+  Efforts are underway to reduce SNOMED CT's structural complexity\
+  and provide a metathesaurus of clinical concepts with mappings to different terminologies,\
+  thereby improving semantic integrity in practical healthcare scenarios.\
+  \cite{lindberg_unified_1993,wei_using_2012}
+
+%----------------------------------------------------------------------------------------
+%	RDF
+%----------------------------------------------------------------------------------------
 
 \section[Healthcare Data Dictionary ( HDD) ]{HDD}
 
@@ -267,11 +305,18 @@ Query Nuance: from the precise - SELECT - to the broader - DESCRIBE - or just CO
  and graphical layouts, paging and filtering.
 \end{enumerate}
 \includegraphics[scale=0.4]{fmqlFromFileMan.png}
+<<<<<<< HEAD
 \cite{bouamrane_overview_2012}
 
    %----------------------------------------------------------------------------------------
   %	REFERENCE LIST
   %----------------------------------------------------------------------------------------
+=======
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+>>>>>>> 28731a4cc50789a625bbbd352d97ead582ccd0c1
 
   \bibliographystyle{apalike}
   \bibliography{SemanticHealthcare}{}
