@@ -242,19 +242,6 @@
 %	RDF
 %----------------------------------------------------------------------------------------
 
-\section[Healthcare Data Dictionary ( HDD) ]{HDD}
-
-\section[International Classification of Diseases ( ICD ) ]{ICD}
-
-\section[Logical Observation Identifier Names and Codes terminology ( LOINC )] {LOINC}
-
-\subsection{How we can use it}
-
-\subsection{How is data stored/API's}
-
-\section[Fast Healthcare Interoperability Resources (HL7/FHIR )]{HL7/FHIR }
-
-\section[Nationwide Health Information Network (NwHIN)]{NwHIN}
 
  \section[Resource Description Framework (RDF)]{RDF}
 
@@ -271,24 +258,70 @@ An example would be the following,
 
 \subsection{Why this model be useful for our application}
 
-
 \subsection{Comparison with other data models}
+
+%----------------------------------------------------------------------------------------
+%	HDD
+%----------------------------------------------------------------------------------------
+
+\section[Healthcare Data Dictionary ( HDD) ]{HDD}
+
+
+%----------------------------------------------------------------------------------------
+%	ICD
+%----------------------------------------------------------------------------------------
+
+\section[International Classification of Diseases ( ICD ) ]{ICD}
+
+%----------------------------------------------------------------------------------------
+%	LOINC
+%----------------------------------------------------------------------------------------
+
+\section[Logical Observation Identifier Names and Codes terminology ( LOINC )] {LOINC}
+
+\subsection{How we can use it}
+
+\subsection{How is data stored/API's}
+
+%----------------------------------------------------------------------------------------
+%	HL7/FHIR
+%----------------------------------------------------------------------------------------
+
+\section[Fast Healthcare Interoperability Resources (HL7/FHIR )]{HL7/FHIR }
+
+%----------------------------------------------------------------------------------------
+%	NwHIN
+%----------------------------------------------------------------------------------------
+
+\section[Nationwide Health Information Network (NwHIN)]{NwHIN}
+
+%----------------------------------------------------------------------------------------
+%	SPARQL
+%----------------------------------------------------------------------------------------
 
 \section[SPARQL Protocol and RDF Query Language (SPARQL)]{SPARQL}
 
 \initial{S}\textit{SPARQL Protocol and RDF Query Language (SPARQL}]\
-is a W3C recommend standard for querying RDF data.\
-It allows one to query remote RDF resources, in a manner similar to the querying of databases using SQL.\ 
-A SPARQL query is a set of graph patterns; any data triple matching these patterns is added to the query results.\\
+		is a W3C recommend standard for querying RDF data.\
+		It allows one to query remote RDF resources, in a manner similar to the querying of databases using SQL.\
+		A SPARQL query is a set of graph patterns; any data triple matching these patterns is added to the query results.\\
+		
+		\subsection{Alternatives}
+		SquishQL (http://www.techrepublic.com/article/squishql-the-simplest-rdf-query-language/)//
+		
+		\subsection{Examples}
 
-\subsection{Alternatives}
-SquishQL (http://www.techrepublic.com/article/squishql-the-simplest-rdf-query-language/)//
+%----------------------------------------------------------------------------------------
+% 	BIO2RDF
+%----------------------------------------------------------------------------------------
 
-\subsection{Examples}
+\section[Bio2RDF]{Bio2RDF}
 
-\section[Bio2RDF]{HL7/FHIR }
+%----------------------------------------------------------------------------------------
+%	FMQL
+%----------------------------------------------------------------------------------------
 
- \section[FileMan Query Language (FMQL)]{FMQL}
+\section[FileMan Query Language (FMQL)]{FMQL}
 
 \initial{F}\textit{ileMan Query Language (FMQL)}\
 is a Query Language that provides access to both FileMan data\
@@ -304,19 +337,11 @@ Data Formats: a consistent form of JSON, the web-friendly response format, for e
 Query Nuance: from the precise - SELECT - to the broader - DESCRIBE - or just COUNT, covers data hierarchies\
  and graphical layouts, paging and filtering.
 \end{enumerate}
-\includegraphics[scale=0.4]{fmqlFromFileMan.png}
-<<<<<<< HEAD
-\cite{bouamrane_overview_2012}
+\includegraphics[scale=0.4]{fmqlFromFileMan.png}\\
 
    %----------------------------------------------------------------------------------------
   %	REFERENCE LIST
   %----------------------------------------------------------------------------------------
-=======
-
-%----------------------------------------------------------------------------------------
-%	REFERENCE LIST
-%----------------------------------------------------------------------------------------
->>>>>>> 28731a4cc50789a625bbbd352d97ead582ccd0c1
 
   \bibliographystyle{apalike}
   \bibliography{SemanticHealthcare}{}
