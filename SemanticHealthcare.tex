@@ -56,7 +56,7 @@
 
 \newcommand{\HorRule}{\color{DarkGoldenrod} \rule{\linewidth}{1pt}} % Defines the gold horizontal rule around the title
 
-\pretitle{ \vspace{-150pt}\begin{flushleft} \HorRule \fontsize{40}{40} \usefont{OT1}{phv}{b}{n} \color{DarkRed} \selectfont} % Horizontal rule before the title
+\pretitle{\vspace{-150pt} \begin{flushleft} \HorRule \fontsize{40}{40} \usefont{OT1}{phv}{b}{n} \color{DarkRed} \selectfont} % Horizontal rule before the title
 
 \title{Semantic Healthcare} % Your article title
 
@@ -88,16 +88,7 @@
 \begin{document}
 
   \maketitle
-
-  \begin{minipage}[t]{\textwidth}
-    \center{\usefont{OT1}{phv}{b}{n}\contentsname}
-    \begin{flushleft}
-      \makeatletter
-      \@starttoc{toc}
-      \makeatother
-    \end{flushleft}
-  \end{minipage}
-
+  \tableofcontents
   \thispagestyle{fancy} % Enabling the custom headers/footers for the first page
 
 %----------------------------------------------------------------------------------------
@@ -116,15 +107,44 @@
    
   \noindent SNOMED RT is a concept-based terminology. A \emph{concept} is a unit\
   of thought that refers to a unique, clearly defined entity. An example is ``Fundus of stomach''.\
+  \begin{table}[ht!]
+    \centering
+    \begin{tabular}{| l | l | l |}
+      \hline
+      Concept Code & Descriptions                      & Status \\ \hline \hline
+      D3-89550        & Cerebrovascular accident & Preferred name\\
+                              & CVA                                   & Synonym\\
+                              & Stroke                               & Synonym\\                   
+      \hline
+      \end{tabular}
+    \caption{SNOMED RT - Concepts, Descriptions and Synonyms}\cite[Table.~1]{a_y_wang_mapping_2001}
+    \label{tab:snomedrt_example}
+  \end{table}
   A \emph{term} is a particular lexical string or expression that represents a concept.\
   Terms are used in clinical information systems or other healthcare applications.\
   In SNOMED RT, we use \emph{description} to refer to terms that are linked\
   to concepts in core tables. This imparts a specific, nonambiguous meaning to each\
   term. A single concept may have one or more associated descriptions. One description\
   in each concept is designated the \emph{preferred name}, and the others are called\
-  \emph{synonyms}.
-
-
+  \emph{synonyms}(See Table~\ref{tab:snomedrt_example}). Term and description have often been used\
+  interchangeably in the past. However, the two are being distinguished because\
+  a term can be associated with different concepts in the clinical information\
+  systems depending on context, but a description is ideally non-ambiguous\
+  and always associated with a concept.\\
+  
+  \noindent Some of the fundamental aspects of SNOMED RT~\cite{dolin_snomed_2001} are:
+  \begin{itemize}
+    \itemsep0em
+    \item Hierarchies in SNOMED RT represent strict supertype-subtype relationships.\
+    Therefore, a child concept is necessarily always a kind of the parent concept.\\
+    \item Concepts are defined by their placement in a (poly)hierarchy and by additional\
+    properties called ``Relationship Types'' or ``Roles'', whose target values are also\
+    SNOMED concepts. For example, Appendectomy (P1-57450) has an\
+    ``ASSOCIATED-TOPOGRAPHY'' role, whose value is Appendix (T-59200).\\
+    \item SNOMED RT contains textual definitions, which are especially valuable when\
+    the underlying description logic is unable to define a procedure fully.\\
+  \end{itemize}
+  
 %----------------------------------------------------------------------------------------
 %	SNOMED CT
 %----------------------------------------------------------------------------------------
