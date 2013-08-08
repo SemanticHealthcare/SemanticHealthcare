@@ -268,7 +268,7 @@
 \initial{R}\textit{esource Description Framework (RDF)}\
 is a World Wide Web Consortium (W3C) standardized data model for representing\
 semantic Web resources. It uses graphs to represent information using a triple-based\
- notation comprising a subject, predicate and an object. All these entities can be uniquely identified by Internationalized Resource Identifiers (IRIs).\\
+ notation comprising a subject, predicate and an object. All these entities can be uniquely identified by Internationalized Resource Identifiers (IRIs).\
 
 \subsection{How we can use it}
 
@@ -294,9 +294,9 @@ data, without loss of semantic fidelity. This enables standardized data models a
 \end{description}
 
 By using a standard language for data interchange, new research discoveries could be made\
-more efficiently and effectively.\\
+more efficiently and effectively.\\\
 
-\includegraphics[scale=0.5]{rdf1.png}
+\includegraphics[scale=0.4]{rdf1.png}
 
 \subsection{Comparison with other data models}
 
@@ -318,12 +318,10 @@ For comparison, XML itself is not very much concerned with meaning. XML nodes do
 SQL: \\
 
 Relational Database’s such as SQL is also a comparable data model to RDF.\
-
-“I think it can be useful to think of RDF as *a* relational model, just not the same one that SQL DBs are based on (Codd's).\
 Individual statements in RDF are expressed as subject, predicate, object triples. Sets of these with a common predicate\
  can be mapped to binary relations in the relational model, in the the common parlance, 2-column tables.”\\
 
-But another significant difference between relational DBs and RDF is that in the former, for a certain set of values\
+But a difference between the two is that in Relational DB's, for a certain set of values\
 a relation is either considered either true (there is a corresponding row in the table) or false (there isn't).\
  In the RDF model in the general case, if a set of values isn't in the "row" (i.e. you don't have a particular statement), then it's not false, just unknown.”\\
 
@@ -356,11 +354,78 @@ a relation is either considered either true (there is a corresponding row in the
 
 \section[Fast Healthcare Interoperability Resources (HL7/FHIR )]{HL7/FHIR }
 
+\initial{F}\textit{ast Healthcare Interoperability Resources (HL7/FHIR )}\
+is a is a next generation standards framework created by HL7.\
+FHIR combines the best features of HL7’s Version 2, Version 3 and CDA®\
+product lines while leveraging the latest web standards and applying a tight focus on implementability.\\
+
+“Fast Healthcare Interoperability Resources (FHIR) defines a set of resources for use in exchanging information\
+ about the healthcare process. Resources are:\
+
+\begin{itemize}
+\item Atomic - they are the smallest defined unit of operation and a transaction scope of their own.
+\item Connected - resources refer to other resources to allow for clean modular reuse of information.
+\item Independent - the content of a resource can be processed without having to retrieve referenced resources.
+\item Simple - each resource definition is easy to understand, and to implement without needing specialized tooling or infrastructure (though that can be used if desired).
+\item RESTful - resources are able to be used in a RESTful exchange context.
+\item Flexible - resources can also be used in non-RESTful contexts, such as messaging or SOA architectures and can be moved in and out of RESTful paradigms as convenient.
+\item Extensible - resources can be extended to allow for local requirements without impacting on interoperability.
+\item Webcentric - where possible and appropriate, open internet standards are used for data representation.
+\item Free for use - the FHIR specification itself is open - anyone can implement FHIR or derive related specifications without any IP restrictions.
+\end{itemize}
+
+In addition to the basic resources, FHIR defines a lightweight implementation framework that\
+supports the use of these resources in RESTful environments, classic message exchanges, human-centric\
+ clinical documents and enterprise SOA architectures. Each of these approaches provides its own benefits\ 
+- FHIR provides the underpinning enablement that makes the choosing one of these painless and enables enterprises\
+ to choose their own paradigm without forsaking interoperability with other approaches.\\
+
+Though the resources are simple and easy to understand, they are backed by a thorough, global requirements gathering\
+ and formal modeling process that ensures that the content of the resources is stable and reliable. The resource\
+contents are mapped to solid underlying ontologies and models using computable languages (including RDF) so\
+that the definitions and contents of the resources can be leveraged by computational analysis and conversion processes.\\
+
+FHIR also provides an underlying conformance framework and tooling that allows different implementation contexts\ 
+and enterprises to describe their context and use of resources in formal computable ways and to empower computed\
+ interoperability that leverages both the conformance and definitional frameworks.\\
+
+The combination of the resources and the 3 supporting layers (implementation frameworks,\
+definitional thoroughness, and conformance tooling), along with the completely free license of FHIR\
+ itself frees healthcare data so that it can easily flow to where it needs to be (across hospital production systems,\
+ mobile clinical systems, cloud based data stores, national health repositories, research databases, etc.)\
+without having to pass through format and semantic inter-conversion hurdles along the way.”\\
+
+
+%----------------------------------------------------------------------------------------
+%	CMT
+%----------------------------------------------------------------------------------------
+
+\section[Convergent Medical Terminology ( CMT )]{CMT}
+
+\initial{C}\textit{onvergent Medical Terminology (CMT )}\
+is a set of clinician- and patient friendly terminology, linked to US\
+and international interoperability standards, and related vocabulary development tools\
+ and utilities.  Developed by Kaiser Permanente over many years for use within its health-IT\
+ systems, CMT now includes more than 75,000 concepts.\\
+
+In September 2010 Kaiser Permanente, the International Health Terminology Standards\
+Development Organisation (IHTSDO) and the US Department of Health and Human Services\
+jointly announced Kaiser Permanente’s donation of their CMT content and related tooling to the IHTSDO.\
+The donation consists of terminology content already developed, a set of tools to help create and manage\
+terminology and processes to control the quality of terminology that is developed. CMT also includes mappings\
+ to classifications and standard vocabularies including SNOMED CT.\\
+
+
 %----------------------------------------------------------------------------------------
 %	NwHIN
 %----------------------------------------------------------------------------------------
 
 \section[Nationwide Health Information Network (NwHIN)]{NwHIN}
+
+\initial{N}\textit{ationwide Health Information Network (NwHIN )}\
+is a ‘network of networks’ for exchanging health data.\
+The fabric of the NwHIN is based on web services that provide the framework\
+ among NwHIN participants to locate and exchange health information.”\\
 
 %----------------------------------------------------------------------------------------
 %	SPARQL
@@ -368,7 +433,7 @@ a relation is either considered either true (there is a corresponding row in the
 
 \section[SPARQL Protocol and RDF Query Language (SPARQL)]{SPARQL}
 
-\initial{S}\textit{SPARQL Protocol and RDF Query Language (SPARQL}]\
+\initial{S}\textit{SPARQL Protocol and RDF Query Language (SPARQL)}\
 		is a W3C recommend standard for querying RDF data.\
 		It allows one to query remote RDF resources, in a manner similar to the querying of databases using SQL.\
 		A SPARQL query is a set of graph patterns; any data triple matching these patterns is added to the query results.\\
