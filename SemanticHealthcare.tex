@@ -191,6 +191,46 @@ Some of the Descriptions associated with \emph{ConceptId} 22298006:
   as \emph{Core Components}~\cite{snomed_implementation_guide_snomed_2011}.\
   Supplementary tables called \emph{Reference Sets} specify the common extensible\
   pattern that is used to add additional information related to the core components.
+
+  \section[Resource Description Framework (RDF)]{RDF}
+
+\initial{R}\textit{esource Description Framework (RDF)}\
+is a World Wide Web Consortium (W3C) standardized data model for representing\
+semantic Web resources. It uses graphs to represent information using a triple-based\
+ notation comprising a subject, predicate and an object. All these entities can be uniquely identified by Internationalized Resource Identifiers (IRIs).\\
+
+\subsection{How we can use it}
+
+We can use it by evoking already existing tools to transfer relational data that\
+already exists into RDF format which will then allow us to easily gain insight between data.\
+An example would be the following,
+
+\subsection{Why this model be useful for our application}
+
+
+
+\subsection{Comparison with other data models}
+
+\section[SPARQL Protocol and RDF Query Language (SPARQL)]{SPARQL}
+
+ \section[FileMan Query Language (FMQL)]{FMQL}
+
+\initial{F}\textit{ileMan Query Language (FMQL)}\
+is a Query Language that provides access to both FileMan data\
+- a vital measurement of a patient - and the schema of that data - the type "Vital Measurement".\
+The three things that it addresses are:
+\begin{enumerate}
+\item
+Identity: every entity and entity type in FileMan gets a unique identifier - a URI.
+\item
+Data Formats: a consistent form of JSON, the web-friendly response format, for every type of data in the system\
+ as well as HTML for human readers and RDF for web-data practitioners.
+\item
+Query Nuance: from the precise - SELECT - to the broader - DESCRIBE - or just COUNT, covers data hierarchies\
+ and graphical layouts, paging and filtering.
+\end{enumerate}
+\includegraphics[scale=0.4]{fmqlFromFileMan.png}
+
    %----------------------------------------------------------------------------------------
   %	REFERENCE LIST
   %----------------------------------------------------------------------------------------
