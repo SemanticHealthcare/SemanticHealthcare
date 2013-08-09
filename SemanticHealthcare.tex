@@ -322,14 +322,14 @@
 %----------------------------------------------------------------------------------------
 
 
- \section[Resource Description Framework (RDF\textsuperscript{\textregistered})]
-{RDF\textsuperscript{\textregistered}}
+ \section[Resource Description Framework (RDF)]{RDF}
   \label{sec:rdf}
 
 \initial{R}\textit{esource Description Framework (RDF)}\
 is a World Wide Web Consortium (W3C) standardized data model for representing\
 semantic Web resources. It uses graphs to represent information using a triple-based\
  notation comprising a subject, predicate and an object. All these entities can be uniquely identified by Internationalized Resource Identifiers (IRIs).\
+  \cite{pathak_applying_2012}
 
 \subsection{How we can use it}
 
@@ -339,7 +339,7 @@ An example would be the following,
 
 \subsection{Why this model would be useful for our application}
 
-RDF offers a practical evolutionary pathway to semantic interoperability. It enables information\
+"RDF offers a practical evolutionary pathway to semantic interoperability. It enables information\
  to be readily linked and exchanged with full semantic fidelity while leveraging existing IT infrastructure investments.\
  Being schema-flexible, RDF allows multiple evolving data models and vocabularies to peacefully co-exist in the same instance\
 data, without loss of semantic fidelity. This enables standardized data models and vocabularies to be used whenever possible\
@@ -351,11 +351,13 @@ data, without loss of semantic fidelity. This enables standardized data models a
 \begin{description}
 \item[(a)]  Its ability to make information self-describing with precise semantics
 \item[(b)] its support for automated inference
-\item[(c)]  its foundation in open standard
+\item[(c)]  its foundation in open standard"
 \end{description}
 
+ (\url{http://www.osehra.org/blog/rdf-universal-healthcare-language-0})\\
+
 By using a standard language for data interchange, new research discoveries could be made\
-more efficiently and effectively.\\\
+more efficiently and effectively.\
 
 \includegraphics[scale=0.4]{rdf1.png}
 
@@ -371,10 +373,7 @@ That RDF is designed for knowledge, and not data, means RDF is particularly conc
 XML is also more than a file format. It is a foundation for dealing with hierarchical, self-contained documents,\
  whether they be stored on disk in the usual brackets-and-slashes format, or held in memory and accessed through a DOM API.\\
 
-For comparison, XML itself is not very much concerned with meaning. XML nodes don't need to be associated with particular concepts,\
- and the XML standard doesn't indicate how to derive a fact from a document. For instance, if you were presented with a few XML\
- documents whose root nodes were in a foreign language you don't understand, you couldn't do anything useful with the documents\
- but display them. RDF documents with nodes you can't understand could still actually be usefully processed because RDF specifies some basic level of meaning.”\\
+ (\url{http://www.rdfabout.com/intro/})\
 
 SQL: \\
 
@@ -386,13 +385,15 @@ But a difference between the two is that in Relational DB's, for a certain set o
 a relation is either considered either true (there is a corresponding row in the table) or false (there isn't).\
  In the RDF model in the general case, if a set of values isn't in the "row" (i.e. you don't have a particular statement), then it's not false, just unknown.”\\
 
+ (\url{http://www.osehra.org/blog/rdf-universal-healthcare-language-0})\\
+
 
 %----------------------------------------------------------------------------------------
 %	HDD
 %----------------------------------------------------------------------------------------
 
-\section[Healthcare Data Dictionary (HDD\textsuperscript{\textregistered})]
-{HDD\textsuperscript{\textregistered}}
+\section[3M\textsuperscript{\texttrademark} Healthcare Data Dictionary (HDD)]
+{3M HDD\textsuperscript{\texttrademark}}
   \label{sec:hdd}
   
   \initial{H}\textit{ealthcare Data Dictionary (HDD )}\
@@ -407,8 +408,7 @@ a relation is either considered either true (there is a corresponding row in the
 %	ICD
 %----------------------------------------------------------------------------------------
 
-\section[International Classification of Diseases (ICD\textsuperscript{\textregistered}) ]
-{ICD\textsuperscript{\textregistered}}
+\section[International Classification of Diseases (ICD) ]{ICD}
   \label{sec:icd}
 
 \initial{I}\textit{nternational Classification of Diseases (ICD)}\\
@@ -440,17 +440,21 @@ There is a free software program developed by The Regenstrief Institute called R
 %	HL7/FHIR
 %----------------------------------------------------------------------------------------
 
-\section[Fast Healthcare Interoperability Resources (HL7 FHIR\textsuperscript{\textregistered})]
-{HL7 FHIR \textsuperscript{\textregistered}}
+\section[Fast Healthcare Interoperability Resources (HL7 FHIR\textsuperscript{\texttrademark})]
+{HL7 FHIR \textsuperscript{\texttrademark}}
   \label{sec:fhir}
 
 \initial{F}\textit{ast Healthcare Interoperability Resources (HL7/FHIR )}\
 is a is a next generation standards framework created by HL7.\
-FHIR combines the best features of HL7’s Version 2, Version 3 and CDA®\
-product lines while leveraging the latest web standards and applying a tight focus on implementability.\\
+"It defines a set of "resources" for health. These resources represent granular clinical\
+concepts that can be exchanged in order to quickly and effectively solve problems in healthcare\
+ and related process. The resources cover the basic elements of healthcare - patients, admissions,\
+diagnostic reports, medications, and problem lists, with their typical participants, and also support\
+a range of richer and more complex clinical models. The simple direct definitions of the resources are\
+ based on thorough requirements gathering, formal analysis and extensive cross-mapping to other relevant standards."\\
+  (\url{http://www.hl7.org/implement/standards/fhir/v0.01/print-introduction.htm})
 
-“Fast Healthcare Interoperability Resources (FHIR) defines a set of resources for use in exchanging information\
- about the healthcare process. Resources are:\
+"Resources are:\
 
 \begin{itemize}
 \item Atomic - they are the smallest defined unit of operation and a transaction scope of their own.
@@ -484,48 +488,55 @@ definitional thoroughness, and conformance tooling), along with the completely f
  itself frees healthcare data so that it can easily flow to where it needs to be (across hospital production systems,\
  mobile clinical systems, cloud based data stores, national health repositories, research databases, etc.)\
 without having to pass through format and semantic inter-conversion hurdles along the way.”\\
+ (\url{http://hl7.org/implement/standards/fhir/overview.htm})
+
 
 %----------------------------------------------------------------------------------------
 %	NwHIN
 %----------------------------------------------------------------------------------------
 
-\section[Nationwide Health Information Network (NwHIN\textsuperscript{\textregistered})]
-{NwHIN\textsuperscript{\textregistered}}
+\section[Nationwide Health Information Network (NwHIN)]{NwHIN}
   \label{sec:nwhin}
 
 \initial{N}\textit{ationwide Health Information Network (NwHIN )}\
-is a ‘network of networks’ for exchanging health data.\
-The fabric of the NwHIN is based on web services that provide the framework\
- among NwHIN participants to locate and exchange health information.”\\
+is a set of standards, services, and policies that enable the secure exchange\
+of health information over the Internet. \
+(\url{http://www.healthit.gov/policy-researchers-implementers/nationwide-health-information-network-nwhin})\\
+
+\includegraphics[scale=0.5]{nwhin.png}\\
+(\url{http://www.siframework.org/scenario_toc2.html})\
 
 %----------------------------------------------------------------------------------------
 %	SPARQL
 %----------------------------------------------------------------------------------------
 
-\section[SPARQL Protocol and RDF Query Language (SPARQL\textsuperscript{\textregistered})]
-{SPARQL\textsuperscript{\textregistered}}
+\section[SPARQL Protocol and RDF Query Language (SPARQL)]{SPARQL}
   \label{sec:sparql}
 
 \initial{S}\textit{SPARQL Protocol and RDF Query Language (SPARQL)}\
 		is a W3C recommend standard for querying RDF data.\
 		It allows one to query remote RDF resources, in a manner similar to the querying of databases using SQL.\
-		A SPARQL query is a set of graph patterns; any data triple matching these patterns is added to the query results.\\
+		A SPARQL query is a set of graph patterns; any data triple matching these patterns is added to the query results.\
+                   \cite{Jarrar_mashql:_2008}     
 		
 		\subsection{Alternatives}
-		SquishQL (http://www.techrepublic.com/article/squishql-the-simplest-rdf-query-language)
-		
+		SquishQL
+
 		\subsection{Examples}
+
+                    \includegraphics[scale=0.3]{sparql.png}\\
+                   (\url{http://librdf.org/query/})\
+                     
 
 %----------------------------------------------------------------------------------------
 %	FMQL
 %----------------------------------------------------------------------------------------
 
-\section[FileMan Query Language (FMQL\textsuperscript{\textregistered})]
-{FMQL\textsuperscript{\textregistered}}
+\section[FileMan Query Language (FMQL)]{FMQL}
   \label{sec:fmql}
 
 \initial{F}\textit{ileMan Query Language (FMQL)}\
-is a Query Language that provides access to both FileMan data\
+"is a Query Language that provides access to both FileMan data\
 - a vital measurement of a patient - and the schema of that data - the type "Vital Measurement".\
 The three things that it addresses are:
 \begin{enumerate}
@@ -536,9 +547,10 @@ Data Formats: a consistent form of JSON, the web-friendly response format, for e
  as well as HTML for human readers and RDF for web-data practitioners.
 \item
 Query Nuance: from the precise - SELECT - to the broader - DESCRIBE - or just COUNT, covers data hierarchies\
- and graphical layouts, paging and filtering.
+ and graphical layouts, paging and filtering."
 \end{enumerate}
-\includegraphics[scale=0.4]{fmqlFromFileMan.png}
+\includegraphics[scale=0.4]{fmqlFromFileMan.png}\\
+(\url{http://vista.caregraf.info/fmql})\
 
    %----------------------------------------------------------------------------------------
   %	REFERENCE LIST
