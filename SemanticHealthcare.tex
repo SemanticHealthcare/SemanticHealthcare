@@ -9,6 +9,7 @@
 \usepackage[svgnames]{xcolor} % Enabling colors by their 'svgnames'
 \usepackage{fix-cm}	 % Custom font sizes - used for the initial letter in the document
 \usepackage{graphicx} % Inserting figures and images
+\usepackage{natbib}  % For using the APA bibliography style
 
 \usepackage{sectsty} % Enables custom section titles
 \allsectionsfont{\usefont{T1}{phv}{b}{n}} % Change the font of all section commands
@@ -311,6 +312,11 @@
   
   \noindent CMT is currently distributed within the UMLS Metathesauras\
   (\url{http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/index.html}).
+  
+%----------------------------------------------------------------------------------------
+%	Bio2RDF
+%----------------------------------------------------------------------------------------
+
 %----------------------------------------------------------------------------------------
 %	RDF
 %----------------------------------------------------------------------------------------
@@ -380,7 +386,6 @@ But a difference between the two is that in Relational DB's, for a certain set o
 a relation is either considered either true (there is a corresponding row in the table) or false (there isn't).\
  In the RDF model in the general case, if a set of values isn't in the "row" (i.e. you don't have a particular statement), then it's not false, just unknown.”\\
 
-\subsection{BIO2RDF}
 
 %----------------------------------------------------------------------------------------
 %	HDD
@@ -538,7 +543,7 @@ Query Nuance: from the precise - SELECT - to the broader - DESCRIBE - or just CO
   %	REFERENCE LIST
   %----------------------------------------------------------------------------------------
 
-  \bibliographystyle{apalike}
+  \bibliographystyle{apa-good}
   \bibliography{SemanticHealthcare}{}
 
 %----------------------------------------------------------------------------------------
