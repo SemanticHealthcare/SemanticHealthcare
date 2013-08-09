@@ -10,8 +10,8 @@
 \usepackage{fix-cm}	 % Custom font sizes - used for the initial letter in the document
 \usepackage{graphicx} % Inserting figures and images
 
-%\usepackage{sectsty} % Enables custom section titles
-%\allsectionsfont{\usefont{OT1}{phv}{b}{n}} % Change the font of all section commands
+\usepackage{sectsty} % Enables custom section titles
+\allsectionsfont{\usefont{T1}{phv}{b}{n}} % Change the font of all section commands
 
 \usepackage{fancyhdr} % Needed to define custom headers/footers
 \pagestyle{fancy} % Enables the custom headers/footers
@@ -36,7 +36,8 @@
 	colorlinks=true, %set true if you want colored links
 	linktoc=all, %set to all if you want both sections and subsections linked
 	linkcolor=blue, %choose some color if you want links to stand out
-	citecolor=Maroon, 
+	citecolor=Maroon,
+	urlcolor=SteelBlue, 
 	}
 	
 \addto{\captionsenglish}{\renewcommand*\contentsname{Table of Contents}}
@@ -88,9 +89,10 @@
 \begin{document}
 
   \maketitle
+  \renewcommand{\contentsname}{\hspace{120pt} Table of Contents}
   \tableofcontents
   \thispagestyle{fancy} % Enabling the custom headers/footers for the first page
-
+  \vspace{20pt}
 %----------------------------------------------------------------------------------------
 %	SNOMED RT
 %----------------------------------------------------------------------------------------
@@ -157,8 +159,9 @@
    is a comprehensive, multilingual clinical terminology that provides clinical content and\
    expressivity for clinical documentation and reporting. It can be used to code, retrieve\
    and analyze clinical data.\
-   SNOMED CT was formed by the merger, expansion and restructuring of SNOMED RT\
-   (described in section~\ref{sec:snomedrt}) and the United Kingdom National Health Service (NHS)\
+   SNOMED CT was formed by the merger, expansion and restructuring of\
+   SNOMED RT\textsuperscript{\ref{sec:snomedrt}}\
+   and the United Kingdom National Health Service (NHS)\
    Clinical Terms (also known as the Read Codes).\
    In a nutshell, SNOMED CT consists of concepts arranged in a hierarchy, connected\
    by relationships. The International Health Terminology Standards Development Organization\
@@ -182,8 +185,8 @@
   on. Every concept also has a set of terms that name the concept in a human-readable\
   way. There are well over 300,000 active concepts in the terminology with differing levels\
   of granularity linked to one another by \textbar ~is a \textbar ~relationships as depicted\
-  in Figure \ref{fig:snomedct_concepts_granularity}. 
-    \begin{figure}[!ht]
+  in Figure~\ref{fig:snomedct_concepts_granularity}.\\
+  \begin{figure}[!ht]
     \centering
     \includegraphics[scale=1]{granularity.png}
     \caption{SNOMED CT - Multiple levels of granularity}\cite[Fig.~1]{snomed_-_user_guide_snomed_2011}
@@ -220,7 +223,7 @@
   SNOMED CT Relationships link each concept to other concepts that have a related\
   meaning. These relationships provide formal definitions and other characteristics of\
   the concept. One type of link is the \textbar ~is a \textbar ~relationship which\
-  relates a concept to the its more general concepts. For example, the concept\
+  relates a concept to the its more general concepts. For example (Figure~\ref{fig:snomedct_relationships}), the concept\
   ``viral pneumonia'' has an \textbar ~is a \textbar ~relationship to the more\
   general concept ``pneumonia''. These \textbar ~is a \textbar ~relationships\
   define the hierarchy of SNOMED CT concepts. Other types of relationships\
@@ -245,7 +248,8 @@
 
   \subsection{Summary}
   SNOMED CT is a used widely to achieve semantic uniformity\
-  and consistency of health terms as well as to achieve interoperability between HL7\
+  and consistency of health terms as well as to achieve interoperability between\
+  HL7\textsuperscript{\ref{sec:fhir}}\
   (Health Level 7) based health frameworks and other healthcare entities as shown\
   by the works in \cite{ryan_towards_2006,arguello_executing_2009,khan_achieving_2012}.\
   Not only does it provide unique semantic identifiers to clinical concepts, SNOMED CT\
@@ -257,7 +261,56 @@
   and provide a metathesaurus of clinical concepts with mappings to different terminologies,\
   thereby improving semantic integrity in practical healthcare scenarios.\
   \cite{lindberg_unified_1993,wei_using_2012}
+%----------------------------------------------------------------------------------------
+%	CMT
+%----------------------------------------------------------------------------------------
+  \section[Convergent Medical Terminology (CMT)]{CMT}
+  \label{sec:cmt}
 
+  \initial{C}onvergent Medical Terminology (CMT) is a set of clinician and patient friendly\
+  terminology, linked to US and international interoperability standards, and\
+  related vocabulary development tools and utilities. Developed by Kaiser\-
+  Permananente over many years for use within its health-IT systems, CMT now\
+  includes more than 75,000 concepts. CMT is a core component Kaiser Permanente's\
+  comprehensive electronic health record \emph{KP HealthConnect\textsuperscript\textregistered}.\\
+
+  \begin{figure}[ht!]
+    \label{fig:cmt}
+    \centering
+    \includegraphics[scale=0.75]{CMT.jpg}
+    \caption{High-level graphical description\
+    of CMT}\cite[Fig.~1]{dolin_kaiser_2004}
+  \end{figure}  
+
+  \noindent In September 2010 Kaiser Permanente, the International Health\
+  Terminology Standards Development Organisation (IHTSDO) and the US\
+  Department of Health and Human Services jointly announced Kaiser Permanente's\
+  donation of their CMT content and related tooling to the IHTSDO. The donation\
+  consists of terminology content already developed, a set of tools to\
+  help create and manage terminology and processes to control the quality of\
+  terminology that is developed. CMT also includes mappings to classifications\
+  and standard vocabularies including SNOMED CT\textsuperscript{\ref{sec:snomedct}}.\\
+  
+  \noindent A high-level graphical depiction of CMT\
+  is shown in Figure~\ref{fig:cmt}. CMT is built upon\
+  industry standard terminologies. SNOMED CT\textsuperscript{\ref{sec:snomedct}},\
+  laboratory LOINC\textsuperscript{\ref{sec:loinc}} and First DataBank drug\
+  terminology form the core of CMT. Core terminologies are integrated into a\
+  single poly-hierarchically structured knowledge base. A classifier organizes\
+  the CMT concepts into a poly-hierarchy, based on their definitions.\
+  The act of classifying helps identify synonymous concepts, and maintains quality\
+  and consistency across the some 400,000 concepts.\\
+  
+  \noindent Applications can directly access CMT via a provided interface and/or\
+  CMT can provide applications with cross map sets and context sets, both of which\
+  are patterned after the SNOMED CT\textsuperscript{\ref{sec:snomedct}} model.\
+  Cross map sets are used to store mappings between CMT concepts and other coding schemes.\
+  Context sets are CMT subsets used within a particular context. Contexts\
+  can include a particular drop-down list or vocabulary table in an application,\
+  a field in an HL7\textsuperscript{\ref{sec:fhir}} message, or any other CMT subset needed within the organization.\\
+  
+  \noindent CMT is currently distributed within the UMLS Metathesauras\
+  (\url{http://www.nlm.nih.gov/research/umls/knowledge_sources/metathesaurus/index.html}).
 %----------------------------------------------------------------------------------------
 %	RDF
 %----------------------------------------------------------------------------------------
@@ -431,8 +484,7 @@ without having to pass through format and semantic inter-conversion hurdles alon
 %	CMT
 %----------------------------------------------------------------------------------------
 
-\section[Convergent Medical Terminology (CMT\textsuperscript{\textregistered})]
-{CMT\textsuperscript{\textregistered}}
+\section[Convergent Medical Terminology (CMT)]{CMT}
   \label{sec:cmt}
 
 \initial{C}\textit{onvergent Medical Terminology (CMT )}\
@@ -447,7 +499,6 @@ jointly announced Kaiser Permanente’s donation of their CMT content and relate
 The donation consists of terminology content already developed, a set of tools to help create and manage\
 terminology and processes to control the quality of terminology that is developed. CMT also includes mappings\
  to classifications and standard vocabularies including SNOMED CT.\\
-
 
 %----------------------------------------------------------------------------------------
 %	NwHIN
