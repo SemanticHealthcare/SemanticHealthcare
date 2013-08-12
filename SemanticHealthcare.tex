@@ -50,6 +50,7 @@
 {\textbf{\textit{#1}}}}{}}
 
 
+
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
@@ -331,9 +332,10 @@ semantic Web resources. It uses graphs to represent information using a triple-b
 
 \subsection{How we can use it}
 
-We can use it by evoking already existing tools to transfer relational data that\
-already exists into RDF format which will then allow us to easily gain insight between data.\
-An example would be the following,
+We can use it by evoking already existing tools such as D2R Map\
+  (\url{http://wifo5-03.informatik.uni-mannheim.de/bizer/d2rmap/D2Rmap.htm}),
+ which is an open source tool thats transfers relational data into RDF\
+ format which will then allow us to easily gain better insight between data.\
 
 \subsection{Why this model would be useful for our application}
 
@@ -357,33 +359,40 @@ data, without loss of semantic fidelity. This enables standardized data models a
 By using a standard language for data interchange, new research discoveries could be made\
 more efficiently and effectively.\
 
-\includegraphics[scale=0.4]{rdf1.png}
+\includegraphics[scale=0.65]{rdfh.png}
+ \cite{parachuri2008role}\\
+
+\includegraphics[scale=0.4]{rdf1.png}\\
+ (\url{www.jonathanborden-md.com/HealthcareSemWeb.ppt‎})\\
 
 \subsection{Comparison with other data models}
 
+\includegraphics[scale=0.5]{sqlrdf.png}
+ \cite{parachuri2008role}\\
+
 XML:\\
 
-XML is a comparable data model to RDF and in fact one way you can express RDF data is in a certain XML Format.\
-What sets RDF apart from XML is that RDF is designed to represent knowledge in a distributed world.\
-That RDF is designed for knowledge, and not data, means RDF is particularly concerned with meaning.\\
+XML is a comparable data model to RDF and in fact one way you can express RDF data is in a certain XML format.\
+"What sets RDF apart from XML is that RDF is designed to represent knowledge in a distributed world.\
+That RDF is designed for knowledge, and not data, means RDF is particularly concerned with meaning."\\
 
 “In some ways, RDF can be compared to XML. XML also is designed to be simple and applicable to any type of data.\
 XML is also more than a file format. It is a foundation for dealing with hierarchical, self-contained documents,\
- whether they be stored on disk in the usual brackets-and-slashes format, or held in memory and accessed through a DOM API.\\
+ whether they be stored on disk in the usual brackets-and-slashes format, or held in memory and accessed through a DOM API."\\
 
  (\url{http://www.rdfabout.com/intro/})\\
 
 SQL: \\
 
-Relational Database’s such as SQL is also a comparable data model to RDF.\
-Individual statements in RDF are expressed as subject, predicate, object triples. Sets of these with a common predicate\
+Relational Database’s such as SQL is also a comparable data model to RDF, and you can actually store your RDF data inside of a relational database.\
+"Individual statements in RDF are expressed as subject, predicate, object triples. Sets of these with a common predicate\
  can be mapped to binary relations in the relational model, in the the common parlance, 2-column tables.”\\
 
-But a difference between the two is that in Relational DB's, for a certain set of values\
+"But a difference between the two is that in Relational DB's, for a certain set of values\
 a relation is either considered either true (there is a corresponding row in the table) or false (there isn't).\
  In the RDF model in the general case, if a set of values isn't in the "row" (i.e. you don't have a particular statement), then it's not false, just unknown.”\\
 
- (\url{http://www.osehra.org/blog/rdf-universal-healthcare-language-0})\\
+ (\url{http://www.rdfabout.com/comparisons.xpd})\\
 
 %----------------------------------------------------------------------------------------
 %	Bio2RDF
@@ -551,7 +560,7 @@ concepts that can be exchanged in order to quickly and effectively solve problem
 diagnostic reports, medications, and problem lists, with their typical participants, and also support\
 a range of richer and more complex clinical models. The simple direct definitions of the resources are\
  based on thorough requirements gathering, formal analysis and extensive cross-mapping to other relevant standards."\\
-  (\url{http://www.hl7.org/implement/standards/fhir/v0.01/print-introduction.htm})\
+  (\url{http://www.hl7.org/implement/standards/fhir/v0.01/print-introduction.htm})\\
 
 "Resources are:\
 
@@ -597,12 +606,12 @@ without having to pass through format and semantic inter-conversion hurdles alon
 \section[Nationwide Health Information Network (NwHIN)]{NwHIN}
   \label{sec:nwhin}
 
-\initial{N}\textit{ationwide Health Information Network (NwHIN )}\
+\initial{``N}\textit{ationwide Health Information Network (NwHIN )}\
 is a set of standards, services, and policies that enable the secure exchange\
-of health information over the Internet. \
+of health information over the Internet.''\\
 (\url{http://www.healthit.gov/policy-researchers-implementers/nationwide-health-information-network-nwhin})\\
 
-\includegraphics[scale=0.5]{nwhin.png}\\
+\includegraphics[scale=0.5]{nwhin.png}\\\
 (\url{http://www.siframework.org/scenario_toc2.html})\
 
 %----------------------------------------------------------------------------------------
@@ -619,13 +628,23 @@ of health information over the Internet. \
                    \cite{Jarrar_mashql:_2008}     
 		
 		\subsection{Alternatives}
-		SquishQL
+
+		SquishQL - A simple RDF query language for beginners that allows for SQL syntax.\\
+		(\url{http://www.techrepublic.com/article/squishql-the-simplest-rdf-query-language/})\
 
 		\subsection{Examples}
 
-                  \includegraphics[scale=0.3]{sparql.png}\\
-                   (\url{http://librdf.org/query/})\
-                     
+                  \includegraphics[scale=0.5]{sparql.png}\\
+		 (\url{http://librdf.org/query/})
+
+  		   \includegraphics[scale=0.5]{sparql1.png}
+ 		  \cite{stenzhorn2008simplifying}\\
+
+		  \includegraphics[scale=0.5]{sparqlh.png}
+ 		  \cite{parachuri2008role}
+ 		
+
+		
 
 %----------------------------------------------------------------------------------------
 %	FMQL
