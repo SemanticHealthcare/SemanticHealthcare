@@ -106,7 +106,7 @@
    represents the initial step towards unifying various clinical terms in healthcare. SNOMED RT was\
    designed to complement the broad coverage of medical concepts in SNOMED with a set of\
    enhanced features that significantly increased its value as a reference terminology for\
-   representing clinical data~\cite{spackman_snomed_1997}. SNOMED RT was developed by\
+   representing clinical data~\citep{spackman_snomed_1997}. SNOMED RT was developed by\
    the College of American Pathologists (CAP).\\
    
   \noindent SNOMED RT is a concept-based terminology. A \emph{concept} is a unit\
@@ -121,7 +121,7 @@
                               & Stroke                               & Synonym\\                   
       \hline
       \end{tabular}
-    \caption{SNOMED RT - Concepts, Descriptions and Synonyms}\cite[Table.~1]{a_y_wang_mapping_2001}
+    \caption{SNOMED RT - Concepts, Descriptions and Synonyms}\citep[Table.~1]{a_y_wang_mapping_2001}
     \label{tab:snomedrt_example}
   \end{table}
   A \emph{term} is a particular lexical string or expression that represents a concept.\
@@ -136,7 +136,7 @@
   systems depending on context, but a description is ideally non-ambiguous\
   and always associated with a concept.\\
   
-  \noindent Some of the fundamental aspects of SNOMED RT~\cite{dolin_snomed_2001} are:
+  \noindent Some of the fundamental aspects of SNOMED RT~\citep{dolin_snomed_2001} are:
   \begin{itemize}
     \itemsep0ex
     \item Hierarchies in SNOMED RT represent strict supertype-subtype relationships.\
@@ -169,7 +169,7 @@
    by relationships. The International Health Terminology Standards Development Organization\
    (IHTSDO) owns and administers the rights to SNOMED CT.\\
 
-  According to \cite{snomed_-_user_guide_snomed_2011}, there are three basic\
+  According to \citep{snomed_-_user_guide_snomed_2011}, there are three basic\
   components of SNOMED CT:
   \begin{itemize}
     \itemsep0ex
@@ -191,7 +191,7 @@
   \begin{figure}[!ht]
     \centering
     \includegraphics[scale=1]{granularity.png}
-    \caption{SNOMED CT - Multiple levels of granularity}\cite[Fig.~1]{snomed_-_user_guide_snomed_2011}
+    \caption{SNOMED CT - Multiple levels of granularity}\citep[Fig.~1]{snomed_-_user_guide_snomed_2011}
     \label{fig:snomedct_concepts_granularity}
   \end{figure}
 
@@ -236,7 +236,7 @@
   \begin{figure}[!ht]
     \centering
     \includegraphics[scale=0.5]{defining_relationship_example1.png}
-    \caption{SNOMED CT - Illustration of Defining Relationships}\cite[Fig.~7]{snomed_-_user_guide_snomed_2011}
+    \caption{SNOMED CT - Illustration of Defining Relationships}\citep[Fig.~7]{snomed_-_user_guide_snomed_2011}
     \label{fig:snomedct_relationships}
   \end{figure}
 
@@ -244,7 +244,7 @@
   SNOMED CT is distributed as a set of tab-delimited text files that can be\
   imported into a relational database. The three tables - the Concepts table,\
   the Descriptions table and the Relationships table are commonly referred to\
-  as \emph{Core Components}~\cite{snomed_implementation_guide_snomed_2011}.\
+  as \emph{Core Components}~\citep{snomed_implementation_guide_snomed_2011}.\
   Supplementary tables called \emph{Reference Sets} specify the common extensible\
   pattern that is used to add additional information related to the core components.
 
@@ -253,16 +253,16 @@
   and consistency of health terms as well as to achieve interoperability between\
   HL7\textsuperscript{\ref{sec:fhir}}\
   (Health Level 7) based health frameworks and other healthcare entities as shown\
-  by the works in \cite{ryan_towards_2006,arguello_executing_2009,khan_achieving_2012}.\
+  by the works in \citep{ryan_towards_2006,arguello_executing_2009,khan_achieving_2012}.\
   Not only does it provide unique semantic identifiers to clinical concepts, SNOMED CT\
   also describes and links different concepts in an ontogolical fashion.\
   While SNOMED CT has emerged internationally as a leading terminology, the work of\
-  \cite{he_clinical_2012, khare_exploiting_2012} delineates that the existing SNOMED CT\
+  \citep{he_clinical_2012, khare_exploiting_2012} delineates that the existing SNOMED CT\
   lexicon suffers from a surprisingly huge paucity of synonyms.\
   Efforts are underway to reduce SNOMED CT's structural complexity\
   and provide a metathesaurus of clinical concepts with mappings to different terminologies,\
   thereby improving semantic integrity in practical healthcare scenarios.\
-  \cite{lindberg_unified_1993,wei_using_2012}
+  \citep{lindberg_unified_1993,wei_using_2012}
 %----------------------------------------------------------------------------------------
 %	CMT
 %----------------------------------------------------------------------------------------
@@ -281,7 +281,7 @@
     \centering
     \includegraphics[scale=0.75]{CMT.jpg}
     \caption{High-level graphical description\
-    of CMT}\cite[Fig.~1]{dolin_kaiser_2004}
+    of CMT}\citep[Fig.~1]{dolin_kaiser_2004}
   \end{figure}  
 
   \noindent In September 2010 Kaiser Permanente, the International Health\
@@ -328,7 +328,7 @@
 is a World Wide Web Consortium (W3C) standardized data model for representing\
 semantic Web resources. It uses graphs to represent information using a triple-based\
  notation comprising a subject, predicate and an object. All these entities can be uniquely identified by Internationalized Resource Identifiers (IRIs).\
-  \cite{pathak_applying_2012}
+  \citep{pathak_applying_2012}
 
 \subsection{How we can use it}
 
@@ -360,7 +360,7 @@ By using a standard language for data interchange, new research discoveries coul
 more efficiently and effectively.\
 
 \includegraphics[scale=0.65]{rdfh.png}
- \cite{parachuri2008role}\\
+ \citep{parachuri2008role}\\
 
 \includegraphics[scale=0.4]{rdf1.png}\\
  (\url{www.jonathanborden-md.com/HealthcareSemWeb.ppt‎})\\
@@ -368,7 +368,7 @@ more efficiently and effectively.\
 \subsection{Comparison with other data models}
 
 \includegraphics[scale=0.5]{sqlrdf.png}
- \cite{parachuri2008role}\\
+ \citep{parachuri2008role}\\
 
 XML:\\
 
@@ -408,7 +408,7 @@ a relation is either considered either true (there is a corresponding row in the
   sources obtained from multiple data providers. Bio2RDF is the culmination\
   of efforts towards addressing the pressing need for a global multisite\
   search engine. It is defined as a system that is able to query and connect\
-  different databases available on the Internet~\cite{belleau_bio2rdf:_2008}.\\
+  different databases available on the Internet~\citep{belleau_bio2rdf:_2008}.\\
     
   \begin{figure}[ht!]
     \centering
@@ -438,7 +438,7 @@ a relation is either considered either true (there is a corresponding row in the
   made accessible either on the Bio2RDF.org server or on demand from the\
   original source. The myBio2RDF application contains an rdfizer program\
   and a servlet that answers Bio2RDF HTTP requests by formulating\
-  SPARQL\textsuperscript{\ref{sec:sparql}} endpoints~\cite{callahan_bio2rdf_2013}.\\
+  SPARQL\textsuperscript{\ref{sec:sparql}} endpoints~\citep{callahan_bio2rdf_2013}.\\
   
   \subsection{Naming Convention}
   Bio2RDF entities are named as follows:
@@ -470,7 +470,7 @@ a relation is either considered either true (there is a corresponding row in the
     \centering
     \includegraphics[scale=2.80,trim=1 1 1 1,clip]{bio2rdf_provenance.png}
     \caption{Bio2RDF Provenance Graph for the NLM Medical Subject Headings (MeSH)\
-    architecture~\cite{bio2rdf_wiki_bio2rdf_2013}}
+    architecture~\citep{bio2rdf_wiki_bio2rdf_2013}}
     \label{fig:bio2rdf_provenance}
   \end{figure}  
   
@@ -493,7 +493,7 @@ a relation is either considered either true (there is a corresponding row in the
   \noindent Although Bio2RDF facilitates integration of and programmatic access\
   to otherwise heterogeneous datasets (in both, content and format), a complete\
   syntactic and semantic normalization across numerous datasets has yet to be\
-  fully realized. Works of~\cite{ansell_model_2011, callahan_ontology-based_2013}\
+  fully realized. Works of~\citep{ansell_model_2011, callahan_ontology-based_2013}\
   demonstrate better and improved models of resolving queries to the Bio2RDF datasets.\\
 
 %----------------------------------------------------------------------------------------
@@ -505,7 +505,7 @@ a relation is either considered either true (there is a corresponding row in the
   \label{sec:hdd}
   
   \initial{H}\textit{ealthcare Data Dictionary (HDD )}\
- is a controlled medical vocabulary server; makes it possible to map and manage medical terminologies, integrate content \& standardize healthcare data. Allows organizations to transmit \& receive accurate, actionable patient data across systems \& applications, regardless of where data originates% \cite{
+ is a controlled medical vocabulary server; makes it possible to map and manage medical terminologies, integrate content \& standardize healthcare data. Allows organizations to transmit \& receive accurate, actionable patient data across systems \& applications, regardless of where data originates% \citep{
   
   \subsection{How we can use it}\
 
@@ -540,7 +540,7 @@ a relation is either considered either true (there is a corresponding row in the
 
 \subsection{How we can use it}\
 
-There is a free software program developed by The Regenstrief Institute called RELMA (the Regenstrief LOINC Mapping Assistant) which enables browsing and searching the database, review accessory content for terms and map local terms to LOINC \cite{kroth_using_2012} 
+There is a free software program developed by The Regenstrief Institute called RELMA (the Regenstrief LOINC Mapping Assistant) which enables browsing and searching the database, review accessory content for terms and map local terms to LOINC \citep{kroth_using_2012} 
 
 \subsection{How is data stored}\
 
@@ -625,7 +625,7 @@ of health information over the Internet.''\\
 		is a W3C recommend standard for querying RDF data.\
 		It allows one to query remote RDF resources, in a manner similar to the querying of databases using SQL.\
 		A SPARQL query is a set of graph patterns; any data triple matching these patterns is added to the query results.\
-                   \cite{Jarrar_mashql:_2008}     
+                   \citep{Jarrar_mashql:_2008}     
 		
 		\subsection{Alternatives}
 
@@ -638,10 +638,10 @@ of health information over the Internet.''\\
 		 (\url{http://librdf.org/query/})
 
   		   \includegraphics[scale=0.5]{sparql1.png}
- 		  \cite{stenzhorn2008simplifying}\\
+ 		  \citep{stenzhorn2008simplifying}\\
 
 		  \includegraphics[scale=0.5]{sparqlh.png}
- 		  \cite{parachuri2008role}
+ 		  \citep{parachuri2008role}
  		
 
 		
