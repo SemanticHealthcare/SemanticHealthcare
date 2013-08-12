@@ -409,15 +409,10 @@ a relation is either considered either true (there is a corresponding row in the
   sources obtained from multiple data providers. Bio2RDF is the culmination\
   of efforts towards addressing the pressing need for a global multisite\
   search engine. It is defined as a system that is able to query and connect\
-<<<<<<< HEAD
-  different databases available on the Internet~\citep{belleau_bio2rdf:_2008}.\\
-    
-=======
   different databases available on the Internet~\cite{belleau_bio2rdf:_2008}.\
   Bio2RDF uses RDF documents and a\
   list of rules to create URIs that will create linked data.\\
-  
->>>>>>> catherine dumas can't use latex
+ 
   \begin{figure}[ht!]
     \centering
     \includegraphics[scale=0.30]{bio2rdf_architecture.jpg}
@@ -445,8 +440,7 @@ a relation is either considered either true (there is a corresponding row in the
   \noindent where, `dataset' is the preferred short name (or prefix) for a given source\
   dataset as extracted from the Life Science Registry\footnote{Hosted by Bio2RDF\
   at \url{https://docs.google.com/spreadsheet/ccc?key=0AmzqhEUDpIPvdFR0UFhDUTZJdnNYdnJwdHdvNVlJR1E}}.\
-<<<<<<< HEAD
-  
+    
   \begin{figure}[ht!]
     \centering
     \includegraphics[scale=2.80,trim=1 1 1 1,clip]{bio2rdf_provenance.png}
@@ -476,11 +470,6 @@ a relation is either considered either true (there is a corresponding row in the
   syntactic and semantic normalization across numerous datasets has yet to be\
   fully realized. Works of~\citep{ansell_model_2011, callahan_ontology-based_2013}\
   demonstrate better and improved models of resolving queries to the Bio2RDF datasets.\\
-=======
-  For example, the ``Comparative Toxicogenomics Database (CTD)'' dataset\
-  provenance graph makes use of \url{http://bio2rdf.org/bio2rdf-ctd-provenance}\
-  as its graph URI.
->>>>>>> catherine dumas can't use latex
 
 %----------------------------------------------------------------------------------------
 %	HDD
@@ -491,11 +480,101 @@ a relation is either considered either true (there is a corresponding row in the
   \label{sec:hdd}
   
   \initial{H}\textit{ealthcare Data Dictionary (HDD )}\
- is a controlled medical vocabulary server; makes it possible to map and manage medical terminologies, integrate content \& standardize healthcare data. Allows organizations to transmit \& receive accurate, actionable patient data across systems \& applications, regardless of where data originates% \citep{
-  
-  \subsection{How we can use it}\
+ is a controlled medical vocabulary server; makes it possible to map and manage medical terminologies, integrate content and standardize healthcare data. Allows organizations to transmit and receive accurate, actionable patient data across systems and applications, regardless of where data originates\
+(\url{http://solutions.3m.com/wps/portal/3M/en_US/Health-Information-Systems/HIS/Products-and-Services/Products-List-A-Z/Healthcare-Data-Dictionary/})\\
 
-\subsection{How is data stored}\
+HDD incorporates and links terms from multiple clinical information systems and standard terminologies.\
+It maps disparate medical terms to give data context and meaning; and is used to standardize data to make\
+it more interoperable and computable. It is a concept-based vocabulary and knowledge base.\\
+
+\indent In June 2012, the U.S. Department of Defense and the Department of Veterans Affairs reached an agreement 
+with Salt Lake City-based 3M Health Information Systems to make HDD \
+freely available as open-source content and software. HDD, which has been deployed since 1996 by 3M under an\ 
+agreement with the DoD and VA, was started as a development project to standardize clinical information.\
+All major healthcare standard technologies are mapped unto HDD: SNOMED CT, LOINC, ICD-9 and ICD-10.\
+(\url{http://www.healthcare-informatics.com/news-item/open-access-healthcare-data-dictionary})
+
+\subsection{Information Models, Knowledge Base, Vocabulary}\
+
+ \begin{figure}[ht!]
+    \label{fig:ikv}
+    \centering
+    \includegraphics[scale=0.75]{hdd.jpg}
+    \caption{Key Components of HDD}\
+  \end{figure}  
+
+\begin{itemize} 
+\item  \textbf{Information Models:} describes relationships among events and terminologies in a way that\
+gives them meaning and context. IM's mediate between data gathering software and databases\
+and are supported by terminologies.\\
+
+\item  \textbf{Knowledge Base:} defines the domains referenced by the information models.\
+Domains are created and populated by the web of relationships among concepts.\
+Semantic relationships fall into two broad categories: hierarchical and non hierarchical.\\
+
+HDD's knowledge base consists of semantic networks and hierarchies that describe the complex relationships\ 
+existing between concepts in the vocabulary. These relationships can be hierarchical (``parent-child'' or ``is-a'') or\ 
+non-hierarchical ``is-a-component-of''. Figure 6 (below) is an example of how the knowledge base can describe the\ relationships between the components of a CHEM 4 laboratory test.\\
+(\url{http://www.3mtcs.cmo/products/hdd})
+
+ \begin{figure}[ht!]
+    \label{fig:lab}
+    \centering
+    \includegraphics[scale=0.4]{labtest.png}
+    \caption{Sample of HDD's knowledge base as applied to CHEM 4 lab test}\
+  \end{figure}  
+
+
+\item \textbf{Vocabulary:} Identifies medical concepts and organizes them to support synonyms, multiple surface forms, and other lexical\
+characteristics. The HDD is a controlled medical vocabulary that follows best medical informatics practices such as concept\
+permanence, multiple hierarchies, and meaningless identifiers. Each unique concept in the HDD is assigned a\ 
+Numeric Concept Identifier (NCID) code. (\url{http://www.3mtcs.cmo/products/hdd}) 
+\end{itemize}
+
+ \subsection{How we can use it}\
+The server is the complete repository of concepts and associations, maintained and made available for download\
+in its most up-to-date version. Organizations can download and install the package locally to ensure constant\ 
+access to its contents. Users of the HDD will have the ability to request additions to the dictionary, which the team\
+at 3M will review and determine if they should be included.\
+(\url{http://ehrintelligence.com/2012/05/22/what-the-healthcare-data-dictionary-means-to-interoperability/}) 
+
+\subsection{Architecture and Platform Independence}\
+HDD was designed to meet open architecture standards, allow for platform\
+independence, and conforms to the following industry standards:\
+\begin{itemize}
+\item Linux platform\
+\item HL7 Common Technology Services (CTS)\
+\item HL7 messaging\
+\item Abstract Syntax Notation (ASN.1) information model. transferable to XML\ 
+\end{itemize}
+
+ \begin{figure}[ht!]
+    \label{fig:asn}
+    \centering
+    \includegraphics[scale=0.4]{asn.png}
+    \caption{Simplified ASN.1 definition}\
+  \end{figure}  
+
+  \begin{figure}[ht!]
+    \label{fig:sid}
+    \centering
+    \includegraphics[scale=0.6]{sid.png}
+    \caption{Sample instance data}\
+  \end{figure}  
+ 
+ (\url{http://multimedia.3m.com/mws/mediawebserver?6666660Zjcf6lVs6EVs6663GPCOrrrrQ-})\
+
+\subsection{Mapping Source Controlled Medical Vocabularies (CMV's) and Local Vocabularies}\
+All industry-standard CMVs can coexist in the 3M HDD because of a process\
+called mapping, which cross-references elements in each CMV with a concrete,\
+unambiguous concept in the 3M HDD.\\
+
+\begin{figure}[ht!]
+    \label{fig:cid}
+    \centering
+    \includegraphics[scale=0.4]{conceptid.png}
+    \caption{Sample of HDD's concepts and NCIDs}\
+  \end{figure}  
 
 
 %----------------------------------------------------------------------------------------
