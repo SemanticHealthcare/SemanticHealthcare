@@ -324,51 +324,67 @@
 %----------------------------------------------------------------------------------------
 
 
- \section[Resource Description Framework (RDF)]{RDF}
+  \section[Resource Description Framework (RDF)]{RDF}
   \label{sec:rdf}
 
-\initial{R}\textit{esource Description Framework (RDF)}\
-is a World Wide Web Consortium (W3C) standardized data model for representing\
-semantic Web resources. It uses graphs to represent information using a triple-based\
- notation comprising a subject, predicate and an object. All these entities can be uniquely identified by Internationalized Resource Identifiers (IRIs).\
-  \citep{pathak_applying_2012}
+  \initial{R}\textit{esource Description Framework (RDF)}\
+  is a World Wide Web Consortium (W3C) standardized data model for representing\
+  semantic Web resources. It uses graphs to represent information using a triple-based\
+  notation comprising a subject, predicate and an object. All these entities\
+  can be uniquely identified by Internationalized Resource Identifiers\
+  (IRIs)~\citep{pathak_applying_2012}.
 
-\subsection{How we can use it}
+  \subsection{How we can use it}
 
-We can use it by evoking already existing tools such as D2R Map\
-  (\url{http://wifo5-03.informatik.uni-mannheim.de/bizer/d2rmap/D2Rmap.htm}),
- which is an open source tool thats transfers relational data into RDF\
- format which will then allow us to easily gain better insight between data.\
+  We can use it by evoking already existing tools such as D2R Map\
+  (\url{http://wifo5-03.informatik.uni-mannheim.de/bizer/d2rmap/D2Rmap.htm}),\
+  which is an open source tool thats transfers relational data into RDF\
+  format which will then allow us to easily gain better insight between data.\
 
-\subsection{Why this model would be useful for our application}
+  \subsection{Why this model would be useful for our application}
 
-``RDF offers a practical evolutionary pathway to semantic interoperability. It enables information\
- to be readily linked and exchanged with full semantic fidelity while leveraging existing IT infrastructure investments.\
- Being schema-flexible, RDF allows multiple evolving data models and vocabularies to peacefully co-exist in the same instance\
-data, without loss of semantic fidelity. This enables standardized data models and vocabularies to be used whenever possible\
-, while permitting legacy or specialized models and vocabularies to be semantically linked and used when necessary. It also\
- enables a limitless variety of related information to be semantically linked to patient data, such as genomic, geographic and drug\
- interaction data, enabling more effective treatment, and greater knowledge discovery. Other reasons for adopting RDF as a universal\
- healthcare exchange language include:
+  RDF offers a practical evolutionary pathway to semantic interoperability.\
+  It enables information to be readily linked and exchanged with full semantic\
+  fidelity while leveraging existing IT infrastructure investments.\
+  Being schema-flexible, RDF allows multiple evolving data models and vocabularies\
+  to peacefully co-exist in the same instance data, without loss of semantic fidelity.\
+  This enables standardized data models and vocabularies to be used whenever possible,\ 
+  while permitting legacy or specialized models and vocabularies to be\
+  semantically linked and used when necessary. It also enables a limitless\
+  variety of related information to be semantically linked to patient data,\
+  such as genomic, geographic and drug interaction data, enabling more effective\
+  treatment, and greater knowledge discovery. Other reasons for adopting RDF as\
+  a universal healthcare exchange language include:\
 
-\begin{description}
-\item[(a)]  Its ability to make information self-describing with precise semantics
-\item[(b)] its support for automated inference
-\item[(c)]  its foundation in open standard''
-\end{description}
+  \begin{description}
+  \itemindent3em
+  \itemsep0ex
+  \item[(a)]  Its ability to make information self-describing with precise semantics
+  \item[(b)] its support for automated inference
+  \item[(c)]  its foundation in open standard''
+  \end{description}
 
- (\url{http://www.osehra.org/blog/rdf-universal-healthcare-language-0})\\
+  (\url{http://www.osehra.org/blog/rdf-universal-healthcare-language-0})\\
 
-By using a standard language for data interchange, new research discoveries could be made\
-more efficiently and effectively.\
+  By using a standard language for data interchange, new research discoveries could be made\
+  more efficiently and effectively.\
 
-\includegraphics[scale=0.65]{rdfh.png}
- \citep{parachuri2008role}\\
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[scale=0.65]{rdfh.png}
+    \caption{\citep{parachuri2008role}}
+    \label{fig:rdfh}
+  \end{figure}
 
-\includegraphics[scale=0.4]{rdf1.png}\\
- (\url{www.jonathanborden-md.com/HealthcareSemWeb.ppt‎})\\
+  \begin{figure}[ht!]
+    \centering
+    \includegraphics[scale=0.4]{rdf1.png}\\
+    \caption{\url{www.jonathanborden-md.com/HealthcareSemWeb.ppt‎}}
+    \label{fig:rdf1}
+  \end{figure}
+   
 
-\subsection{Comparison with other data models}
+  \subsection{Comparison with other data models}
 
   \begin{figure}[ht!]
     \centering
@@ -378,29 +394,32 @@ more efficiently and effectively.\
     \label{fig:nwhin}
   \end{figure}  
 
-XML:\\
+  XML:\\
 
-XML is a comparable data model to RDF and in fact one way you can express RDF data is in a certain XML format.\
-``What sets RDF apart from XML is that RDF is designed to represent knowledge in a distributed world.\
-That RDF is designed for knowledge, and not data, means RDF is particularly concerned with meaning.''\\
+  XML is a comparable data model to RDF and in fact one way you can express RDF data is in a certain XML format.\
+  What sets RDF apart from XML is that RDF is designed to represent knowledge in a distributed world.\
+  That RDF is designed for knowledge, and not data, means RDF is particularly concerned with meaning.\\
 
-``In some ways, RDF can be compared to XML. XML also is designed to be simple and applicable to any type of data.\
-XML is also more than a file format. It is a foundation for dealing with hierarchical, self-contained documents,\
- whether they be stored on disk in the usual brackets-and-slashes format, or held in memory and accessed through a DOM API.''\\
+  In some ways, RDF can be compared to XML. XML also is designed to be simple and applicable to any type of data.\
+  XML is also more than a file format. It is a foundation for dealing with hierarchical, self-contained documents,\
+  whether they be stored on disk in the usual brackets-and-slashes format, or held in memory and accessed through a DOM API.\\
+  (\url{http://www.rdfabout.com/intro/})\\
 
- (\url{http://www.rdfabout.com/intro/})\\
+  SQL: \\
 
-SQL: \\
+  Relational Database’s such as SQL is also a comparable data model to RDF, and\
+  you can actually store your RDF data inside of a relational database.\
+  Individual statements in RDF are expressed as subject, predicate, object\ 
+  triples. Sets of these with a common predicate can be mapped to binary relations\
+  in the relational model, in the the common parlance, 2-column tables.\\
 
-Relational Database’s such as SQL is also a comparable data model to RDF, and you can actually store your RDF data inside of a relational database.\
-``Individual statements in RDF are expressed as subject, predicate, object triples. Sets of these with a common predicate\
- can be mapped to binary relations in the relational model, in the the common parlance, 2-column tables.''\\
+  But a difference between the two is that in Relational DB's, for a certain\
+  set of values a relation is either considered either true (there is a corresponding\
+  row in the table) or false (there isn't). In the RDF model in the general case,\
+  if a set of values isn't in the ``row'' (i.e. you don't have a particular statement),\
+  then it's not false, just unknown.\\
 
-``But a difference between the two is that in Relational DB's, for a certain set of values\
-a relation is either considered either true (there is a corresponding row in the table) or false (there isn't).\
- In the RDF model in the general case, if a set of values isn't in the ``row'' (i.e. you don't have a particular statement), then it's not false, just unknown.''\\
-
- (\url{http://www.rdfabout.com/comparisons.xpd})\\
+   (\url{http://www.rdfabout.com/comparisons.xpd})\\
 
 %----------------------------------------------------------------------------------------
 %	Bio2RDF
@@ -508,80 +527,94 @@ a relation is either considered either true (there is a corresponding row in the
 %	HDD
 %----------------------------------------------------------------------------------------
 
-\section[3M\textsuperscript{\texttrademark} Healthcare Data Dictionary (HDD)]
-{3M HDD\textsuperscript{\texttrademark}}
+  \section[3M\textsuperscript{\texttrademark} Healthcare Data Dictionary (HDD)]
+  {3M HDD\textsuperscript{\texttrademark}}
   \label{sec:hdd}
   
   \initial{H}\textit{ealthcare Data Dictionary (HDD )}\
- is a controlled medical vocabulary server; makes it possible to map and manage medical terminologies, integrate content and standardize healthcare data. Allows organizations to transmit and receive accurate, actionable patient data across systems and applications, regardless of where data originates\
-\citep{_3M_Healthcare_Data_Dictionary_2013}\
+  is a controlled medical vocabulary server; makes it possible to map and manage\
+  medical terminologies, integrate content and standardize healthcare data. Allows\
+  organizations to transmit and receive accurate, actionable patient data across\
+  systems and applications, regardless of where data\
+  originates~\citep{_3M_Healthcare_Data_Dictionary_2013}.\
+  HDD incorporates and links terms from multiple clinical information\
+  systems and standard terminologies. It maps disparate medical terms to\
+  give data context and meaning; and is used to standardize data to make\
+  it more interoperable and computable. It is a concept-based vocabulary and\
+  knowledge base.\\
 
-HDD incorporates and links terms from multiple clinical information systems and standard terminologies.\
-It maps disparate medical terms to give data context and meaning; and is used to standardize data to make\
-it more interoperable and computable. It is a concept-based vocabulary and knowledge base.\\
+  \noindent In June 2012, the U.S. Department of Defense and the Department\
+  of Veterans Affairs reached an agreement with Salt Lake City-based 3M Health\
+  Information Systems to make HDD freely available as open-source content and\
+  software. HDD, which has been deployed since 1996 by 3M under an agreement with\
+  the DoD and VA, was started as a development project to standardize clinical information.\
+  All major healthcare standard technologies are mapped unto HDD:\
+  SNOMED CT\textsuperscript{\ref{sec:snomedct}}, LOINC\textsuperscript{\ref{sec:loinc}},\
+  ICD-9 and ICD-10\textsuperscript{\ref{sec:icd}}.\
+  (\url{http://www.healthcare-informatics.com/news-item/open-access-healthcare-data-dictionary})
 
-\indent In June 2012, the U.S. Department of Defense and the Department of Veterans Affairs reached an agreement 
-with Salt Lake City-based 3M Health Information Systems to make HDD \
-freely available as open-source content and software. HDD, which has been deployed since 1996 by 3M under an\ 
-agreement with the DoD and VA, was started as a development project to standardize clinical information.\
-All major healthcare standard technologies are mapped unto HDD: SNOMED CT, LOINC, ICD-9 and ICD-10.\
-(\url{http://www.healthcare-informatics.com/news-item/open-access-healthcare-data-dictionary})
+  \subsection{Information Models, Knowledge Base, Vocabulary}\
 
-\subsection{Information Models, Knowledge Base, Vocabulary}\
-
- \begin{figure}[ht!]
+  \begin{figure}[ht!]
     \label{fig:ikv}
     \centering
     \includegraphics[scale=0.75]{hdd.jpg}
     \caption{Key Components of HDD}\
   \end{figure}  
 
-\begin{itemize} 
-\item  \textbf{Information Models:} describes relationships among events and terminologies in a way that\
-gives them meaning and context. IM's mediate between data gathering software and databases\
-and are supported by terminologies.\\
+  \begin{itemize}
+    \itemsep0ex
+    \item  \textbf{Information Models:} describes relationships among events and terminologies in a way that\
+    gives them meaning and context. IM's mediate between data gathering software and databases\
+    and are supported by terminologies.\\
 
-\item  \textbf{Knowledge Base:} defines the domains referenced by the information models.\
-Domains are created and populated by the web of relationships among concepts.\
-Semantic relationships fall into two broad categories: hierarchical and non hierarchical.\\
+    \item  \textbf{Knowledge Base:} defines the domains referenced by the information models.\
+    Domains are created and populated by the web of relationships among concepts.\
+    Semantic relationships fall into two broad categories: hierarchical and non hierarchical.\\
 
-HDD's knowledge base consists of semantic networks and hierarchies that describe the complex relationships\ 
-existing between concepts in the vocabulary. These relationships can be hierarchical (``parent-child'' or ``is-a'') or\ 
-non-hierarchical ``is-a-component-of''. Figure 6 (below) is an example of how the knowledge base can describe the\ relationships between the components of a CHEM 4 laboratory test.\\
-(\url{http://www.3mtcs.cmo/products/hdd})
+    HDD's knowledge base consists of semantic networks and hierarchies that describe\
+    the complex relationships existing between concepts in the vocabulary. These\
+    relationships can be hierarchical (``parent-child'' or ``is-a'') or\ 
+    non-hierarchical ``is-a-component-of''. Figure 6 (below) is an example of how\
+    the knowledge base can describe the\ relationships between the components of a\
+    CHEM 4 laboratory test.\\
+    (\url{http://www.3mtcs.cmo/products/hdd})
 
- \begin{figure}[ht!]
-    \label{fig:lab}
-    \centering
-    \includegraphics[scale=0.4]{labtest.png}
-    \caption{Sample of HDD's knowledge base as applied to CHEM 4 lab test}\
-  \end{figure}  
+    \begin{figure}[ht!]
+      \label{fig:lab}
+      \centering
+      \includegraphics[scale=0.4]{labtest.png}
+      \caption{Sample of HDD's knowledge base as applied to CHEM 4 lab test}\
+    \end{figure}  
 
 
-\item \textbf{Vocabulary:} Identifies medical concepts and organizes them to support synonyms, multiple surface forms, and other lexical\
-characteristics. The HDD is a controlled medical vocabulary that follows best medical informatics practices such as concept\
-permanence, multiple hierarchies, and meaningless identifiers. Each unique concept in the HDD is assigned a\ 
-Numeric Concept Identifier (NCID) code. (\url{http://www.3mtcs.cmo/products/hdd}) 
-\end{itemize}
+    \item \textbf{Vocabulary:} Identifies medical concepts and organizes them\
+    to support synonyms, multiple surface forms, and other lexical\
+    characteristics. The HDD is a controlled medical vocabulary that follows\
+    best medical informatics practices such as concept permanence, multiple\
+    hierarchies, and meaningless identifiers. Each unique concept in the HDD\
+    is assigned a Numeric Concept Identifier (NCID) code. (\url{http://www.3mtcs.cmo/products/hdd}) 
+  \end{itemize}
 
- \subsection{How we can use it}\
-The server is the complete repository of concepts and associations, maintained and made available for download\
-in its most up-to-date version. Organizations can download and install the package locally to ensure constant\ 
-access to its contents. Users of the HDD will have the ability to request additions to the dictionary, which the team\
-at 3M will review and determine if they should be included.\
-(\url{http://ehrintelligence.com/2012/05/22/what-the-healthcare-data-dictionary-means-to-interoperability/}) 
+  \subsection{How we can use it}
+  The server is the complete repository of concepts and associations, maintained and made available for download\
+  in its most up-to-date version. Organizations can download and install the package locally to ensure constant\ 
+  access to its contents. Users of the HDD will have the ability to request additions to the dictionary, which the team\
+  at 3M will review and determine if they should be included.\
+  (\url{http://ehrintelligence.com/2012/05/22/what-the-healthcare-data-dictionary-means-to-interoperability/}) 
 
-\subsection{Architecture and Platform Independence}\
-HDD was designed to meet open architecture standards, allow for platform\
-independence, and conforms to the following industry standards:\
-\begin{itemize}
-\item Linux platform\
-\item HL7 Common Technology Services (CTS)\
-\item HL7 messaging\
-\item Abstract Syntax Notation (ASN.1) information model. transferable to XML\ 
-\end{itemize}
+  \subsection{Architecture and Platform Independence}
+  HDD was designed to meet open architecture standards, allow for platform\
+  independence, and conforms to the following industry standards:\
+  \begin{itemize}
+    \itemsep0ex
+    \item Linux platform\
+    \item HL7 Common Technology Services (CTS)\
+    \item HL7 messaging\
+    \item Abstract Syntax Notation (ASN.1) information model. transferable to XML\ 
+  \end{itemize}
 
- \begin{figure}[ht!]
+  \begin{figure}[ht!]
     \label{fig:asn}
     \centering
     \includegraphics[scale=0.4]{asn.png}
@@ -597,12 +630,12 @@ independence, and conforms to the following industry standards:\
  
  (\url{http://multimedia.3m.com/mws/mediawebserver?6666660Zjcf6lVs6EVs6663GPCOrrrrQ-})\
 
-\subsection{Mapping Source Controlled Medical Vocabularies (CMV's) and Local Vocabularies}\
-All industry-standard CMVs can coexist in the 3M HDD because of a process\
-called mapping, which cross-references elements in each CMV with a concrete,\
-unambiguous concept in the 3M HDD.\\
+  \subsection{Mapping Source Controlled Medical Vocabularies (CMV's) and Local Vocabularies}\
+  All industry-standard CMVs can coexist in the 3M HDD because of a process\
+  called mapping, which cross-references elements in each CMV with a concrete,\
+  unambiguous concept in the 3M HDD.\\
 
-\begin{figure}[ht!]
+  \begin{figure}[ht!]
     \label{fig:cid}
     \centering
     \includegraphics[scale=0.4]{conceptid.png}
@@ -614,100 +647,113 @@ unambiguous concept in the 3M HDD.\\
 %	ICD
 %----------------------------------------------------------------------------------------
 
-\section[International Classification of Diseases (ICD) ]{ICD}
+  \section[International Classification of Diseases (ICD) ]{ICD}
   \label{sec:icd}
 
-\initial{I}\textit{nternational Classification of Diseases (ICD)}\\
+  \initial{I}\textit{nternational Classification of Diseases (ICD)}\\
 
-\subsection{How we can use it}\
+  \subsection{How we can use it}\
 
 
-\subsection{How is data stored}\
+  \subsection{How is data stored}\
 
 %----------------------------------------------------------------------------------------
 %	LOINC
 %----------------------------------------------------------------------------------------
 
-\section[Logical Observation Identifier Names and Codes terminology (LOINC\textsuperscript{\textregistered})] 
-{LOINC\textsuperscript{\textregistered}}
+  \section[Logical Observation Identifier Names and Codes terminology\
+  (LOINC\textsuperscript{\textregistered})] 
+  {LOINC\textsuperscript{\textregistered}}
   \label{sec:loinc}
   
-\initial{L}\textit{ogical Observation Identifier Names and Codes terminology (LOINC )}\\
+  \initial{L}\textit{ogical Observation Identifier Names and Codes terminology (LOINC )}\\
 
 
 
-\subsection{How we can use it}\
+  \subsection{How we can use it}
 
-There is a free software program developed by The Regenstrief Institute called RELMA (the Regenstrief LOINC Mapping Assistant) which enables browsing and searching the database, review accessory content for terms and map local terms to LOINC \citep{kroth_using_2012} 
+  There is a free software program developed by The Regenstrief Institute\
+  called RELMA (the Regenstrief LOINC Mapping Assistant) which enables browsing\
+  and searching the database, review accessory content for terms and map local\
+  terms to LOINC \citep{kroth_using_2012} 
 
-\subsection{How is data stored}\
+  \subsection{How is data stored}
 
 %----------------------------------------------------------------------------------------
 %	HL7/FHIR
 %----------------------------------------------------------------------------------------
 
-\section[Fast Healthcare Interoperability Resources (HL7 FHIR\textsuperscript{\texttrademark})]
-{HL7 FHIR \textsuperscript{\texttrademark}}
-  \label{sec:fhir}
+  \section[Fast Healthcare Interoperability Resources (HL7 FHIR\textsuperscript{\texttrademark})]
+  {HL7 FHIR \textsuperscript{\texttrademark}}
+    \label{sec:fhir}
 
-\initial{F}\textit{ast Healthcare Interoperability Resources (HL7/FHIR )}\
-is a is a next generation standards framework created by HL7.\
-It defines a set of "resources" for health. These resources represent granular clinical\
-concepts that can be exchanged in order to quickly and effectively solve problems in healthcare\
- and related process. The resources cover the basic elements of healthcare - patients, admissions,\
-diagnostic reports, medications, and problem lists, with their typical participants, and also support\
-a range of richer and more complex clinical models. The simple direct definitions of the resources are\
- based on thorough requirements gathering, formal analysis and extensive cross-mapping to other relevant standards.''\\
+  \initial{F}\textit{ast Healthcare Interoperability Resources (HL7/FHIR )}\
+  is a is a next generation standards framework created by HL7.\
+  It defines a set of ``resources'' for health. These resources represent granular clinical\
+  concepts that can be exchanged in order to quickly and effectively solve problems in healthcare\
+  and related process. The resources cover the basic elements of healthcare - patients, admissions,\
+  diagnostic reports, medications, and problem lists, with their typical participants, and also support\
+  a range of richer and more complex clinical models. The simple direct definitions of the resources are\
+  based on thorough requirements gathering, formal analysis and extensive cross-mapping to other relevant standards.\\
   (\url{http://www.hl7.org/implement/standards/fhir/v0.01/print-introduction.htm})\\
 
-``Resources are:\
+  Resources are:\
 
-\begin{itemize}
-\item Atomic - they are the smallest defined unit of operation and a transaction scope of their own.
-\item Connected - resources refer to other resources to allow for clean modular reuse of information.
-\item Independent - the content of a resource can be processed without having to retrieve referenced resources.
-\item Simple - each resource definition is easy to understand, and to implement without needing specialized tooling or infrastructure (though that can be used if desired).
-\item RESTful - resources are able to be used in a RESTful exchange context.
-\item Flexible - resources can also be used in non-RESTful contexts, such as messaging or SOA architectures and can be moved in and out of RESTful paradigms as convenient.
-\item Extensible - resources can be extended to allow for local requirements without impacting on interoperability.
-\item Webcentric - where possible and appropriate, open internet standards are used for data representation.
-\item Free for use - the FHIR specification itself is open - anyone can implement FHIR or derive related specifications without any IP restrictions.
-\end{itemize}
+  \begin{itemize}
+    \itemsep0ex
+    \item Atomic - they are the smallest defined unit of operation and a transaction\
+    scope of their own.\
+    \item Connected - resources refer to other resources to allow for clean modular\
+    reuse of information.\
+    \item Independent - the content of a resource can be processed without having to\
+    retrieve referenced resources.\
+    \item Simple - each resource definition is easy to understand, and to implement\
+    without needing specialized tooling or infrastructure (though that can be used if desired).\
+    \item RESTful - resources are able to be used in a RESTful exchange context.\
+    \item Flexible - resources can also be used in non-RESTful contexts, such as messaging\
+    or SOA architectures and can be moved in and out of RESTful paradigms as convenient.\
+    \item Extensible - resources can be extended to allow for local requirements without\
+    impacting on interoperability.\
+    \item Webcentric - where possible and appropriate, open internet standards are used\
+    for data representation.\
+    \item Free for use - the FHIR specification itself is open - anyone can implement\
+    FHIR or derive related specifications without any IP restrictions.\
+  \end{itemize}
 
-In addition to the basic resources, FHIR defines a lightweight implementation framework that\
-supports the use of these resources in RESTful environments, classic message exchanges, human-centric\
- clinical documents and enterprise SOA architectures. Each of these approaches provides its own benefits\ 
-- FHIR provides the underpinning enablement that makes the choosing one of these painless and enables enterprises\
- to choose their own paradigm without forsaking interoperability with other approaches.\\
+  \noindent In addition to the basic resources, FHIR defines a lightweight implementation framework that\
+  supports the use of these resources in RESTful environments, classic message exchanges, human-centric\
+  clinical documents and enterprise SOA architectures. Each of these approaches provides its own benefits\ 
+  - FHIR provides the underpinning enablement that makes the choosing one of these painless and enables enterprises\
+  to choose their own paradigm without forsaking interoperability with other approaches.\\
 
-Though the resources are simple and easy to understand, they are backed by a thorough, global requirements gathering\
- and formal modeling process that ensures that the content of the resources is stable and reliable. The resource\
-contents are mapped to solid underlying ontologies and models using computable languages (including RDF) so\
-that the definitions and contents of the resources can be leveraged by computational analysis and conversion processes.\\
+  \noindent Though the resources are simple and easy to understand, they are backed by a thorough, global requirements gathering\
+  and formal modeling process that ensures that the content of the resources is stable and reliable. The resource\
+  contents are mapped to solid underlying ontologies and models using computable languages (including RDF) so\
+  that the definitions and contents of the resources can be leveraged by computational analysis and conversion processes.\\
 
-FHIR also provides an underlying conformance framework and tooling that allows different implementation contexts\ 
-and enterprises to describe their context and use of resources in formal computable ways and to empower computed\
- interoperability that leverages both the conformance and definitional frameworks.\\
+  \noindent FHIR also provides an underlying conformance framework and tooling that allows different implementation contexts\ 
+  and enterprises to describe their context and use of resources in formal computable ways and to empower computed\
+  interoperability that leverages both the conformance and definitional frameworks.\\
 
-The combination of the resources and the 3 supporting layers (implementation frameworks,\
-definitional thoroughness, and conformance tooling), along with the completely free license of FHIR\
- itself frees healthcare data so that it can easily flow to where it needs to be (across hospital production systems,\
- mobile clinical systems, cloud based data stores, national health repositories, research databases, etc.)\
-without having to pass through format and semantic inter-conversion hurdles along the way.''\\
- (\url{http://hl7.org/implement/standards/fhir/overview.htm})
+  \noindent The combination of the resources and the 3 supporting layers (implementation frameworks,\
+  definitional thoroughness, and conformance tooling), along with the completely free license of FHIR\
+  itself frees healthcare data so that it can easily flow to where it needs to be (across hospital production systems,\
+  mobile clinical systems, cloud based data stores, national health repositories, research databases, etc.)\
+  without having to pass through format and semantic inter-conversion hurdles along the way.\\
+  (\url{http://hl7.org/implement/standards/fhir/overview.htm})
 
 
 %----------------------------------------------------------------------------------------
 %	NwHIN
 %----------------------------------------------------------------------------------------
 
-\section[Nationwide Health Information Network (NwHIN)]{NwHIN}
+  \section[Nationwide Health Information Network (NwHIN)]{NwHIN}
   \label{sec:nwhin}
 
-\initial{``N}\textit{ationwide Health Information Network (NwHIN )}\
-is a set of standards, services, and policies that enable the secure exchange\
-of health information over the Internet.''\\
-(\url{http://www.healthit.gov/policy-researchers-implementers/nationwide-health-information-network-nwhin})\\
+  \initial{N}\textit{ationwide Health Information Network (NwHIN )}\
+  is a set of standards, services, and policies that enable the secure exchange\
+  of health information over the Internet.\\
+  (\url{http://www.healthit.gov/policy-researchers-implementers/nationwide-health-information-network-nwhin})\\
 
   \begin{figure}[ht!]
     \centering
@@ -717,115 +763,107 @@ of health information over the Internet.''\\
     \label{fig:nwhin}
   \end{figure}  
 
-(\url{http://www.siframework.org/scenario_toc2.html})\
+  (\url{http://www.siframework.org/scenario_toc2.html})\
 
 %----------------------------------------------------------------------------------------
 %	SPARQL
 %----------------------------------------------------------------------------------------
 
-\section[SPARQL Protocol and RDF Query Language (SPARQL)]{SPARQL}
+  \section[SPARQL Protocol and RDF Query Language (SPARQL)]{SPARQL}
   \label{sec:sparql}
 
-\initial{S}\textit{SPARQL Protocol and RDF Query Language (SPARQL)}\
-		is a W3C recommend standard for querying RDF data.\
-		It allows one to query remote RDF resources, in a manner similar to the querying of databases using SQL.\
-		A SPARQL query is a set of graph patterns; any data triple matching these patterns is added to the query results.''\
-                   \citep{Jarrar_mashql:_2008}     
+  \initial{S}\textit{SPARQL Protocol and RDF Query Language (SPARQL)}\
+  is a W3C recommend standard for querying RDF data.\
+  It allows one to query remote RDF resources, in a manner similar to the querying of databases using SQL.\
+  A SPARQL query is a set of graph patterns; any data triple matching these patterns is added to the query results.\
+  \citep{Jarrar_mashql:_2008}\\     
 		
-		\subsection{Alternatives}
+  \subsection{Alternatives}
 
-		SquishQL - A simple RDF query language for beginners that allows for SQL syntax.\\
-		(\url{http://www.techrepublic.com/article/squishql-the-simplest-rdf-query-language})\
+  SquishQL - A simple RDF query language for beginners that allows for SQL syntax.\
+  \noindent(\url{http://www.techrepublic.com/article/squishql-the-simplest-rdf-query-language})\\
 
-\subsection{Examples}
+  \subsection{Examples}
 
-\begin{figure}[ht!]
-     \begin{center}
-%
-        \subfigure[Example 1]{%
-            \label{fig:first}
-            \includegraphics[width=1.0\textwidth]{sparql.png}
-        }%
+  \begin{figure}[ht!]
+    \begin{center}
+      \subfigure[Example 1]{%
+        \label{fig:first}
+        \includegraphics[width=1.0\textwidth]{sparql.png}
+      }%
 
-        \subfigure[Example 2]{%
-           \label{fig:second}
-           \includegraphics[width=1.0\textwidth]{sparql1.png}
-        }%
+      \subfigure[Example 2]{%
+        \label{fig:second}
+        \includegraphics[width=1.0\textwidth]{sparql1.png}
+      }%
 
-        \subfigure[Example 3]{%
-            \label{fig:third}
-            \includegraphics[width=0.4\textwidth]{sparqlh.png}
-        }%
-%
+      \subfigure[Example 3]{%
+          \label{fig:third}
+          \includegraphics[width=0.4\textwidth]{sparqlh.png}
+      }%
     \end{center}
     \caption{%
-	SPARQL Examples
-     }%
-   \label{fig:subfigures}
-\end{figure}
-%%
-% -------------- End of figure environment ----------------------%
-%%
+	    SPARQL Examples
+    }%
+    \label{fig:subfigures}
+  \end{figure}
 
-The first, second, and third subfigures in subfigure
-\ref{fig:subfigures} are labeled as
-\ref{fig:first} \cite{stenzhorn2008simplifying}, \ref{fig:second} \cite{stenzhorn2008simplifying} and \ref{fig:third}  \cite{parachuri2008role}
-respectively.
+  \noindent The first, second, and third subfigures in subfigure\
+  \ref{fig:subfigures} are labeled as\
+  \ref{fig:first} \cite{stenzhorn2008simplifying},\
+  \ref{fig:second} \cite{stenzhorn2008simplifying}\
+  and \ref{fig:third}  \cite{parachuri2008role} respectively.\\
 
 
 %----------------------------------------------------------------------------------------
 %	FMQL
 %----------------------------------------------------------------------------------------
 
-\section[FileMan Query Language (FMQL)]{FMQL}
+  \section[FileMan Query Language (FMQL)]{FMQL}
   \label{sec:fmql}
 
-\initial{F}\textit{ileMan Query Language (FMQL)}\
-
+  \initial{F}\textit{ileMan Query Language (FMQL)}\
+  is a Query Language that provides access to both FileMan data\
+  - a vital measurement of a patient - and the schema of that data - the type ``Vital Measurement''.\\
+  
   \begin{figure}[ht!]
     \centering
-   \includegraphics[scale=0.4]{fmqlFromFileMan.png}
+    \includegraphics[scale=0.4]{fmqlFromFileMan.png}
     \caption{Querying data from Fileman}
     \cite[Fig.~1]{belleau_bio2rdf:_2008}
     \label{fig:fmql}
   \end{figure}  
 
-``is a Query Language that provides access to both FileMan data\
-- a vital measurement of a patient - and the schema of that data - the type ``Vital Measurement''.\
-The three things that it addresses are:
-\begin{enumerate}
-\item
-Identity: every entity and entity type in FileMan gets a unique identifier - a URI.
-\item
-Data Formats: a consistent form of JSON, the web-friendly response format, for every type of data in the system\
- as well as HTML for human readers and RDF for web-data practitioners.
-\item
-Query Nuance: from the precise - SELECT - to the broader - DESCRIBE - or just COUNT, covers data hierarchies\
- and graphical layouts, paging and filtering.''
-\end{enumerate}
-
-(\url{http://vista.caregraf.info/fmql})\
+  \noindent The three things that it addresses are:
+  \begin{enumerate}
+    \item Identity: every entity and entity type in FileMan gets a unique identifier - a URI.
+    \item Data Formats: a consistent form of JSON, the web-friendly response format, for every\
+    type of data in the system as well as HTML for human readers and RDF for web-data practitioners.\
+    \item Query Nuance: from the precise - SELECT - to the broader - DESCRIBE - or just COUNT, covers data hierarchies\
+    and graphical layouts, paging and filtering.
+  \end{enumerate}
+  (\url{http://vista.caregraf.info/fmql})
 
 %----------------------------------------------------------------------------------------
 %	Miscellaneous Technologies
 %----------------------------------------------------------------------------------------
-\section{Miscellaneoous Technologies}
-\label{sec:misc}
+  \section{Miscellaneous Technologies}
+  \label{sec:misc}
 
-There have been multiple efforts undertaken to unify healthcare semantics.\
-Some of the other technologies and/or lexicons that are being used currently\
-are summarized here:
+  There have been multiple efforts undertaken to unify healthcare semantics.\
+  Some of the other technologies and/or lexicons that are being used currently\
+  are summarized here:
 
-\subsection{First DataBank\textsuperscript{\texttrademark}}
-\label{sec:fdb}
-First Databank Inc.\footnote{\url{http://www.fdbhealth.com}},\
-currently owned by Hearst Corporation, is a publisher\
-of pharmaceutical industry market information and information\
-technology. First Databank's proprietary knowledge base -\ 
-\emph{MedKnowledge}~\citep{first_databank_fdb_2013}\
-provides prices, descriptions, and collateral clinical information on drugs\
-approved by the US Food and Drug Administration (FDA), plus commonly used\
-over-the-counter drugs, herbal remedies, nutraceuticals and dietary supplements.\\
+  \subsection{First DataBank\textsuperscript{\texttrademark}}
+  \label{sec:fdb}
+  First Databank Inc.\footnote{\url{http://www.fdbhealth.com}},\
+  currently owned by Hearst Corporation, is a publisher\
+  of pharmaceutical industry market information and information\
+  technology. First Databank's proprietary knowledge base -\ 
+  \emph{MedKnowledge}~\citep{first_databank_fdb_2013}\
+  provides prices, descriptions, and collateral clinical information on drugs\
+  approved by the US Food and Drug Administration (FDA), plus commonly used\
+  over-the-counter drugs, herbal remedies, nutraceuticals and dietary supplements.\\
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
