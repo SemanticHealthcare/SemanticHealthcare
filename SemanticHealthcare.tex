@@ -336,8 +336,7 @@
 
   \subsection{How we can use it}
 
-  We can use it by evoking already existing tools such as D2R Map\
-  (\url{http://wifo5-03.informatik.uni-mannheim.de/bizer/d2rmap/D2Rmap.htm}),\
+  We can use it by evoking already existing tools such as D2R Map \citep{_d2r_tool_2013}\
   which is an open source tool thats transfers relational data into RDF\
   format which will then allow us to easily gain better insight between data.\
 
@@ -360,30 +359,36 @@
     \itemsep0ex
     \item[(a)]  Its ability to make information self-describing with precise semantics
     \item[(b)] its support for automated inference
-    \item[(c)]  its foundation in open standard''
+    \item[(c)]  its foundation in open standard''\citep{_Munnecke_2013}\
   \end{description}
-
-  (\url{http://www.osehra.org/blog/rdf-universal-healthcare-language-0})\\
 
   \noindent By using a standard language for data interchange, new research discoveries could be made\
   more efficiently and effectively.\
 
-  \begin{figure}[ht!]
-    \centering
-    \includegraphics[scale=0.65]{rdfh.png}
-    \caption{\citep{parachuri2008role}}
-    \label{fig:rdfh}
+  \subsection{RDFExamples}
+  \begin{figure}[h!]
+    \begin{subfigure}[b]{.5\linewidth}
+      \includegraphics[width=1.0\textwidth]{rdfh.png}
+      \caption{RDF Example 1}
+      \label{fig:third}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{.5\linewidth}
+      \includegraphics[width=1.0\textwidth]{rdf1.png}
+      \caption{RDF Example 2}
+      \label{fig:fourth}
+    \end{subfigure}
+    \caption{Examples}
+    \label{fig:rdf_examples}
   \end{figure}
 
-  \begin{figure}[ht!]
-    \centering
-    \includegraphics[scale=0.4,trim=3 1 1 8,clip]{rdf1.png}\\
-    \caption{\url{www.jonathanborden-md.com/HealthcareSemWeb.ppt‎}}
-    \label{fig:rdf1}
-  \end{figure}
-   
+ \noindent The first, second, and third subfigures in subfigure\
+  2 are labeled as\
+  \ref{fig:third} \cite{parachuri2008role}\
+  and \ref{fig:fourth}  \cite{_Borden_2013} respectively.\\
 
-  \subsection{Comparison with other data models}
+
+ \subsection{Comparison with other data models}
 
   \begin{figure}[ht!]
     \centering
@@ -401,8 +406,8 @@
 
   \noindent In some ways, RDF can be compared to XML. XML also is designed to be simple and applicable to any type of data.\
   XML is also more than a file format. It is a foundation for dealing with hierarchical, self-contained documents,\
-  whether they be stored on disk in the usual brackets-and-slashes format, or held in memory and accessed through a DOM API.\\
-  (\url{http://www.rdfabout.com/intro/})\\
+  whether they be stored on disk in the usual brackets-and-slashes format, or held in memory and accessed through a DOM API.\
+  \citep{_rdf_about_2013}\\
 
   \noindent SQL: \\
 
@@ -416,9 +421,7 @@
   set of values a relation is either considered either true (there is a corresponding\
   row in the table) or false (there isn't). In the RDF model in the general case,\
   if a set of values isn't in the ``row'' (i.e. you don't have a particular statement),\
-  then it's not false, just unknown.\\
-
-   (\url{http://www.rdfabout.com/comparisons.xpd})\\
+  then it's not false, just unknown. \citep{_rdf_comparison_2013}\
 
 %----------------------------------------------------------------------------------------
 %	Bio2RDF
@@ -695,8 +698,7 @@
   and related process. The resources cover the basic elements of healthcare - patients, admissions,\
   diagnostic reports, medications, and problem lists, with their typical participants, and also support\
   a range of richer and more complex clinical models. The simple direct definitions of the resources are\
-  based on thorough requirements gathering, formal analysis and extensive cross-mapping to other relevant standards.\\
-  (\url{http://www.hl7.org/implement/standards/fhir/v0.01/print-introduction.htm})\\
+  based on thorough requirements gathering, formal analysis and extensive cross-mapping to other relevant standards. \citep{_fhir_intro_2013}\
 
   Resources are:\
 
@@ -740,8 +742,7 @@
   definitional thoroughness, and conformance tooling), along with the completely free license of FHIR\
   itself frees healthcare data so that it can easily flow to where it needs to be (across hospital production systems,\
   mobile clinical systems, cloud based data stores, national health repositories, research databases, etc.)\
-  without having to pass through format and semantic inter-conversion hurdles along the way.\\
-  (\url{http://hl7.org/implement/standards/fhir/overview.htm})
+  without having to pass through format and semantic inter-conversion hurdles along the way. \citep{_fhir_framework_2013}\
 
 
 %----------------------------------------------------------------------------------------
@@ -753,18 +754,15 @@
 
   \initial{N}\textit{ationwide Health Information Network (NwHIN )}\
   is a set of standards, services, and policies that enable the secure exchange\
-  of health information over the Internet.\\
-  (\url{http://www.healthit.gov/policy-researchers-implementers/nationwide-health-information-network-nwhin})\\
+  of health information over the Internet.\citep{_nwhin_framework_2013}     
 
   \begin{figure}[ht!]
     \centering
     \includegraphics[scale=0.5]{nwhin.png}
     \caption{Transferring of Patient Record from one provider to another}
-    \cite[Fig.~1]{belleau_bio2rdf:_2008}
+    \cite[Fig.~1]{_nwhin_frameworkOne_2013}
     \label{fig:nwhin}
   \end{figure}  
-
-  (\url{http://www.siframework.org/scenario_toc2.html})\
 
 %----------------------------------------------------------------------------------------
 %	SPARQL
@@ -776,41 +774,33 @@
   \initial{S}\textit{SPARQL Protocol and RDF Query Language (SPARQL)}\
   is a W3C recommend standard for querying RDF data.\
   It allows one to query remote RDF resources, in a manner similar to the querying of databases using SQL.\
-  A SPARQL query is a set of graph patterns; any data triple matching these patterns is added to the query results.\
-  \citep{Jarrar_mashql:_2008}\\     
+  A SPARQL query is a set of graph patterns; any data triple matching these patterns is added to the query results. \citep{Jarrar_mashql:_2008}\\     
 		
   \subsection{Alternatives}
 
-  SquishQL - A simple RDF query language for beginners that allows for SQL syntax.\
-  \noindent(\url{http://www.techrepublic.com/article/squishql-the-simplest-rdf-query-language})\\
+  SquishQL - A simple RDF query language for beginners that allows for SQL syntax. \citep{_Mikhalenko_2013}\
 
   \subsection{Examples}
   \begin{figure}[h!]
-    \includegraphics[trim=1 1 400 1,clip,scale=0.4]{sparql.png}
-    \caption{Hello World}
-    \label{fig:first}
-  \end{figure}
-  \begin{figure}[h!]
     \begin{subfigure}[b]{.5\linewidth}
-      \includegraphics[width=1.0\textwidth]{sparql1.png}
-      \caption{Hello World}
-      \label{fig:second}
+      \includegraphics[width=1.2\textwidth]{sparql1.png}
+      \caption{SPARQL Query 1}
+      \label{fig:first}
     \end{subfigure}
     ~
     \begin{subfigure}[b]{.5\linewidth}
-      \includegraphics[width=1.0\textwidth]{sparqlh.png}
-      \caption{Hello World}
-      \label{fig:third}
+      \includegraphics[width=1.2\textwidth]{sparqlh.png}
+      \caption{SPARQL Query 2}
+      \label{fig:second}
     \end{subfigure}
     \caption{Examples}
     \label{fig:sparql_examples}
   \end{figure}
 
   \noindent The first, second, and third subfigures in subfigure\
-  \ref{fig:subfigures} are labeled as\
-  \ref{fig:first} \cite{stenzhorn2008simplifying},\
-  \ref{fig:second} \cite{stenzhorn2008simplifying}\
-  and \ref{fig:third}  \cite{parachuri2008role} respectively.\\
+  1 are labeled as\
+  \ref{fig:first} \cite{stenzhorn2008simplifying}\
+  and \ref{fig:second}  \cite{parachuri2008role} respectively.\\
 
 
 %----------------------------------------------------------------------------------------
@@ -827,7 +817,7 @@
   \begin{figure}[ht!]
     \centering
     \includegraphics[scale=0.4]{fmqlFromFileMan.png}
-    \caption{Querying data from Fileman~\cite[Fig.~1]{belleau_bio2rdf:_2008}}
+    \caption{Querying data from Fileman~\cite[Fig.~1]{_fmql_framework_2013}}
     \label{fig:fmql}
   \end{figure}  
 
@@ -837,9 +827,8 @@
     \item Data Formats: a consistent form of JSON, the web-friendly response format, for every\
     type of data in the system as well as HTML for human readers and RDF for web-data practitioners.\
     \item Query Nuance: from the precise - SELECT - to the broader - DESCRIBE - or just COUNT, covers data hierarchies\
-    and graphical layouts, paging and filtering.
+    and graphical layouts, paging and filtering.  \citep{_fmql_framework_2013}     
   \end{enumerate}
-  (\url{http://vista.caregraf.info/fmql})
 
 %----------------------------------------------------------------------------------------
 %	Miscellaneous Technologies
