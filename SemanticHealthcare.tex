@@ -130,7 +130,7 @@
   A \emph{term} is a particular lexical string or expression that represents a concept.\
   Terms are used in clinical information systems or other healthcare applications.\
   In SNOMED RT, we use \emph{description} to refer to terms that are linked\
-  to concepts in core tables. This imparts a specific, nonambiguous meaning to each\
+  to concepts in core tables. This imparts a specific, non-ambiguous meaning to each\
   term. A single concept may have one or more associated descriptions. One description\
   in each concept is designated the \emph{preferred name}, and the others are called\
   \emph{synonyms}(See Table~\ref{tab:snomedrt_example}). Term and description have often been used\
@@ -280,11 +280,11 @@
   comprehensive electronic health record \emph{KP HealthConnect\textsuperscript\textregistered}.\\
 
   \begin{figure}[ht!]
-    \label{fig:cmt}
     \centering
     \includegraphics[scale=0.75]{CMT.jpg}
     \caption{High-level graphical description\
     of CMT}\citep[Fig.~1]{dolin_kaiser_2004}
+    \label{fig:cmt}
   \end{figure}  
 
   \noindent In September 2010 Kaiser Permanente, the International Health\
@@ -377,7 +377,7 @@
 
   \begin{figure}[ht!]
     \centering
-    \includegraphics[scale=0.4]{rdf1.png}\\
+    \includegraphics[scale=0.4,trim=3 1 1 8,clip]{rdf1.png}\\
     \caption{\url{www.jonathanborden-md.com/HealthcareSemWeb.ppt‎}}
     \label{fig:rdf1}
   \end{figure}
@@ -452,11 +452,11 @@
     \itemindent3em
     \itemsep0ex
     \item [\textbf{Rule 1:}] URI's are normalized and dereferencable
-    \item [\textbf{Rule 2:}] Autoritative public namespaces are used 
+    \item [\textbf{Rule 2:}] Authoritative public namespaces are used 
     \item [\textbf{Rule 3:}] Mandatory predicates are used
     \item [\textbf{Rule 4:}] Blank nodes are forbidden
     \item [\textbf{Rule 5:}] RDFizer programs are open source
-    \item [\textbf{Rule 6:}] Deferenceable ontologies
+    \item [\textbf{Rule 6:}] Deference-able ontologies
   \end{itemize}
   Figure~\ref{fig:bio2rdf_architecture} shows a schematic description\
   of the Bio2RDF architecture. All external data sources, in different formats\
@@ -508,7 +508,7 @@
   Each dataset provenance object has a unique IRI and label based on the\
   dataset name and creation date. For example,\
   \url{http://bio2rdf.org/bio2rdf_dataset:bio2rdf-mesh-20120827}.\
-  An example provenance graph for the MeSH dataset can be in figure~\ref{fig:bio2rdf_provenance}.\
+  An example provenance graph for the MeSH dataset can be in Figure~\ref{fig:bio2rdf_provenance}.\
   Note that each subject IRI in the dataset is linked the date-unique dataset\
   IRI that is part of the provenance record using the VoID `inDataset' predicate.\
   Other important features of the provenance record include the use of the Dublin\
@@ -539,7 +539,7 @@
   HDD incorporates and links terms from multiple clinical information\
   systems and standard terminologies. It maps disparate medical terms to\
   give data context and meaning; and is used to standardize data to make\
-  it more interoperable and computable. It is a concept-based vocabulary and\
+  it more inter-operable and computable. It is a concept-based vocabulary and\
   knowledge base.\\
 
   \noindent In June 2012, the U.S. Department of Defense and the Department\
