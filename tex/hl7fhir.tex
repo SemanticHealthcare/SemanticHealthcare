@@ -1,0 +1,56 @@
+  \section[Fast Healthcare Interoperability Resources (HL7 FHIR\textsuperscript{\texttrademark})]
+  {HL7 FHIR \textsuperscript{\texttrademark}}
+    \label{sec:fhir}
+
+  \initial{F}\textit{ast Healthcare Interoperability Resources (HL7/FHIR )}\
+  is a is a next generation standards framework created by HL7.\
+  It defines a set of ``resources'' for health. These resources represent granular clinical\
+  concepts that can be exchanged in order to quickly and effectively solve problems in healthcare\
+  and related process. The resources cover the basic elements of healthcare - patients, admissions,\
+  diagnostic reports, medications, and problem lists, with their typical participants, and also support\
+  a range of richer and more complex clinical models. The simple direct definitions of the resources are\
+  based on thorough requirements gathering, formal analysis and extensive cross-mapping to other relevant standards. \citep{_fhir_intro_2013}\
+
+  Resources are:\
+
+  \begin{itemize}
+    \itemsep0ex
+    \item Atomic - they are the smallest defined unit of operation and a transaction\
+    scope of their own.\
+    \item Connected - resources refer to other resources to allow for clean modular\
+    reuse of information.\
+    \item Independent - the content of a resource can be processed without having to\
+    retrieve referenced resources.\
+    \item Simple - each resource definition is easy to understand, and to implement\
+    without needing specialized tooling or infrastructure (though that can be used if desired).\
+    \item RESTful - resources are able to be used in a RESTful exchange context.\
+    \item Flexible - resources can also be used in non-RESTful contexts, such as messaging\
+    or SOA architectures and can be moved in and out of RESTful paradigms as convenient.\
+    \item Extensible - resources can be extended to allow for local requirements without\
+    impacting on interoperability.\
+    \item Webcentric - where possible and appropriate, open internet standards are used\
+    for data representation.\
+    \item Free for use - the FHIR specification itself is open - anyone can implement\
+    FHIR or derive related specifications without any IP restrictions.\
+  \end{itemize}
+
+  \noindent In addition to the basic resources, FHIR defines a lightweight implementation framework that\
+  supports the use of these resources in RESTful environments, classic message exchanges, human-centric\
+  clinical documents and enterprise SOA architectures. Each of these approaches provides its own benefits\ 
+  - FHIR provides the underpinning enablement that makes the choosing one of these painless and enables enterprises\
+  to choose their own paradigm without forsaking interoperability with other approaches.\\
+
+  \noindent Though the resources are simple and easy to understand, they are backed by a thorough, global requirements gathering\
+  and formal modeling process that ensures that the content of the resources is stable and reliable. The resource\
+  contents are mapped to solid underlying ontologies and models using computable languages (including RDF) so\
+  that the definitions and contents of the resources can be leveraged by computational analysis and conversion processes.\\
+
+  \noindent FHIR also provides an underlying conformance framework and tooling that allows different implementation contexts\ 
+  and enterprises to describe their context and use of resources in formal computable ways and to empower computed\
+  interoperability that leverages both the conformance and definitional frameworks.\\
+
+  \noindent The combination of the resources and the 3 supporting layers (implementation frameworks,\
+  definitional thoroughness, and conformance tooling), along with the completely free license of FHIR\
+  itself frees healthcare data so that it can easily flow to where it needs to be (across hospital production systems,\
+  mobile clinical systems, cloud based data stores, national health repositories, research databases, etc.)\
+  without having to pass through format and semantic inter-conversion hurdles along the way. \citep{_fhir_framework_2013}\

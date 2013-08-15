@@ -1,0 +1,10 @@
+# Fdb version 3
+["pdflatex"] 1376594315 "rdf.tex" "rdf.pdf" "rdf" 1376594315
+  "/etc/texmf/web2c/texmf.cnf" 1376064350 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf/web2c/texmf.cnf" 1351468918 31466 25867adcbb7c2423c76afd53e67c9231 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1376064400 713989 9e680b96acdbceb5dd43a4253d94e3f8 ""
+  "rdf.aux" 1376594287 8 a94a2480d3289e625eea47cd1b285758 ""
+  "rdf.tex" 1376594314 4657 fdacc7bbf037ac9cd24051776ab5689b ""
+  (generated)
+  "rdf.pdf"
+  "rdf.log"
