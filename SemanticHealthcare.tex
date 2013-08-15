@@ -8,7 +8,10 @@
 \usepackage{booktabs} % Horizontal rules in tables
 \usepackage[svgnames]{xcolor} % Enabling colors by their 'svgnames'
 \usepackage{fix-cm}	 % Custom font sizes - used for the initial letter in the document
+
 \usepackage{graphicx} % Inserting figures and images
+\graphicspath{ {images/} }
+
 \usepackage{natbib}  % For using the APA bibliography style
 \usepackage[list=true]{subcaption}
 
@@ -353,14 +356,13 @@
   variety of related information to be semantically linked to patient data,\
   such as genomic, geographic and drug interaction data, enabling more effective\
   treatment, and greater knowledge discovery. Other reasons for adopting RDF as\
-  a universal healthcare exchange language include:
-  \begin{description}
-    \itemindent0em
+  a universal healthcare exchange language include~\citep{_Munnecke_2013}:
+  \begin{itemize}
     \itemsep0ex
-    \item[(a)]  Its ability to make information self-describing with precise semantics
-    \item[(b)] its support for automated inference
-    \item[(c)]  its foundation in open standard''\citep{_Munnecke_2013}\
-  \end{description}
+    \item Its ability to make information self-describing with precise semantics
+    \item Its support for automated inference
+    \item Its foundation in open standard
+  \end{itemize}
 
   \noindent By using a standard language for data interchange, new research discoveries could be made\
   more efficiently and effectively.\
@@ -374,7 +376,7 @@
     \end{subfigure}
     ~
     \begin{subfigure}[b]{.5\linewidth}
-      \includegraphics[width=1.0\textwidth]{rdf1.png}
+      \includegraphics[trim = 2 1 1 7,clip,width=\textwidth]{rdf1.png}
       \caption{RDF Example 2}
       \label{fig:fourth}
     \end{subfigure}
@@ -382,7 +384,7 @@
     \label{fig:rdf_examples}
   \end{figure}
 
- \noindent The first, second, and third subfigures in subfigure\
+  \noindent The first, second, and third subfigures in subfigure\
   2 are labeled as\
   \ref{fig:third} \cite{parachuri2008role}\
   and \ref{fig:fourth}  \cite{_Borden_2013} respectively.\\
@@ -540,7 +542,7 @@
   systems and applications, regardless of where data\
   originates~\citep{_3M_Healthcare_Data_Dictionary_2013}.\\
   
-  HDD incorporates and links terms from multiple clinical information\
+  \noindent HDD incorporates and links terms from multiple clinical information\
   systems and standard terminologies. It maps disparate medical terms to\
   give data context and meaning; and is used to standardize data to make\
   it more interoperable and computable. It is a concept-based vocabulary and\
@@ -574,7 +576,7 @@
     Domains are created and populated by the web of relationships among concepts.\
     Semantic relationships fall into two broad categories: hierarchical and non hierarchical.\\
 
-    HDD's knowledge base consists of semantic networks and hierarchies that describe\
+    \noindent HDD's knowledge base consists of semantic networks and hierarchies that describe\
     the complex relationships existing between concepts in the vocabulary. These\
     relationships can be hierarchical (``parent-child'' or ``is-a'') or\ 
     non-hierarchical ``is-a-component-of''. Figure 6 (below) is an example of how\
@@ -619,7 +621,7 @@
   \begin{figure}[ht!]
     \label{fig:asn}
     \centering
-    \includegraphics[scale=0.4]{asn.png}
+    \includegraphics[scale=0.4,trim=1 1 400 1,clip]{asn.png}
     \caption{Simplified ASN.1 definition}\
     \citep{_3M_HDD_Product_Overview_2010}\
   \end{figure}  
@@ -627,12 +629,12 @@
   \begin{figure}[ht!]
     \label{fig:sid}
     \centering
-    \includegraphics[scale=0.6]{sid.png}
+    \includegraphics[width=\textwidth]{sid.png}
     \caption{Sample instance data}\
     \citep{_3M_HDD_Product_Overview_2010}\
   \end{figure}  
  
-  \subsection{Mapping Source Controlled Medical Vocabularies (CMV's) and Local Vocabularies}\
+  \subsection{Mapping Source Controlled Medical Vocabularies (CMV's) and Local Vocabularies}
   All industry-standard CMVs can coexist in the 3M HDD because of a process\
   called mapping, which cross-references elements in each CMV with a concrete,\
   unambiguous concept in the 3M HDD.\\
