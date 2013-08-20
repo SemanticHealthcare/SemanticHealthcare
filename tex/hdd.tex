@@ -1,5 +1,5 @@
   \section[3M\textsuperscript{\texttrademark} Healthcare Data Dictionary (HDD)]
-  {3M HDD\textsuperscript{\texttrademark}}
+  {3M\textsuperscript{\texttrademark} HDD}
   \label{sec:hdd}
   
   \initial{H}\textit{ealthcare Data Dictionary (HDD )}\
@@ -9,12 +9,27 @@
   systems and applications, regardless of where data\
   originates~\citep{_3M_Healthcare_Data_Dictionary_2013}.\\
   
+  \begin{figure}[ht!]
+    \label{fig:ikv}
+    \centering
+    \includegraphics[scale=0.75]{hdd.jpg}
+    \caption{Key Components of HDD}\citep{_3M_HDD_Product_Overview_2010}\
+  \end{figure}
+  
   \noindent HDD incorporates and links terms from multiple clinical information\
   systems and standard terminologies. It maps disparate medical terms to\
   give data context and meaning; and is used to standardize data to make\
   it more interoperable and computable. It is a concept-based vocabulary and\
   knowledge base. \citep{_3M_Healthcare_Data_Dictionary_2013}.\\
 
+  \begin{figure}[ht!]
+      \label{fig:lab}
+      \centering
+      \includegraphics[scale=0.4]{labtest.png}
+      \caption{Sample of HDD's knowledge base as applied to CHEM 4 lab test}\
+      \citep{_3M_HDD_Product_Overview_2010}\
+  \end{figure}
+  
   \noindent In June 2012, the U.S. Department of Defense and the Department\
   of Veterans Affairs reached an agreement with Salt Lake City-based 3M Health\
   Information Systems to make HDD freely available as open-source content and\
@@ -25,14 +40,6 @@
   ICD-9 and ICD-10\textsuperscript{\ref{sec:icd}}.\citep{_DeGaspari_2013}\
  
   \subsection{Information Models, Knowledge Base, Vocabulary}\
-
-  \begin{figure}[ht!]
-    \label{fig:ikv}
-    \centering
-    \includegraphics[scale=0.75]{hdd.jpg}
-    \caption{Key Components of HDD}\citep{_3M_HDD_Product_Overview_2010}\
-  \end{figure}  
-
   \begin{itemize}
     \itemsep0ex
     \item  \textbf{Information Models:} describes relationships among events and terminologies in a way that\
@@ -49,15 +56,6 @@
     non-hierarchical ``is-a-component-of''. Figure 6 (below) is an example of how\
     the knowledge base can describe the\ relationships between the components of a\
     CHEM 4 laboratory test.\citep{_3M_HDD_Product_Overview_2010}\
-    
-     \begin{figure}[ht!]
-      \label{fig:lab}
-      \centering
-      \includegraphics[scale=0.4]{labtest.png}
-      \caption{Sample of HDD's knowledge base as applied to CHEM 4 lab test}\
-      \citep{_3M_HDD_Product_Overview_2010}\
-    \end{figure}  
-
 
     \item \textbf{Vocabulary:} Identifies medical concepts and organizes them\
     to support synonyms, multiple surface forms, and other lexical\
@@ -66,6 +64,14 @@
     hierarchies, and meaningless identifiers. Each unique concept in the HDD\
     is assigned a Numeric Concept Identifier (NCID) code.\citep{_3M_HDD_Product_Overview_2010}\
   \end{itemize}
+
+  \begin{figure}[ht!]
+    \label{fig:asn}
+    \centering
+    \includegraphics[scale=0.4,trim=1 1 400 1,clip]{asn.png}
+    \caption{Simplified ASN.1 definition}\
+    \citep{_3M_HDD_Product_Overview_2010}\
+  \end{figure}  
 
   \subsection{How we can use it}
   The server is the complete repository of concepts and associations, maintained and made available for download\
@@ -84,14 +90,6 @@
     \item Abstract Syntax Notation (ASN.1) information model. transferable to XML\
     \citep{_3M_HDD_Product_Overview_2010}\
   \end{itemize}
-
-  \begin{figure}[ht!]
-    \label{fig:asn}
-    \centering
-    \includegraphics[scale=0.4,trim=1 1 400 1,clip]{asn.png}
-    \caption{Simplified ASN.1 definition}\
-    \citep{_3M_HDD_Product_Overview_2010}\
-  \end{figure}  
 
   \begin{figure}[ht!]
     \label{fig:sid}
