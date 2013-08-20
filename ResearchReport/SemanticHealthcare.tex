@@ -1,0 +1,165 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[DIV=calc, paper=a4, fontsize=12pt, onecolumn]{scrartcl}	 % A4 paper and 12pt font size
+
+\usepackage[english]{babel} % Engllish language /hyphenation
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage[svgnames]{xcolor} % Enabling colors by their 'svgnames'
+\usepackage{fix-cm}	 % Custom font sizes - used for the initial letter in the document
+
+\usepackage{graphicx} % Inserting figures and images
+\graphicspath{ {images/} }
+
+\usepackage{natbib}  % For using the APA bibliography style
+\usepackage[list=true]{subcaption}
+
+\usepackage[perpage,symbol]{footmisc}
+
+\usepackage{sectsty} % Enables custom section titles
+\allsectionsfont{\usefont{T1}{phv}{b}{n}} % Change the font of all section commands
+
+\usepackage{fancyhdr} % Needed to define custom headers/footers
+\pagestyle{fancy} % Enables the custom headers/footers
+\usepackage{lastpage} % Used to determine the number of pages in the document (for "Page X of Total")
+\usepackage{url} % Used to format urls correctly
+
+% Headers - all currently empty
+\lhead{}
+\chead{}
+\rhead{}
+
+% Footers
+\lfoot{}
+\cfoot{}
+\rfoot{\footnotesize Page \thepage\ of \pageref{LastPage}} % "Page 1 of 2"
+
+\renewcommand{\headrulewidth}{0.0pt} % No header rule
+\renewcommand{\footrulewidth}{0.4pt} % Thin footer rule
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true, %set true if you want colored links
+	linktoc=all, %set to all if you want both sections and subsections linked
+	linkcolor=blue, %choose some color if you want links to stand out
+	citecolor=Maroon,
+	urlcolor=SteelBlue, 
+	}
+	
+\addto{\captionsenglish}{\renewcommand*\contentsname{Table of Contents}}
+
+\usepackage{lettrine} % Package to accentuate the first letter of the text
+\newcommand{\initial}[1]{ % Defines the command and style for the first letter
+\lettrine[lines=3,lhang=0.3,nindent=0em,slope=0em]{
+\color{DarkBlue}
+{\textbf{\textit{#1}}}}{}}
+
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\usepackage{titling} % Allows custom title configuration
+
+\newcommand{\HorRule}{\color{DarkGoldenrod} \rule{\linewidth}{1pt}} % Defines the gold horizontal rule around the title
+
+\pretitle{\vspace{-150pt} \begin{center} \HorRule \fontsize{40}{40} \usefont{OT1}{ptm}{b}{n} \color{DarkRed} \selectfont} % Horizontal rule before the title
+
+\title{Semantic Healthcare} % Your article title
+
+\posttitle{\par\end{center}\vskip 0.5em} % Whitespace under the title
+
+\preauthor{\begin{flushleft}\large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{DarkRed}} % Author font configuration
+
+\newcommand{\org}{\footnotesize \usefont{OT1}{phv}{m}{sl} \color{Black}}
+
+\DeclareRobustCommand{\authoring}{
+\begin{tabular}{ccc}
+  Sankhesh Jhaveri & Catherine Dumas & Joshua Cope\\
+  \org Kitware,Inc. & \org Kitware, Inc., SUNY Albany & \org Kitware, Inc., SUNY Albany
+\end{tabular}}
+
+\author{\authoring} % Your name
+
+\postauthor{\footnotesize \usefont{OT1}{phv}{m}{sl} \color{Black} % Configuration for the institution name
+ % Your institution
+
+\par\end{flushleft}\HorRule} % Horizontal rule after the title
+
+\date{} % Add a date here if you would like one to appear underneath the title block
+
+%\setcounter{secnumdepth}{0} % All sections start from depth 0
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+  \maketitle
+  \renewcommand{\contentsname}{\hspace{120pt} Table of Contents}
+  \tableofcontents
+  \thispagestyle{fancy} % Enabling the custom headers/footers for the first page
+  \vspace{20pt}
+%----------------------------------------------------------------------------------------
+%	SNOMED RT
+%----------------------------------------------------------------------------------------
+  \input{tex/snomedrt}  
+%----------------------------------------------------------------------------------------
+%	SNOMED CT
+%----------------------------------------------------------------------------------------
+  \input{tex/snomedct}
+%----------------------------------------------------------------------------------------
+%	CMT
+%----------------------------------------------------------------------------------------
+  \input{tex/cmt} 
+%----------------------------------------------------------------------------------------
+%	RDF
+%----------------------------------------------------------------------------------------
+  \input{tex/rdf}
+%----------------------------------------------------------------------------------------
+%	Bio2RDF
+%----------------------------------------------------------------------------------------
+  \input{tex/bio2rdf}
+%----------------------------------------------------------------------------------------
+%	HDD
+%----------------------------------------------------------------------------------------
+  \input{tex/hdd}
+%----------------------------------------------------------------------------------------
+%	ICD
+%----------------------------------------------------------------------------------------
+  \input{tex/icd}
+%----------------------------------------------------------------------------------------
+%	LOINC
+%----------------------------------------------------------------------------------------
+  \input{tex/loinc}
+%----------------------------------------------------------------------------------------
+%	HL7/FHIR
+%----------------------------------------------------------------------------------------
+  \input{tex/hl7fhir}
+%----------------------------------------------------------------------------------------
+%	NwHIN
+%----------------------------------------------------------------------------------------
+  \input{tex/nwhin}
+%----------------------------------------------------------------------------------------
+%	SPARQL
+%----------------------------------------------------------------------------------------
+  \input{tex/sparql}
+%----------------------------------------------------------------------------------------
+%	FMQL
+%----------------------------------------------------------------------------------------
+  \input{tex/fmql}
+%----------------------------------------------------------------------------------------
+%	Miscellaneous Technologies
+%----------------------------------------------------------------------------------------
+  \input{tex/misc}
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+  \bibliographystyle{apa-good}
+  \bibliography{SemanticHealthcare}{}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
