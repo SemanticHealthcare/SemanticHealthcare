@@ -1,0 +1,165 @@
+import csv,os,sys,datetime
+sys.path = ['${VISTA_SOURCE_DIR}/Python/vista'] + sys.path
+from OSEHRAHelper import ConnectToMUMPS,PROMPT
+
+VistA=ConnectToMUMPS("${CMAKE_CURRENT_BINARY_DIR}/SemanticDataImport.log","${VISTA_CACHE_INSTANCE}","${VISTA_CACHE_NAMESPACE}")
+if ('${VISTA_CACHE_USERNAME}' and '${VISTA_CACHE_PASSWORD}'):
+  VistA.login('${VISTA_CACHE_USERNAME}','${VISTA_CACHE_PASSWORD}')
+if VistA.type=='cache':
+  try:
+    VistA.ZN('${VISTA_CACHE_NAMESPACE}')
+  except IndexError,no_namechange:
+    pass
+VistA.wait(PROMPT)    
+from AddOneDoctor import AddOneDoctor
+provider_csv =  csv.DictReader(open("${CMAKE_CURRENT_SOURCE_DIR}/provider.csv",'rb'))
+VistA.write('S DUZ=1 D ^XUP')
+VistA.wait('Select OPTION NAME')
+VistA.write('Systems Manager Menu')
+VistA.wait('Systems Manager Menu')
+VistA.write('USER')
+for provfields in provider_csv:
+  #AddOneDoctor(VistA,fullname,initials,ssn,NPI,sex,accesscode,verifycode,signaturecode,personclass,divisionname)
+  print "Adding " + provfields['Name'] + " to list of providers"
+  AddOneDoctor(VistA,provfields['Name'],provfields['Initials'],provfields['SSN'],provfields['NPI'],provfields['Sex'],provfields['AccessCode'],provfields['VerifyCode'],"","208D00000X","VISTA HEALTH CARE")
+VistA.wait('User Management')
+VistA.write('')
+VistA.wait('Systems Manager Menu')
+VistA.write('')
+VistA.wait('Do you really want to halt')
+VistA.write('')
+VistA.wait(PROMPT)
+patients_csv = csv.DictReader(open("${CMAKE_CURRENT_SOURCE_DIR}/enrollment_orig.csv",'rb'))
+for pfields in patients_csv:
+    if pfields["Patient_MemberID"]:
+      patientid= pfields["Patient_MemberID"]       
+      patientname=pfields['Name_Last']+","+pfields['Name_First']+" "+pfields['MI']      
+      vitals_csv = csv.DictReader(open("${CMAKE_CURRENT_SOURCE_DIR}/vital_sign.csv",'rb'))
+      for vfields in vitals_csv:
+          i=0
+          vitaltypes=['Height','Weight','Pulse','Respiration','Blood Pressure']
+          for type in vitaltypes:
+            VistA.write('S DUZ=1 D Q^DI')
+            VistA.wait('Select OPTION')
+            VistA.write('Enter')
+            VistA.wait('INPUT TO WHAT FILE')
+            VistA.write('GMRV VITAL MEASUREMENT')
+            VistA.wait('EDIT WHICH FIELD')
+            vinfo=['PATIENT','VITAL TYPE','HOSPITAL LOCATION','RATE']
+            for field in vinfo:
+              VistA.write(field)
+              index = VistA.multiwait(['THEN EDIT FIELD','SUB-FIELD'])
+              if index==1:
+                VistA.write('')
+                VistA.wait('THEN EDIT FIELD')
+            VistA.write('')
+            if vfields['Member_ID']==patientid:
+              VistA.wait('DATE/TIME VITALS TAKEN')
+              enc_date=vfields['Encounter_Date']
+              date,time,meridian=enc_date.split(" ")
+              time=time[:4]+str(i)
+              print "Adding Vitals for " + patientname +" on " + date +": " + type
+              i=i+1
+              VistA.write(date+'@'+time)
+              index = VistA.multiwait(['Are you adding','PATIENT','CHOOSE'])
+              if index == 0:
+                VistA.write('Y')
+                VistA.wait('GMRV VITAL MEASUREMENT PATIENT')
+                VistA.write(patientname)
+                VistA.wait('GMRV VITAL MEASUREMENT VITAL TYPE')
+                VistA.write(type)
+                index=VistA.multiwait(['PATIENT','CHOOSE'])
+                if index==1:
+                  VistA.write('1')
+                  VistA.wait('PATIENT')
+              elif index==2:
+                VistA.write('1')
+                VistA.wait('PATIENT')
+              VistA.write(pfields['Name_Last']+","+pfields['Name_First']+" "+pfields['MI'])
+              VistA.wait('VITAL TYPE')
+              VistA.write(type)
+              index=VistA.multiwait(['HOSPITAL LOCATION','CHOOSE'])
+              if index==1:
+                VistA.write('1')
+                VistA.wait('HOSPITAL LOCATION')
+              VistA.write('VISTA HEALTH CARE')
+              VistA.wait('RATE')
+              if type == 'Height':
+                VistA.write(vfields['Height']+vfields['Height_Units'])
+              elif type == 'Weight':
+                VistA.write(vfields['Weight']+vfields['Weight_Units'])
+              elif type == 'Pulse':
+                VistA.write(vfields['Pulse'])
+              elif type == 'Respiration':
+                VistA.write(vfields['Respiration'])
+              elif type == 'Blood Pressure':
+                VistA.write(vfields['SystolicBP']+'/'+vfields['DiastolicBP'])
+              VistA.wait('GMRV VITAL MEASUREMENT DATE/TIME VITALS TAKEN')
+              VistA.write('')
+              VistA.wait('Select OPTION')
+              VistA.write('')
+            else:
+              VistA.wait('GMRV VITAL MEASUREMENT DATE/TIME VITALS TAKEN')
+              VistA.write('')
+              VistA.wait('Select OPTION')
+              VistA.write('')
+      encounter_csv = csv.DictReader(open("${CMAKE_CURRENT_SOURCE_DIR}/encounter.csv",'rb'))
+      for efields in encounter_csv:
+        if efields['Member_ID'] == patientid:
+          VistA.write('D ^XUP')
+          VistA.wait('Select OPTION NAME')
+          VistA.write('PXCE ENCOUNTER ENTRY & DELETE')
+          VistA.wait('Select Patient or Clinic name')
+          VistA.write(patientname)
+          VistA.wait('OK')
+          VistA.write('Yes')
+          VistA.wait('Select Action')
+          VistA.write('AD')
+          index = VistA.multiwait(['to exit','Select ITEM No.'])
+          VistA.write('A')
+          VistA.wait('Encounter Date and Time')
+          enc_date=efields['Encounter_Date']
+          date,time,meridian=enc_date.split(" ")
+          print "Adding Encounter for " + patientname + " on: " + date+'@'+time
+          VistA.write(date+'@'+time)
+          VistA.wait('Hospital Location')
+          VistA.write('VISTA HEALTH CARE')
+          VistA.wait('APPOINTMENT TYPE')
+          VistA.write('')
+          VistA.wait('Select Action')
+          VistA.write('XA')
+          index = VistA.multiwait(['Exam:','to Edit'])
+          if index==1:
+            VistA.write('1')
+            VistA.wait('Exam:')
+          VistA.write('GENERAL EXAM')
+          VistA.wait('Results')
+          VistA.write('N')
+          VistA.wait('Encounter Provider')
+          VistA.write('')
+          VistA.wait('Comments')
+          s,notes,vitals,actions,followup=efields['SOAP_Note'].split(':')
+          s,notes,vitals,actions,followup=efields['SOAP_Note'].split(':')
+          VistA.write(notes[:-1])
+          while True:
+            index = VistA.multiwait(['Exam','With','Replace'])
+            VistA.write('')
+            if index==0:
+               break
+          VistA.wait('Select Action')
+          VistA.write('PR')
+          VistA.wait('Provider')
+          first,middle,last = efields['Provider_Name'].split(' ')
+          VistA.write(last +','+first+' '+middle)
+          VistA.wait('Is this Provider Primary')
+          VistA.write('')
+          VistA.wait('Is this Provider Attending')
+          VistA.write('')
+          VistA.wait('Provider')
+          VistA.write('')
+          while True:
+            index = VistA.multiwait(['Select Action',VistA.prompt,'Press RETURN to continue'])
+            if index ==0 or index == 2:
+              VistA.write('')
+            elif index==1:
+              break
