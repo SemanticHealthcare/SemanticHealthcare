@@ -1,0 +1,156 @@
+#---------------------------------------------------------------------------
+# Copyright 2012 The Open Source Electronic Health Record Agent
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#---------------------------------------------------------------------------
+
+#
+# TODO: insert the signaturecode in the script below.
+#
+def AddOneDoctor(VistA,fullname,initials,ssn,NPI,sex,accesscode,verifycode,signaturecode,personclass,divisionname):
+  def_service_section = "IRM"
+  is_visn0 = "${VISTA_STATE}" == "CALIFORNIA" # assume CALIFONIA is using VISN0's data
+  if is_visn0:
+    def_service_section = "MEDICAL ADMIN"
+  VistA.wait('User Management')
+  VistA.write('ADD')
+  VistA.wait('name')
+  VistA.write(fullname)
+  index = VistA.multiwait(['Want to reactivate','Are you adding'])
+  VistA.write('Y')
+  if index == 1:
+    index = VistA.multiwait(['INITIAL:','Do you still want to add this entry'])
+    if index==1:
+      VistA.write('Y')
+      VistA.wait('INITIAL')
+    VistA.write(initials)
+    VistA.wait('SSN:')
+    VistA.write(ssn)
+    VistA.wait('SEX:')
+    VistA.write(sex)
+    VistA.wait('NPI')
+    VistA.write(NPI)
+    VistA.wait('NAME COMPONENTS')
+    VistA.write('\r\r\r') # use all the default for NAME COMPONENTS and return back to main
+    VistA.wait('jump to a specific field.')
+    VistA.write('C') # close command
+    # go to PRIMARY MENU OPTION
+  elif index == 0:
+    VistA.wait('parts of this name')
+  VistA.write('^PRIMARY MENU OPTION')
+  VistA.write('XUCOR') # set to XUCOR
+  VistA.write('')
+  # set up secondary menu
+  VistA.wait('COMMAND')
+  VistA.write('^SECONDARY MENU')
+  second_menu_options = ('OR CPRS GUI CHART',
+                         'GMV V/M GUI')
+  for option in second_menu_options:
+    VistA.write(option)
+    index = VistA.multiwait(['// ','Secondary Menu Options'])
+    if index ==0:
+      VistA.write('Y')
+      VistA.write('')
+      VistA.write('')
+      VistA.wait('jump to a specific field.')
+      VistA.write('C') # close command
+  # want to edit ACCESS CODE
+  VistA.write('^Want to edit ACCESS CODE')
+  VistA.write('Y')
+  VistA.wait("<Hidden>:")
+  VistA.write(accesscode)
+  #VistA.wait('Please re-type the new code to show that I have it right:')
+  VistA.write(accesscode)
+  # skip to verify code
+  VistA.write('^Want to edit VERIFY CODE')
+  VistA.write('Y')
+  #VistA.wait("Enter a new VERIFY CODE:")
+  VistA.write(verifycode)
+  #VistA.wait('Please re-type the new code to show that I have it right: ')
+  VistA.write(verifycode)
+  # setup the Person Class
+  # we have to go to LANGUAGE first
+  VistA.write('^LANGUAGE')
+  VistA.write('') # now we are in person class
+  VistA.write(personclass)
+  VistA.wait('// ')
+  VistA.write('Y')
+  VistA.wait('// ')
+  VistA.write('Y')
+  # set up the Effective date
+  VistA.write('6/6/1998')
+  VistA.write('')
+  VistA.write('')
+  # set up the multiple sign-on
+  VistA.write('^MULTIPLE SIGN-ON')
+  VistA.write('1') # select the first one
+  VistA.write('1') # select allowed
+  VistA.write('99') # set the limit to be 99
+  # set up the division
+  VistA.write('^DIVISION')
+  VistA.write(divisionname)
+  VistA.write('Y')
+  VistA.write('')
+  VistA.write('')
+  VistA.write('')
+  VistA.write('')
+  #VistA.wait('jump to a specific field.')
+  #VistA.write('C')
+  # set up service/section
+  VistA.write('^SERVICE/SECTION')
+  VistA.write(def_service_section)
+  VistA.wait('jump to a specific field.')
+  VistA.write('S')
+  VistA.wait('jump to a specific field.')
+  VistA.write('E')
+  #screenmanstring='\r\r\r\r\r^PRIMARY MENU OPTION\rXUCOR\r^SECONDARY MENU OPTIONS\rOR CPRS GUI CHART\rY\r\r\r\rGMV V/M GUI\rY\r\r\r\r'
+  #screenmanstring=screenmanstring+'^Want to edit ACCESS CODE\rY\r'
+  #screenmanstring=screenmanstring+accesscode+'\r'+accesscode+'\r'
+  #screenmanstring=screenmanstring+'^Want to edit VERIFY CODE\rY\r'
+  #screenmanstring=screenmanstring+verifycode+'\r'+verifycode+'\r'
+  #screenmanstring=screenmanstring+divisionname+'\rY\r\r\r\r\r^SERVICE/SECTION\rIRM\r^Language\r\r'
+  #screenmanstring=screenmanstring+personclass+'\r'
+  #screenmanstring=screenmanstring+'Y\rY\rT-1\r\r^RESTRICT PATIENT SELECTION\r0\r\rCOR\rY\rT-1\r\r^MULTIPLE SIGN-ON\r1\r1\r99\r^\rE\rY'
+  #VistA.write(screenmanstring)
+  # Print User Account Access Letter
+  VistA.wait('User Account Access Letter')
+  VistA.write('NO')
+  VistA.wait('wish to allocate security keys?')
+  VistA.write('Y')
+  VistA.wait('Allocate key')
+  VistA.write('PROVIDER\r1')
+  VistA.wait('Another key')
+  VistA.write('GMV MANAGER')
+  VistA.wait('Another key')
+  VistA.write('LRLAB')
+  VistA.wait('Another key')
+  VistA.write('LRVERIFY')
+  VistA.wait('Another key')
+  VistA.write('ORES\r')
+  VistA.wait('Another holder')
+  VistA.write('')
+  VistA.wait('Do you wish to proceed')
+  VistA.write('Yes')
+  try:
+    while True:
+      index = VistA.multiwait(['add this user to mail groups',
+                               'User Management'], 5)
+      if index == 0:
+        VistA.write('NO')
+        continue
+      elif index == 1:
+        VistA.write('?')
+        break
+  except Exception, e:
+    VistA.write('')
+

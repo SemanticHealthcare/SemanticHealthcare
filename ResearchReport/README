@@ -1,0 +1,32 @@
+                README
+
+Welcome to the Semantic-Healthcare research report written in LaTeX.
+
+System Requirements:
+  LaTeX(pdftex/dvipdf)
+  BibTeX
+  
+  LaTeX Packages used:
+    KOMA-script
+    babel
+    microtype
+    xcolor
+    booktabs
+    graphicx
+    natbib
+    footmisc
+    subcaption
+    sectsty
+    fancyhdr
+    lastpage
+    url
+    lettrine
+    hyperref
+    titling
+  
+
+Installation:
+  latex SemanticHealthcare.tex
+  bibtex SemanticHealthcare.aux
+  latex SemanticHealthcare.tex
+  latex SemanticHealthcare.tex

@@ -1,0 +1,2 @@
+Provider_OrganizationPID,NPI,Speciality,Name,Initials,SSN,AccessCode,VerifyCode,Class,Location,DOB,Sex,Supervision_Required,Person_ID,Primary_Clinic_Location
+00000000000,0507657696,generalist,"M,Physician A",AP,000000002,fakedoc2,2Doc!@#$,1,ClinicA,1/1/1974,male,no,968-48-0000,ClinicA
