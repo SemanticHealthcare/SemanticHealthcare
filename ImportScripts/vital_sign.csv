@@ -1,0 +1,2 @@
+Member_ID,Encounter_Date,Height,Height_Units,Weight,Weight_Units,SystolicBP,DiastolicBP,Pulse,Respiration,Encounter_ID
+000000000-01,1/1/2000 12:00:00 AM,80,cm,14,kg,119,85,85,23,{XXXX-XXXXXXXX-XXXXXXXX}
