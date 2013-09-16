@@ -6,7 +6,7 @@ pre-requisite
 
 * Already installed GT. M, if not refer to ::
 
-    install GT.M
+    https://github.com/OSEHRA/VistA/blob/master/Documentation/InstallGTM.rst
 
 * Already has a local copy of OSEHRA VistA repository, if not ::
 
@@ -52,16 +52,16 @@ Setup CPRS Demo instance
 
 * Post setup configuration
 
-    From a GT.M terminal ::
+  * From a GT.M terminal
 
-      Run D ^ZTMGRSET to set the GT.M platform specific routines
-      Run D ^DINIT to initialize FileMan files
-      Run D ^ZUSET to change the right ZU routine for GT.M
+    1. Run D ^ZTMGRSET to set the GT.M platform specific routines
+    2. Run D ^DINIT to initialize FileMan files
+    3. D ^ZUSET to change the right ZU routine for GT.M
 
-      Run K ^XTV(8989.3,1,”XUCP”) to disable the audit
-      Run K ^XTV(8989.,1,4,”ROU”,1)
-      Run S ^XTV(8989.,1,4,”PLA”,1)=””
-      Run S ^XTV(8989.,1,4,1,0)=”PLA^^500”
+    4. Run K ^XTV(8989.3,1,”XUCP”) to disable the audit
+    5. K ^XTV(8989.,1,4,”ROU”,1)
+    6. S ^XTV(8989.,1,4,”PLA”,1)=””
+    7. S ^XTV(8989.,1,4,1,0)=”PLA^^500”
 
 * Setup RPC Broker via xinetd
 
