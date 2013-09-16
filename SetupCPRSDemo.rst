@@ -127,3 +127,7 @@ Setup CPRS Demo instance
     Setup FMQL environment ::
 
       https://github.com/caregraf/FMQL/wiki/Install-Instructions
+
+    Instead of cloning FMQL from https://github.com/carefraf/FMQL, you need to get from ::
+
+      git clone git://github.com/jasonli2000/FMQL.git -b cprsdemo
