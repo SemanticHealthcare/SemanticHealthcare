@@ -65,66 +65,65 @@ Setup CPRS Demo instance
 
 * Setup RPC Broker via xinetd
 
-    1. Create a cprsdemp-vista-9431 file as following
-       ::
+  1. Create a cprsdemp-vista-9431 file as following ::
 
-         #Assume designated username is cprsdemo, port number is 9431
-         #please change accordingly
-         service cprs-vista
-         {
-           port        = 9431
-           socket_type = stream
-           protocol    = tcp
-           type        = UNLISTED
-           user        = cprsdemo
-           server      = /home/cprsdemo/xinetd/vista-rpcbroker.sh
-           wait        = no
-           disable     = no
-           per_source  = UNLIMITED
-           instances   = UNLIMITED
-         }
+       #Assume designated username is cprsdemo, port number is 9431
+       #please change accordingly
+       service cprs-vista
+       {
+         port        = 9431
+         socket_type = stream
+         protocol    = tcp
+         type        = UNLISTED
+         user        = cprsdemo
+         server      = /home/cprsdemo/xinetd/vista-rpcbroker.sh
+         wait        = no
+         disable     = no
+         per_source  = UNLIMITED
+         instances   = UNLIMITED
+       }
 
-    2. Copy cprsdemo-vista-9431 to /etc/xinetd.d ::
+  2. Copy cprsdemo-vista-9431 to /etc/xinetd.d ::
 
-         sudo cp cprsdemo-vista-9431 /etc/xinetd.d/
+       sudo cp cprsdemo-vista-9431 /etc/xinetd.d/
 
-    3. Create vista-rpcbroker.sh to setup xinetd service call as following::
+  3. Create vista-rpcbroker.sh to setup xinetd service call as following::
 
-         #! /bin/bash
+       #! /bin/bash
 
-         HOMEDIR=/home/cprsdemo/xinetd
-         cd ${HOMEDIR}
+       HOMEDIR=/home/cprsdemo/xinetd
+       cd ${HOMEDIR}
 
-         # please modify the path accordingly
-         export gtm_dist="<path/to/gtm_dist/"
-         export gtm_prompt="GTM>"
-         export gtmver=<gtm_version>
-         export gtmgbldir="<path/to/cprsdemo/global/dir>"
-         export gtmroutines="<cprsdemo routines setup>"
-         export gtm_zinterrupt='I $$JOBEXAM^ZU($ZPOSITION)'
+       # please modify the path accordingly
+       export gtm_dist="<path/to/gtm_dist/"
+       export gtm_prompt="GTM>"
+       export gtmver=<gtm_version>
+       export gtmgbldir="<path/to/cprsdemo/global/dir>"
+       export gtmroutines="<cprsdemo routines setup>"
+       export gtm_zinterrupt='I $$JOBEXAM^ZU($ZPOSITION)'
 
-         if [ ! -d log ] ; then
-           mkdir log
-         fi
+       if [ ! -d log ] ; then
+         mkdir log
+       fi
 
-         LOG=${HOMEDIR}/log/cprs-xinetd.log
-         echo "$$ Job begin `date`"                                      >>  ${LOG}
-         echo "$$  ${gtm_dist}/mumps -run GTMLNX^XWBTCPM"                >>  ${LOG}
+       LOG=${HOMEDIR}/log/cprs-xinetd.log
+       echo "$$ Job begin `date`"                                      >>  ${LOG}
+       echo "$$  ${gtm_dist}/mumps -run GTMLNX^XWBTCPM"                >>  ${LOG}
 
-         ${gtm_dist}/mumps -run GTMLNX^XWBTCPM "${CPRS_BANNER}"         2>>  ${LOG}
-         echo "$$  RPCBroker stopped with exit code $?"                  >>  ${LOG}
-         echo "$$ Job ended `date`"                                      >>  ${LOG}
+       ${gtm_dist}/mumps -run GTMLNX^XWBTCPM "${CPRS_BANNER}"         2>>  ${LOG}
+       echo "$$  RPCBroker stopped with exit code $?"                  >>  ${LOG}
+       echo "$$ Job ended `date`"                                      >>  ${LOG}
 
-    4. Restart xinetd service
-       ::
+  4. Restart xinetd service
+     ::
 
-         sudo service xinetd restart
+       sudo service xinetd restart
 
 
-    5. Try telnet localhostt 9431 to make sure xinetd routing works
+  5. Try telnet localhostt 9431 to make sure xinetd routing works
 
 * Setup FMQL
 
-        Setup FMQL environment ::
+    Setup FMQL environment ::
 
-          https://github.com/caregraf/FMQL/wiki/Install-Instructions
+      https://github.com/caregraf/FMQL/wiki/Install-Instructions
